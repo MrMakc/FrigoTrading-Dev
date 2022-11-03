@@ -1,0 +1,244 @@
+{%- extends '../layout/pages.twig' -%}
+{% set pageTitle = 'Liste produits' %}
+{% set pageTemplate = 'liste-produits' %}
+{% set pageClass = 'liste-produits' %}
+
+
+{%- block mainContent %}
+
+    <div class="sticky-bg bg-left-edito"><div class="bg-img"></div></div>
+    <div class="sticky-bg bg-right-edito"><div class="bg-img"></div></div>
+
+    <aside>
+        <div class="column-sticky">
+            <div class="devis">
+                <a href="#">
+                    {{ macros.svg('doc','30','white') }}
+                    <p>Demande de devis</p>
+                </a>
+            </div>
+            <div class="contact">
+                <a href="#">
+                    {{ macros.svg('mail','30','white') }}
+                    <p>Contactez nous !</p>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+
+    <div class="main-slider">
+        <div class="bg-triangle"></div>
+        <div class="slider-img">
+            <div class="slider-wrap">
+                <div class="slide">
+                    <a href="#">
+                        <div class="img">
+                            <picture>
+                                <img src="../assets/img/upload/exemple.png" alt="">
+                            </picture>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="title-edito inner-wrap">
+        <h1>Containers frigorifiques</h1>
+        <p class="subtitle">Lorem ipsum dolor sit amet, consetetur sa
+            dipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua.
+            At vero eos et accusam et justo duo dolores.
+        </p>
+    </div>
+
+    <div class="block-liste-produits sub-wrap list-to-show">
+        <div class="produit">
+            <div class="img">
+                <picture>
+                    <img src="../assets/img/upload/exemple.png" alt="">
+                </picture>
+            </div>
+            <div class="text editor-wysiwyg">
+                <h2>Container Reefer 10 pieds</h2>
+                <div class="liste-pictos">
+                    <div class="volume"><p>12.45 m3 Volume</p></div>
+                    <div class="palette"><p>4 palettes euros</p></div>
+                </div>
+                {#       rajouter |slice(0, 150) ~ '...' pour tronquer         #}
+                <p>
+                    Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.
+                </p>
+                <a href="#" class="a-button as--grey-4"><span>En savoir plus</span></a>
+            </div>
+        </div>
+        <div class="produit">
+            <div class="img">
+                <picture>
+                    <img src="../assets/img/upload/double-container.png" alt="">
+                </picture>
+            </div>
+            <div class="text editor-wysiwyg">
+                <h2>Container Reefer 10 pieds</h2>
+                <div class="liste-pictos">
+                    <div class="volume"><p>12.45 m3 Volume</p></div>
+                </div>
+                <p>
+                    Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.
+                </p>
+                <a href="#" class="a-button as--grey-4"><span>En savoir plus</span></a>
+            </div>
+        </div>
+        <div class="produit">
+            <div class="img">
+                <picture>
+                    <img src="../assets/img/upload/exemple.png" alt="">
+                </picture>
+            </div>
+            <div class="text editor-wysiwyg">
+                <h2>Container Reefer 10 pieds</h2>
+                <div class="liste-pictos">
+                    <div class="volume"><p>12.45 m3 Volume</p></div>
+                    <div class="palette"><p>4 palettes euros</p></div>
+                </div>
+                {#       rajouter |slice(0, 150) ~ '...' pour tronquer         #}
+                <p>
+                    Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.
+                </p>
+                <a href="#" class="a-button as--grey-4"><span>En savoir plus</span></a>
+            </div>
+        </div>
+        <div class="produit">
+            <div class="img">
+                <picture>
+                    <img src="../assets/img/upload/double-container.png" alt="">
+                </picture>
+            </div>
+            <div class="text editor-wysiwyg">
+                <h2>Container Reefer 10 pieds</h2>
+                <div class="liste-pictos">
+                    <div class="volume"><p>12.45 m3 Volume</p></div>
+                </div>
+                <p>
+                    Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.
+                </p>
+                <a href="#" class="a-button as--grey-4"><span>En savoir plus</span></a>
+            </div>
+        </div>
+        <div class="produit">
+            <div class="img">
+                <picture>
+                    <img src="../assets/img/upload/exemple.png" alt="">
+                </picture>
+            </div>
+            <div class="text editor-wysiwyg">
+                <h2>Container Reefer 10 pieds</h2>
+                <div class="liste-pictos">
+                    <div class="volume"><p>12.45 m3 Volume</p></div>
+                    <div class="palette"><p>4 palettes euros</p></div>
+                </div>
+                {#       rajouter |slice(0, 150) ~ '...' pour tronquer         #}
+                <p>
+                    Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.
+                </p>
+                <a href="#" class="a-button as--grey-4"><span>En savoir plus</span></a>
+            </div>
+        </div>
+        <div class="produit">
+            <div class="img">
+                <picture>
+                    <img src="../assets/img/upload/double-container.png" alt="">
+                </picture>
+            </div>
+            <div class="text editor-wysiwyg">
+                <h2>Container Reefer 10 pieds</h2>
+                <div class="liste-pictos">
+                    <div class="volume"><p>12.45 m3 Volume</p></div>
+                </div>
+                <p>
+                    Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.
+                </p>
+                <a href="#" class="a-button as--grey-4"><span>En savoir plus</span></a>
+            </div>
+        </div>
+        <div class="produit">
+            <div class="img">
+                <picture>
+                    <img src="../assets/img/upload/exemple.png" alt="">
+                </picture>
+            </div>
+            <div class="text editor-wysiwyg">
+                <h2>Container Reefer 10 pieds</h2>
+                <div class="liste-pictos">
+                    <div class="volume"><p>12.45 m3 Volume</p></div>
+                    <div class="palette"><p>4 palettes euros</p></div>
+                </div>
+                {#       rajouter |slice(0, 150) ~ '...' pour tronquer         #}
+                <p>
+                    Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.     Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.
+                </p>
+                <a href="#" class="a-button as--grey-4"><span>En savoir plus</span></a>
+            </div>
+        </div>
+        <div class="produit">
+            <div class="img">
+                <picture>
+                    <img src="../assets/img/upload/double-container.png" alt="">
+                </picture>
+            </div>
+            <div class="text editor-wysiwyg">
+                <h2>Container Reefer 10 pieds</h2>
+                <div class="liste-pictos">
+                    <div class="volume"><p>12.45 m3 Volume</p></div>
+                </div>
+                <p>
+                    Liquam erat volutpat. Nam quam leo, element um vitae pretium et, fe
+                    rmentum quis dolor. Morbi nec fermentum nisl, sed mattis dolor.
+                </p>
+                <a href="#" class="a-button as--grey-4"><span>En savoir plus</span></a>
+            </div>
+        </div>
+
+        {#    Bouton à prévoir mais normalement pas utilisé    #}
+{#        <a href="#" class="see-more">En voir davantage</a>#}
+    </div>
+
+    <div class="graph-full-img inner-wrap">
+        {#    que un titre, texte court et bouton ici    #}
+        <div class="text editor-wysiwyg as--white">
+            <h3>Besoin d’un devis ?</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sa
+                dipscing elitr, sed diam nonum
+                y eirmod tempor invidunt ut labore et dolore magna.
+            </p>
+            <a href="#" class="a-button"><span>Contactez-nous !</span></a>
+        </div>
+        <div class="img">
+            <picture>
+                <img src="../assets/img/upload/exemple.png" alt="">
+            </picture>
+        </div>
+    </div>
+
+
+{% endblock mainContent -%}

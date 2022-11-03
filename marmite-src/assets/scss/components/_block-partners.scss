@@ -1,0 +1,33 @@
+.block-partners{
+  display: grid;
+  grid-template-columns: 27rem auto;
+  justify-content: flex-start;
+  overflow: hidden;
+  .title{
+    display: flex;
+    flex-direction: column;
+    margin-right: 8rem;
+    h2{
+      font-size: 3.5rem;
+      color: $color-text-1;
+    }
+  }
+  .slider-partners{
+    .slick-slide{
+      margin-right: 3rem;
+    }
+    .img{
+      width: 35rem;
+      height: 30rem;
+      box-shadow: inset 2px 2px 26px 5px rgba(0,0,0,0.16);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 15rem;
+        height: auto;
+      }
+    }
+  }
+}
+

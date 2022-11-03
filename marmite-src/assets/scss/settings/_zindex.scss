@@ -1,0 +1,12 @@
+/* ====================== */
+/* Z-index */
+/* ====================== */
+
+$zindex-root : 2;
+$zindex-form-dropdown : ($zindex-root + 1);
+$zindex-form-input : ($zindex-form-dropdown + 1);
+$zindex-form-input-icon : ($zindex-form-input + 1);
+$zindex-header : ($zindex-form-input-icon + 1);
+$zindex-skip : ($zindex-header + 1);
+$zindex-popin : 99999;
+$zindex-popin-alert : ($zindex-popin + 1);

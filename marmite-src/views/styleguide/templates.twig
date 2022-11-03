@@ -1,0 +1,49 @@
+{% extends '../layout/styleguide.twig' %}
+
+{% block sgContent %}
+  <div class="sg-section h-align-center">
+    <div class="sg-h1">Templates</div>
+  </div>
+
+  <div id="sg-pageList" class="sg-section">
+    <div class="sg-h2">List of pages templates</div>
+    <div class="sg-callout sg-callout-info">
+      <p>Below you find a list of html pages developed from the graphic models, based on the Styleguide elements:</p>
+    </div>
+  </div>
+
+  <div class="sg-section">
+    <details class="sg-details" open>
+      <summary>Pages</summary>
+      <ul class="sg-index-ul" data-list="pages">{# data-list : name of the directory #}
+        <template>
+          <li>
+            <a target="_blank" href="%%pageUrl%%">%%pageName%%</a>
+          </li>
+        </template>
+      </ul>
+    </details>
+  </div>
+
+
+  <div id="sg-popinList" class="sg-section">
+    <div class="sg-h2">List of popins templates</div>
+    <div class="sg-callout sg-callout-info">
+      <p>Below you find a list of html popins developed from the graphic models, based on the Styleguide elements:</p>
+    </div>
+  </div>
+  <div class="sg-section">
+
+    <details class="sg-details" open>
+      <summary>Popins</summary>
+      <ul class="sg-index-ul" data-list="popins">{# data-list : name of the directory #}
+        <template>
+          <li>
+            <a target="_blank" href="%%pageUrl%%">%%pageName%%</a>
+          </li>
+        </template>
+      </ul>
+    </details>
+
+  </div>
+{% endblock sgContent %}

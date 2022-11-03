@@ -1,0 +1,260 @@
+/* ==========================================================================
+   BOUTONS
+   ========================================================================== */
+
+/* Base
+/*========================================================================== */
+
+%a-button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  vertical-align: middle;
+  z-index: 1;
+  color: white;
+  border: 1px solid white;
+  background: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  &:hover{
+    background: transparent;
+    color: white;
+    &:before {
+      height: 100%;
+    }
+    &:after {
+      width: 100%;
+    }
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: white;
+    transition: all 0.3s ease;
+  }
+  &:before {
+    height: 0%;
+    width: 2px;
+  }
+  &:after {
+    width: 0%;
+    height: 2px;
+  }
+  span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1.8rem 2.5rem;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      background: white;
+      transition: all 0.3s ease;
+    }
+    &:before {
+      width: 2px;
+      height: 0%;
+    }
+    &:after {
+      width: 0%;
+      height: 2px;
+    }
+    &:hover{
+      &:before {
+        height: 100%;
+      }
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+
+  // btn with icons (before & after text or solo icon)
+  &.as--icon {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    &:not(.as--right) {
+      .a-icon {
+        margin: -.2rem .5rem 0 0;
+      }
+    }
+    &.as--right {
+      flex-direction: row-reverse;
+      .a-icon {
+        margin: -.2rem 0 0 .5rem
+      }
+    }
+    &.as--fullwidth {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      position: relative;
+      .a-icon {
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:not(.as--right) {
+        .a-icon {
+          left: 1.3rem;
+        }
+      }
+      &.as--right {
+        .a-icon {
+          right: 1.3rem;
+        }
+      }
+    }
+  }
+
+  // loading state
+  &.as--loading {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  // disabled state
+  &.as--disabled,
+  &[disabled] {
+    pointer-events: none;
+    cursor: default;
+    opacity: .3;
+  }
+}
+
+.a-button {
+  @extend %a-button;
+}
+
+// btn colors
+
+@mixin a-button-color($color:$color-grey-2) {
+  border-color: $color;
+  background: $color;
+  @if lightness($color) < lightness(#eee) {
+    color: #fff;
+  }
+  &:hover {
+    background: darken($color, 10%);
+    border-color: darken($color, 10%);
+  }
+  &.as--icon-round:hover {
+    background: $color;
+  }
+  &.as--ghost {
+    border-color: $color;
+    &:not([class*=h-color-]) {
+      color: $color;
+    }
+    background: transparent;
+    &:hover {
+      background: fade-out($color, .15);
+      border-color: $color;
+    }
+  }
+}
+
+@each $colorname, $color in $a-colors {
+  .a-button.as--#{$colorname} {
+    color: $color;
+    border: 1px solid $color;
+    &:before, &:after, & span:before, & span:after{
+      background: $color;
+    }
+  }
+}
+
+/* ghost buttons
+/*========================================================================== */
+%as--ghost {
+  background: transparent;
+  border-color: $color-text-3;
+  &:hover {
+    background: fade-out($color-grey-3, .15);
+    border-color: darken($color-text-3, 10%);
+  }
+}
+
+.a-button.as--ghost {
+  @extend %as--ghost;
+}
+
+/* btn circle
+/*========================================================================== */
+%as--circle {
+  $btn-circle-dim: 6rem;
+  width: $btn-circle-dim;
+  height: $btn-circle-dim;
+  padding: 0;
+  line-height: ($btn-circle-dim - .2);
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.a-button.as--circle {
+  @extend %as--circle;
+}
+
+/* Close button
+/*========================================================================== */
+%as--close {
+  @include a-button-color($color: $color-primary);
+  position: absolute;
+  top: 1.5rem;
+  right: 3rem;
+  padding: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  font-family: arial;
+  font-weight: 400;
+  font-size: 5rem;
+}
+
+.a-button.as--close {
+  @extend %as--close;
+}
+
+/* Misc buttons
+/*========================================================================== */
+%as--fullwidth {
+  display: block;
+  width: 100%;
+}
+
+.as--fullwidth {
+  @extend %as--fullwidth;
+}
+
+// force no hover
+%as--no-hover {
+  cursor: default;
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.a-button.as--no-hover {
+  @extend %as--no-hover;
+}
+
+
+
+

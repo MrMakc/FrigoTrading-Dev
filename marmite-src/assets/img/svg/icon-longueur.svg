@@ -1,0 +1,17 @@
+<svg id="Groupe_5882" data-name="Groupe 5882" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81.34" height="66.551" viewBox="0 0 81.34 66.551">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_6466" data-name="Rectangle 6466" width="81.34" height="66.551" fill="none"/>
+    </clipPath>
+  </defs>
+  <line id="Ligne_9" data-name="Ligne 9" x2="56.118" transform="translate(11.677 41.368)" fill="none" stroke="#378ccc" stroke-miterlimit="8" stroke-width="1.5"/>
+  <path id="Tracé_11565" data-name="Tracé 11565" d="M37.724,21.306l8.408,4.2-8.408,4.2Z" transform="translate(28.67 15.858)" fill="#378ccc" fill-rule="evenodd"/>
+  <path id="Tracé_11566" data-name="Tracé 11566" d="M11.062,29.713l-8.408-4.2,8.408-4.2Z" transform="translate(2.017 15.858)" fill="#378ccc" fill-rule="evenodd"/>
+  <g id="Groupe_5881" data-name="Groupe 5881">
+    <g id="Groupe_5880" data-name="Groupe 5880" clip-path="url(#clip-path)">
+      <line id="Ligne_10" data-name="Ligne 10" y2="50.417" transform="translate(78.998 15.471)" fill="none" stroke="#378ccc" stroke-miterlimit="8" stroke-width="2.25"/>
+      <line id="Ligne_11" data-name="Ligne 11" y2="50.417" transform="translate(1.98 16.144)" fill="none" stroke="#378ccc" stroke-miterlimit="8" stroke-width="2.25"/>
+      <text id="L" transform="translate(34.323 25.468)" fill="#378ccc" font-size="31" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    </g>
+  </g>
+</svg>

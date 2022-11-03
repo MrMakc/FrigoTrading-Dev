@@ -1,0 +1,139 @@
+/* ==========================================================================
+   IMAGES
+   ========================================================================== */
+
+/* Base
+/*========================================================================== */
+[data-pict] {
+  display:block;
+  position: relative;
+  overflow: hidden;
+  img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    .no-objectfit &{
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-height: 100%;
+      min-width: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+[data-pict*="homothetic"] {
+  img {
+    .no-objectfit &{
+      position: static;
+      width: 100%;
+      min-height: 0;
+      min-width: 0;
+      transform: translate(0, 0);
+    }
+
+  }
+}
+
+
+
+[data-pict*="left"] {
+  img {
+    object-position: 0 50%;
+    .no-objectfit &{
+      left: 0;
+      transform: translate(0, -50%);
+    }
+  }
+}
+[data-pict*="right"] {
+  img {
+    object-position: 100% 50%;
+    .no-objectfit &{
+      left: auto;
+      right: 0;
+      transform: translate(0, -50%);
+    }
+  }
+}
+[data-pict*="top"] {
+  img {
+    object-position: 50% 0;
+    .no-objectfit &{
+      top: 0;
+      transform: translate(-50%, 0);
+    }
+  }
+  &[data-pict*="left"] {
+    img {
+      object-position: 0 0;
+      .no-objectfit &{
+        transform: translate(0, 0);
+      }
+    }
+  }
+  &[data-pict*="right"] {
+    img {
+      object-position: 100% 0;
+      .no-objectfit &{
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+[data-pict*="bottom"] {
+  img {
+    object-position: 50% 100%;
+    .no-objectfit &{
+      top: auto;
+      bottom: 0;
+      transform: translate(-50%, 0);
+    }
+  }
+  &[data-pict*="left"] {
+    img {
+      object-position: 0 100%;
+      .no-objectfit &{
+        transform: translate(0, 0);
+      }
+    }
+  }
+  &[data-pict*="right"] {
+    img {
+      object-position: 100% 100%;
+      .no-objectfit &{
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+[data-pict*="bg-contain"] {
+  img {
+    object-fit:contain;
+    .no-objectfit &{
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+[data-pict*="default"] { // show real image
+  img {
+    object-fit: none;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    .no-objectfit &{
+      position: static;
+      min-width: 0;
+      min-height: 0;
+      transform: translate(0, 0);
+    }
+  }
+}
+

@@ -1,0 +1,985 @@
+<!doctype html>
+<html class="onlyMarmite" lang="fr-FR">
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">  
+  <title>Styleguide - Marmite - Agence Acti</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"><link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>  <link rel="stylesheet" href="../_styleguide/js/vendor/X-rayHTML/X-rayHTML.css">
+  <link rel="stylesheet" href="../_styleguide/js/vendor/prism/prism.css">
+  <link rel="stylesheet" href="../_styleguide/css/md-github-flavored.css">
+  <link rel="stylesheet" href="../_styleguide/css/main.css">
+      
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="../assets/img/favicons/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-title" content="Marmite">
+<meta property="app:site_data:projectJsName" content="marmite">
+<meta property="app:site_data:sLanguage" content="fr">
+<meta property="app:site_data:sDateFormat" content="dd/mm/yy">
+<meta property="app:site_data:sRootPath" content="../">
+
+
+<meta property="app:msg_data:defaultRequiredMsg" content="Ce champs est requis.">
+<meta property="app:msg_data:defaultErrorMsg" content="Ce champs n'est pas valide.">
+<meta property="app:msg_data:defaultPwdErrorMsg" content="Le mot de passe et le mot de passe de confirmation doivent correspondre.">
+</head>
+<body class="sg-body sg-nav-is-opened">  <div class="sg-topper">
+    <div class="sg-nav-trigger">
+      <span></span>
+    </div>
+    <div class="sg-topper-title">
+      Styleguide — Marmite
+      <a href="http://www.acti.fr" target="_blank"><img src="../assets/img/svg/logo.svg" alt="Marmite" class="main-logo bottom-margin" height="80"> </a>
+    </div>
+  </div>
+
+
+  <div class="sg-aside">
+    <ul class="sg-nav">
+      <li>
+        <span><a href="index.html">Introduction</a></span>
+      </li>
+      <li>
+        <span>Brand design</span>
+        <ul>
+          <li>
+            <a href="brand-design.html#sg-logo">Logo</a>
+          </li>
+          <li>
+            <a href="brand-design.html#sg-favicons">Favicons</a>
+          </li>
+          <li>
+            <a href="brand-design.html#sg-colors">Colors</a>
+          </li>
+          <li><span>Typography</span>
+            <ul>
+              <li>
+                <a href="brand-design.html#sg-fonts">Fonts</a>
+              </li>
+              <li>
+                <a href="brand-design.html#sg-headings">Headings</a>
+              </li>
+              <li>
+                <a href="brand-design.html#sg-text">Text / RichText</a>
+              </li>
+              
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>Atoms</span>
+        <ul>
+          <li>
+            <span>Buttons</span>
+            <ul>
+              <li>
+                <a href="atoms.html#sg-buttons">Buttons usage</a>
+              </li>
+              <li>
+                <a href="atoms.html#sg-buttons-plain-colored">Plain colored buttons</a>
+              </li>
+              <li>
+                <a href="atoms.html#sg-buttons-white-ghost">Plain white & ghost buttons</a>
+              </li>
+              <li>
+                <a href="atoms.html#sg-buttons-full-width">Full width buttons</a>
+              </li>
+              <li>
+                <a href="atoms.html#sg-buttons-misc">Misc buttons</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="atoms.html#sg-icons">Icons</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>Components</span>
+        <ul>
+          <li>
+            <a href="components.html#sg-banner-messages">Banner messages</a>
+          </li>
+          <li>
+            <a href="components.html#sg-breadcrumbs">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="components.html#sg-forms">Forms</a>
+          </li>
+          <li>
+            <a href="components.html#sg-images">Images</a>
+          </li>
+          <li>
+            <a href="components.html#sg-msg">Messages Block</a>
+          </li>
+          <li>
+            <a href="components.html#sg-paging">Paging</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span><a href="css-grid.html#sg-grid">Grid system</a></span>
+      </li>
+      <li>
+        <span><a href="css-helpers.html">CSS helpers</a></span>
+      </li>
+      <li>
+        <span>Pages example</span>
+        <ul>
+          <li>
+            <a href="templates.html#sg-pageList">Pages templates</a>
+          </li>
+          <li>
+            <a href="templates.html#sg-popinList">Popins templates</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
+
+
+  <div class="sg-main">
+    <div class="sg-main-inner">
+
+        <div class="sg-section h-align-center">
+    <div class="sg-h1">Components</div>
+  </div>
+
+  
+  
+
+  <div id="sg-banner-messages" class="sg-section">
+    <div class="sg-h2">Banner messages</div>
+    <div class="sg-callout sg-callout-info">
+      <div class="sg-callout-title">JS Options</div>
+      <code><pre>
+{
+  project: 'projectJsName',
+  hideJs: true, // if hideJs == true, hideClass is note needed
+  hideClass: 'hide-banner', // class to animate the hide if hideJs = false
+  hiddenClass: 'as--hidden', // class to remove when banner is hidden by default
+  caping: 0,
+  container: '.c-banner-messages',
+  availableDuration: 13,
+}
+      </pre>
+      </code>
+      <div class="sg-callout-title">
+        <br>HTML Options
+      </div>
+      <code><pre>
+{
+  banner: 'bannerName',
+  hideJs: true,
+  hideClass: 'hide-banner',
+  hiddenClass: 'as--hidden',
+  caping: 3,
+  availableDuration: 13,
+}
+        </pre>
+      </code>
+
+    </div>
+    <div class="sg-callout sg-callout-info">
+      <div class="sg-callout-title">Usage</div>
+      <div class="grid">
+        <div class="col-6_mq3-12">
+          <p><strong>If you click on the consent button <code>.js-banner-btn-accept</code> :</strong><br> - the banner close<br> - the cookie `projectJsName``bannerName` is create<br> - the the banner won't display again for 13 month
+            duration.<br> <br> <strong>If you click on the close button <code>.js-banner-btn-close</code> :</strong><br> - the banner close<br> - the sessionStorage item `projectJsName``bannerName` is create<br> - the banner won't display
+            until you close your session. </p>
+        </div>
+        <div class="col-6_mq3-12">
+          <p>
+            <strong>If you don't click on these two button and don't set <code>caping</code> option :</strong><br> - the banner will still display if you reload or change page.<br> <br> <strong>If you don't click on these two button and set
+              <code>caping</code> option (n > 0) :</strong><br> - the banner will display <strong>n</strong> times if you reload or change page.<br> - <strong>THEN</strong>, the banner won't display any more until you close your session.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-callout sg-callout-warning">
+      <p>The button <code>.sg-banner-messages-reset</code> is only used in the styleguide.<br> Never use it in your website. </p>
+    </div>
+    <div data-xrayhtml>
+      <div class="c-banner-messages banner-cookies-consent as--hidden" data-banner-options='{
+  "bannerName": "CookiesConsent"
+}'>
+  <p>En poursuivant votre navigation sans modifier vos paramètres,
+    vous acceptez l'utilisation des cookies ou technologies similaires pour disposer de services et d'offres
+    adaptés à vos centres d'intérêts ainsi que pour la sécurisation des transactions sur notre site. <a href="#_" target="_blank">En savoir plus</a></p>
+  <button type="button" class="a-button as--accept js-banner-btn-accept">J'ai compris</button>
+  <button type="button" class="a-button as--close js-banner-btn-close" aria-label="Fermer">&times;</button>
+</div>
+    </div>
+    <div data-xrayhtml>
+      <div class="c-banner-messages as--hidden" data-banner-options='{
+  "bannerName": "Message01",
+  "caping": 3
+}'>
+  <h2 class="main-title-2">/!\ Information /!\</h2>
+  <p>Ceci est un message d'information qui disparaitra au bout de 3 chargement de page</p>
+  <a href="#_" class="a-button">en savoir plus</a>
+  <button type="button" class="a-button as--close js-banner-btn-accept" aria-label="Fermer">&times;</button>
+</div>
+    </div>
+    <p class="as--hidden">Delete Cookies Messages to show the .c-banner-messages ->
+      <button type="button" class="sg-banner-messages-reset">Delete Cookies Messages</button>
+    </p>
+  </div>
+  
+
+  <div id="sg-breadcrumbs" class="sg-section">
+    <div class="sg-h2">Breadcrumbs</div>
+
+
+    <div class="xrayhtml">
+      <div class="snippet">
+        
+          
+          <ol class="c-breadcrumb" aria-label="breadcrumb" role="navigation" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#_" aria-level="1">
+                <span itemprop="name">Accueil</span>
+              </a>
+              <meta itemprop="position" content="1"/>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#_" aria-level="2">
+                <span itemprop="name">Rubrique</span>
+              </a>
+              <meta itemprop="position" content="2"/>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#_" aria-level="3">
+                <span itemprop="name">Sous rubrique</span>
+              </a>
+              <meta itemprop="position" content="3"/>
+            </li>
+          </ol>
+        
+      </div>
+
+      <div class="source-panel">
+                <pre>
+                    <code class="language-markup">
+
+          
+          &lt;ol class="c-breadcrumb" aria-label="breadcrumb" role="navigation" itemscope itemtype="http://schema.org/BreadcrumbList">
+            &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              &lt;a itemprop="item" href="#_" aria-level="1">
+                &lt;span itemprop="name">Accueil&lt;/span>
+              &lt;/a>
+              &lt;meta itemprop="position" content="1"/>
+            &lt;/li>
+            &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              &lt;a itemprop="item" href="#_" aria-level="2">
+                &lt;span itemprop="name">Rubrique&lt;/span>
+              &lt;/a>
+              &lt;meta itemprop="position" content="2"/>
+            &lt;/li>
+            &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              &lt;a itemprop="item" href="#_" aria-level="3">
+                &lt;span itemprop="name">Sous rubrique&lt;/span>
+              &lt;/a>
+              &lt;meta itemprop="position" content="3"/>
+            &lt;/li>
+          &lt;/ol>
+        
+                    </code>
+                </pre>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="sg-forms" class="sg-section">
+
+    <div class="switch">
+      <input id="sgAddValidationForm" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" autocomplete="off"> <label for="sgAddValidationForm">
+        <span>Validation</span>
+      </label>
+    </div>
+    <div class="sg-h2">Forms</div>
+    <div class="sg-callout sg-callout-info">
+      <div class="sg-callout-title">Structure</div>
+      <pre><code>&lt;input
+          type="text"
+          required
+          id="reg-lastname"
+          pattern="[a-zA-Zçàéèëìîïòõôûùñ '-]+"
+          title="Lettres uniquement"
+          aria-labelledby="reg-lastname-label"
+          data-msg-required="Le champs Nom est requis"
+          data-msg-error="Le champs Nom ne doit contenir que des lettres."></code></pre>
+      <div class="sg-callout-title">HTML5 Validation</div>
+      <div class="sg-callout-title">Autocomplete</div>
+      <ul>
+        <li>
+          Name (Full name) <br>
+          => autocomplete="name" autocorrect="off"</li>
+        <li>Honorific Prefix (Mr., Ms., Dr., etc.) <br>
+          => autocomplete="honorific-prefix" autocapitalize="on"</li>
+        <li>Additional Name <br>
+          => autocomplete="additionalname" autocorrect="off"</li>
+        <li>Email <br>
+          => autocomplete="email" autocapitalize="off" autocorrect="off"</li>
+        <li>Organization <br>
+          => autocomplete="organization" autocapitalize="on"</li>
+        <li>Street Address <br>
+          => autocomplete="street-address" autocorrect="off"</li>
+        <li>Address Line 1 <br>
+          => autocomplete="address-line1" autocorrect="off"</li>
+        <li>Country <br>
+          => autocomplete="country"</li>
+        <li>Postal Code <br>
+          => novalidate autocomplete="postal-code" autocorrect="off" type="number"</li>
+        <li>URL <br>
+          => autocomplete="url" autocapitalize="off" autocorrect="off" type="url"</li>
+      </ul>
+    </div>
+
+    <form action="#" id="formSG">
+      <fieldset role="region" aria-labelledby="profile_information" class="form-group">
+        <legend id="profile_information" role="heading" aria-level="3">Fieldset title</legend>
+
+        <div data-xrayhtml>
+              <div class="form-field">
+    <label for="input_name-1">Text input (simple, not required)</label>
+    <div class="input-wrapper">
+      <input
+        name="name-1"
+        type="text"
+        id="input_name-1"
+        value="my value"
+         placeholder="Text du placeholder">
+          </div>
+      </div>
+
+        </div>
+        <div data-xrayhtml>
+              <div class="form-field as--invalid">
+    <label for="input_name-1">Text input (simple, required)<sup>*</sup></label>
+    <div class="input-wrapper">
+      <input
+        name="name-1"
+        type="text"
+        id="input_name-1"
+        value="my value"
+         placeholder="Text du placeholder" required="true" data-msg-required="Ce champs requis" data-msg-error="Ce champs n'est pas valide.">
+          </div>
+          <div class="form-msg-error" id="input_name-1-error">
+        Ce champs n'est pas valide.
+      </div>
+      </div>
+
+        </div>
+        <div data-xrayhtml>
+              <div class="form-field">
+    <label for="input_user-email">Email input (required)<sup>*</sup></label>
+    <div class="input-wrapper">
+      <input
+        name="user-email"
+        type="email"
+        id="input_user-email"
+        value=""
+         placeholder="name@example.com" autocapitalize="off" autocorrect="off" required="true">
+          </div>
+      </div>
+
+        </div>
+        <div data-xrayhtml>
+              <div class="form-field">
+    <label for="input_user-tel">Tel input (with required pattern)<sup>*</sup></label>
+    <div class="input-wrapper">
+      <input
+        name="user-tel"
+        type="tel"
+        id="input_user-tel"
+        value=""
+         placeholder="0123456789" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required="true">
+          </div>
+      </div>
+
+          <small>See <a href="http://html5pattern.com" target="_blank">html5pattern.com</a> for more patterns</small>
+        </div>
+
+        <div class="form-field as--btn-clear as--not-empty">
+          <label for="input-clear">Text input with clear button</label>
+          <div class="input-wrapper">
+            <input id="input-clear" name="input-clear" type="text" value="value to clear">
+            <span class="btn-clear" data-js-clear-field>&times;</span>
+          </div>
+        </div>
+
+
+            <div class="form-field as--icon">
+    <label for="input_icon">Text input with icon</label>
+    <div class="input-wrapper">
+      <input
+        name="icon"
+        type="text"
+        id="input_icon"
+        value=""
+         icon="twitter" icon-size="20" icon-class="as--primary">
+                <svg class="a-icon as--20 as--primary" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-twitter"></use>
+  </svg>
+
+          </div>
+      </div>
+
+
+            <div class="form-field">
+    <label for="input_list">Text input with datalist</label>
+    <div class="input-wrapper">
+      <input
+        name="list"
+        type="text"
+        id="input_list"
+        value=""
+         list="datalist_example" placeholder="type 'v'">
+          </div>
+      </div>
+
+        <datalist id="datalist_example" class="as--hidden">
+          <option value="value #1">Data list value #1</option>
+          <option value="value #2">Data list value #2</option>
+          <option value="value #3">Data list value #3</option>
+          <option value="value #4">Data list value #4</option>
+        </datalist>
+
+        <div class="form-field as--btn-password as--icon">
+          <label for="input-password">Password</label>
+          <div class="input-wrapper">
+            <input id="input-password" name="input-password" type="password" value="myPassword" aria-describedby="helper_password" autocapitalize="off" autocorrect="off">
+            <span id="helper_password" class="input-helper">Must be a string of 6 digits</span>
+            <button type="button" class="a-button btn-password btn-password-show" title="Afficher le mot de passe">
+              <svg class="a-icon as--20" aria-hidden="true" focusable="false">
+                <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-eye"></use>
+              </svg>
+            </button>
+            <button type="button" class="a-button btn-password btn-password-hide" title="Masquer le mot de passe">
+              <svg class="a-icon as--20" aria-hidden="true" focusable="false">
+                <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-eye-closed"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+
+      </fieldset>
+
+      <div class="form-submit h-align-center">
+            <button type="submit" class="a-button as--primary">
+    Valider  </button>
+
+      </div>
+
+      <p class="form-help">*champs obligatoires</p>
+
+        <div class="form-field as--invalid">
+    <label for="input_select-1">Liste déroulante<sup>*</sup></label>
+
+    <select id="input_select-1" name="select-1"  data-msg-error="Error" required="true">
+                    <option value="option-1">option 1</option>
+              <option value="option-2" selected="selected">option 2</option>
+              <option value="option-3">option 3</option>
+              <option value="option-4">option 4</option>
+          </select>
+    
+    </div>
+  </div>
+
+    </form>
+
+    
+
+
+
+    <div class="xrayhtml">
+      <div class="snippet">
+                  <div class="grid">
+            <div class="col-6">
+              <div class="form-field">
+                <label for="input-select-1">Select default with "fake" placeholder</label>
+                <div class="select-wrapper">
+                  <select id="input-select-1" name="input-select-1">
+                    <option value="" disabled selected hidden>Select your option</option> 
+                    <option value="0">Évènement zéro</option>
+                    <option value="1">Évènement un</option>
+                    <option value="2">Évènement deux</option>
+                    <option value="3">Évènement trois</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-6" style="background:#ccc">
+              <div class="form-field">
+                <label for="input-select-2">Select white no bg no border</label>
+                <div class="select-wrapper h-color-white h-no-border h-no-bg">
+                  <select id="input-select-2" name="input-select-2">
+                    <option value="" disabled selected hidden>Select your option</option>
+                    <option value="0">Évènement zéro</option>
+                    <option value="1">Évènement un</option>
+                    <option value="2">Évènement deux</option>
+                    <option value="3">Évènement trois</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-field">
+                <label for="input-select-3">Select color-primary</label>
+                <div class="select-wrapper h-color-primary">
+                  <select id="input-select-3" name="input-select-3">
+                    <option value="1">Évènement un</option>
+                    <option value="2">Évènement deux</option>
+                    <option value="3">Évènement trois</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-field">
+                <label for="input-select-4">Select color-secondary</label>
+                <div class="select-wrapper h-color-secondary">
+                  <select id="input-select-4" name="input-select-4">
+                    <option value="1">Évènement un</option>
+                    <option value="2">Évènement deux</option>
+                    <option value="3">Évènement trois</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+
+      <div class="source-panel">
+                <pre>
+                    <code class="language-markup">
+          &lt;div class="grid">
+            &lt;div class="col-6">
+              &lt;div class="form-field">
+                &lt;label for="input-select-1">Select default with "fake" placeholder&lt;/label>
+                &lt;div class="select-wrapper">
+                  &lt;select id="input-select-1" name="input-select-1">
+                    &lt;option value="" disabled selected hidden>Select your option&lt;/option> 
+                    &lt;option value="0">Évènement zéro&lt;/option>
+                    &lt;option value="1">Évènement un&lt;/option>
+                    &lt;option value="2">Évènement deux&lt;/option>
+                    &lt;option value="3">Évènement trois&lt;/option>
+                  &lt;/select>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="col-6" style="background:#ccc">
+              &lt;div class="form-field">
+                &lt;label for="input-select-2">Select white no bg no border&lt;/label>
+                &lt;div class="select-wrapper h-color-white h-no-border h-no-bg">
+                  &lt;select id="input-select-2" name="input-select-2">
+                    &lt;option value="" disabled selected hidden>Select your option&lt;/option>
+                    &lt;option value="0">Évènement zéro&lt;/option>
+                    &lt;option value="1">Évènement un&lt;/option>
+                    &lt;option value="2">Évènement deux&lt;/option>
+                    &lt;option value="3">Évènement trois&lt;/option>
+                  &lt;/select>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="col-6">
+              &lt;div class="form-field">
+                &lt;label for="input-select-3">Select color-primary&lt;/label>
+                &lt;div class="select-wrapper h-color-primary">
+                  &lt;select id="input-select-3" name="input-select-3">
+                    &lt;option value="1">Évènement un&lt;/option>
+                    &lt;option value="2">Évènement deux&lt;/option>
+                    &lt;option value="3">Évènement trois&lt;/option>
+                  &lt;/select>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="col-6">
+              &lt;div class="form-field">
+                &lt;label for="input-select-4">Select color-secondary&lt;/label>
+                &lt;div class="select-wrapper h-color-secondary">
+                  &lt;select id="input-select-4" name="input-select-4">
+                    &lt;option value="1">Évènement un&lt;/option>
+                    &lt;option value="2">Évènement deux&lt;/option>
+                    &lt;option value="3">Évènement trois&lt;/option>
+                  &lt;/select>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        
+                    </code>
+                </pre>
+      </div>
+    </div>
+
+    <div data-xrayhtml>
+      <div class="form-field">
+        <label>Checkbox group</label>
+        <fieldset class="input-wrapper">
+          <!-- input before label -->
+          <div class="input-checkbox">
+            <input type="checkbox" id="defaultCheckbox1"> <label for="defaultCheckbox1">Check me out 1</label>
+          </div>
+          <!-- input in label -->
+          <label class="input-checkbox"> <input type="checkbox">
+            <span>Check me out 2</span>
+          </label>
+          <!-- input in label -->
+          <label class="input-checkbox"> <input type="checkbox" disabled>
+            <span>Check me out disabled</span>
+          </label>
+        </fieldset>
+      </div>
+      <div class="form-field">
+        <label>Radio group</label>
+        <fieldset class="input-wrapper">
+          <!-- input before label -->
+          <div class="input-radio">
+            <input type="radio" name="defaultradio" id="defaultradio1" checked> <label for="defaultradio1">Radio 1</label>
+          </div>
+          <!-- input in label -->
+          <label class="input-radio"> <input type="radio" name="defaultradio">
+            <span>Radio 2</span>
+          </label>
+          <!-- input in label -->
+          <label class="input-radio"> <input type="radio" name="defaultradio2" disabled>
+            <span>Radio disabled</span>
+          </label>
+        </fieldset>
+      </div>
+      <div class="form-field">
+        <label>Checkbox a-button group</label>
+        <fieldset class="input-wrapper input-btn-check-group">
+          <!-- input before label -->
+          <div class="input-btn-check">
+            <input type="checkbox" id="btnCheckbox1"> <label for="btnCheckbox1">Check me out 1</label>
+          </div>
+          <!-- input in label -->
+          <label class="input-btn-check"> <input type="checkbox">
+            <span>Check me out 2</span>
+          </label>
+          <!-- input in label -->
+          <label class="input-btn-check"> <input type="checkbox" checked>
+            <span>Check me out 3</span>
+          </label>
+          <!-- input in label -->
+          <label class="input-btn-check"> <input type="checkbox" disabled>
+            <span>Check me out disabled</span>
+          </label>
+        </fieldset>
+      </div>
+    </div>
+
+  </div>
+  
+
+  <div id="sg-images" class="sg-section">
+    <div class="sg-h2">Images</div>
+    <div class="sg-callout sg-callout-warning">
+      <div class="sg-callout-title">Images Size</div>
+      <p>Different image size for all template</p><br>
+      <div class="sg-callout-title">Available image size</div>
+      <ul>
+                  <li><code>exemple</code> (500x500)</li>
+              </ul>
+    </div>
+    <div class="sg-callout sg-callout-info">
+      <div class="sg-callout-title">Images are in bg cover</div>
+      <p>You have to set the <code>figure[data-pict]</code> dimensions in css and the image will always be covered.</p>
+      <p>The <code>img</code> is crop with the css property object-fit</p><br>
+      <div class="sg-callout-title">Options</div>
+      <ul>
+        <li><code>[data-pict="top"]</code> (force align top)</li>
+        <li><code>[data-pict="bottom"]</code> (force align bottom)</li>
+        <li><code>[data-pict="left"]</code> (force align left)</li>
+        <li><code>[data-pict="right"]</code> (force align right)</li>
+        <li><code>[data-pict="bg-contain"]</code> (force bg size contain)</li>
+        <li><code>[data-pict="default"]</code> (restore image default size)</li>
+      </ul>
+    </div>
+    <div class="sg-callout">
+      <div class="sg-callout-title">Usefull : Images generator</div>
+      <ul>
+        <li>
+          <a href="https://unsplash.it/" target="_blank">https://unsplash.it/</a>
+        </li>
+        <li>
+          <a href="http://placehold.it/" target="_blank">http://placehold.it/</a>
+        </li>
+        <li>...</li>
+      </ul>
+    </div>
+    <style>
+      .sg-pict-exemple-0 figure {
+        width: 400px;
+      }
+
+      .sg-pict-exemple-1 figure {
+        width: 300px;
+        height: 200px;
+      }
+
+      .sg-pict-exemple-2 figure {
+        width: 200px;
+        height: 400px;
+      }
+
+      .sg-pict-exemple-3 figure {
+        width: 150px;
+        height: 150px;
+      }
+
+      .sg-pict-exemple-4 figure {
+        width: 300px;
+        height: 200px;
+      }
+
+      .sg-pict-exemple-5 figure {
+        width: 200px;
+        height: 400px;
+      }
+
+      .sg-pict-exemple-6 figure {
+        width: 200px;
+        height: 400px;
+      }
+
+      .sg-pict-exemple-7 figure {
+        width: 300px;
+        height: 200px;
+        border: solid 1px #ccc;
+      }
+
+      .sg-pict-exemple-8 figure {
+      }
+
+      .sg-pict-exemple-9 figure,
+      .sg-pict-exemple-10 picture {
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .sg-pict-exemple-9 figure,
+        .sg-pict-exemple-10 picture {
+          width: 500px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .sg-pict-exemple-9 figure,
+        .sg-pict-exemple-10 picture {
+          width: 300px;
+        }
+      }
+
+    </style>
+    <div class="grid">
+      <div class="col-4 sg-pict-exemple-0" data-push-right="off-8">
+        <div class="sg-h3">Container : 400x? & [data-pict="homothetic"] <br> If no height, picture will be homothetic</div>
+        <div data-xrayhtml>
+                    <figure data-pict="homothetic">
+            <img src="../assets/img/upload/__exemple.jpg" width="500" height="500" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-1">
+        <div class="sg-h3">Container : 300x200</div>
+        <div data-xrayhtml>
+                    <figure data-pict="pict">
+            <img src="../assets/img/upload/__exemple.jpg" width="" height="" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-2">
+        <div class="sg-h3">Container : 200x400</div>
+        <div data-xrayhtml>
+                    <figure data-pict="pict">
+            <img src="../assets/img/upload/__exemple.jpg" width="500" height="500" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-3">
+        <div class="sg-h3">Container : 150x150</div>
+        <div data-xrayhtml>
+                    <figure data-pict="pict">
+            <img src="../assets/img/upload/__exemple.jpg" width="500" height="500" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-4">
+        <div class="sg-h3">Container : 300x200 & [data-pict="top"]</div>
+        <div data-xrayhtml>
+                    <figure data-pict="pict top">
+            <img src="../assets/img/upload/__exemple.jpg" width="500" height="500" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-5">
+        <div class="sg-h3">Container : 200x400 & [data-pict="left"]</div>
+        <div data-xrayhtml>
+                    <figure data-pict="pict left">
+            <img src="../assets/img/upload/__exemple.jpg" width="500" height="500" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-6">
+        <div class="sg-h3">Container : 200x400 & [data-pict="bottom right"]</div>
+        <div data-xrayhtml>
+                    <figure data-pict="pict bottom right">
+            <img src="../assets/img/upload/__exemple.jpg" width="500" height="500" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+
+      <div class="col-6 sg-pict-exemple-7">
+        <div class="sg-h3">Container : 300x200 & [data-pict="bg-contain"]</div>
+        <div data-xrayhtml>
+                    <figure data-pict="pict bg-contain">
+            <img src="../assets/img/upload/__exemple.jpg" width="500" height="500" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-6 sg-pict-exemple-8">
+
+        <div class="sg-h3">Restore real size<br> Container : no dimension & [data-pict="default"]</div>
+        <div data-xrayhtml>
+                    <figure data-pict="pict default">
+            <img src="../assets/img/upload/__exemple.jpg" width="500" height="500" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      
+      
+
+      <div class="col-12 sg-pict-exemple-10">
+        <div class="sg-h3">responsive images art direction (picture)</div>
+        <div data-xrayhtml>
+                                                                      <picture data-pict="homothetic">
+            <source media="(max-width: 600px) " srcset="../assets/img/upload/__exemple-small.jpg">
+            <source media="(min-width: 1201px)" srcset="../assets/img/upload/__exemple-big.jpg">
+            <img src="../assets/img/upload/__exemple-2.jpg" width="500" height="500" alt="Image name" title="Image name">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="sg-msg" class="sg-section">
+    <div class="sg-h2">Messages Block</div>
+    <div data-xrayhtml>
+      <div class="c-msg-block">
+        <strong class="title">Simple message</strong>
+        <p>Dolor sit amet, consectetur adipisicing elit. Et, nulla!</p>
+        <ul>
+          <li>consectetur adipisicing elit</li>
+          <li>Et, nulla</li>
+        </ul>
+      </div>
+      <div class="c-msg-block msg-info">
+        <strong class="title">Info message</strong>
+        <p>Dolor sit amet, consectetur adipisicing elit. Et, nulla!</p>
+      </div>
+      <div class="c-msg-block msg-success">
+        <strong class="title">Confirm message</strong>
+        <p>Dolor sit amet, consectetur adipisicing elit. Et, nulla!</p>
+      </div>
+      <div class="c-msg-block msg-error">
+        <strong class="title">Error message</strong>
+        <p>il y a less erreurs suivantes :</p>
+        <ul>
+          <li>Prénom : champs obligatoire</li>
+          <li>Email : mauvais format d'email</li>
+          <li>...</li>
+        </ul>
+      </div>
+      <div class="c-msg-block msg-warning">
+        <strong class="title">Warning message !</strong>
+        <p>Dolor sit amet, consectetur adipisicing elit. Et, nulla!</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="sg-paging" class="sg-section">
+    <div class="sg-h2">Paging</div>
+    <div data-xrayhtml>
+      <nav class="h-align-center">
+        <ul class="c-pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo; précédent</span>
+            </a>
+          </li>
+          <li>
+            <a href="#_">1</a>
+          </li>
+          <li class="dots">
+            <a>...</a>
+          </li>
+          <li>
+            <a href="#_">4</a>
+          </li>
+          <li class="as--active">
+            <a href="#_">5</a>
+          </li>
+          <li>
+            <a href="#_">6</a>
+          </li>
+          <li class="dots">
+            <a>...</a>
+          </li>
+          <li>
+            <a href="#_">10</a>
+          </li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">suivant &raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+
+    </div>
+    
+  </div>
+  
+<script src="../assets/js/libs/modernizr.min.js"></script>
+<script src="../assets/js/libs/jquery.min.js"></script>
+<script src="../assets/js/vendors.js"></script>
+<script src="../assets/js/scripts-front.js"></script>
+<script>console.warn('Marmite is powered by acti with ♥ !');</script>
+  <script src="../_styleguide/js/vendor/X-rayHTML/X-rayHTML.custom.js"></script>
+  <script src="../_styleguide/js/vendor/prism/prism.js"></script>
+  <script src="../_styleguide/js/vendor/showdown/showdown.js"></script>
+  <script src="../_styleguide/js/main.js"></script>
+ 
+</body>
+</html>

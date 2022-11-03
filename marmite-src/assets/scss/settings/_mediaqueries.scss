@@ -1,0 +1,65 @@
+/*
+Media queries limites based on :
+https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+ */
+$mq-1px: .0625;  /* --- 1px --- */
+
+$mq-1: 25em;  /* --- 400px --- */
+/* < Small phones < */
+$mq-2: 32em;  /* --- 512px --- */
+/* < Large phones < */
+$mq-3: 38em;  /* --- 608px --- */
+$mq-4: 56em;  /* --- 896px --- */
+/* < Tablets portrait < */
+$mq-5: 75em;  /* --- 1200px --- */
+/* < Tablets landscape < */
+$mq-6: 88em;  /* --- 1408px --- */
+/* < Small desktop < */
+$mq-7: 112em; /* --- 1792px --- */
+/* < Large desktop */
+
+$gl-mq-list: (
+  mq7: #{$mq-7},
+  mq6: #{$mq-6},
+  mq5: #{$mq-5},
+  mq4: #{$mq-4},
+  mq3: #{$mq-3},
+  mq2: #{$mq-2},
+  mq1: #{$mq-1},
+);
+
+@media only screen {
+  html {
+    text-size-adjust: none;
+  }
+}
+
+@media only screen and (max-width: $mq-7) {
+}
+@media only screen and (max-width: $mq-6) {
+}
+@media only screen and (max-width: $mq-5) {
+}
+@media only screen and (max-width: $mq-4) {
+}
+@media only screen and (max-width: $mq-3) {
+}
+@media only screen and (max-width: $mq-2) {
+}
+@media only screen and (max-width: $mq-1) {
+}
+
+@media only screen and (min-width: ($mq-7 + $mq-1px)) {
+}
+@media only screen and (min-width: ($mq-6 + $mq-1px)) {
+}
+@media only screen and (min-width: ($mq-5 + $mq-1px)) {
+}
+@media only screen and (min-width: ($mq-4 + $mq-1px)) {
+}
+@media only screen and (min-width: ($mq-3 + $mq-1px)) {
+}
+@media only screen and (min-width: ($mq-2 + $mq-1px)) {
+}
+@media only screen and (min-width: ($mq-1 + $mq-1px)) {
+}

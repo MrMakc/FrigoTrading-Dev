@@ -1,0 +1,322 @@
+{% extends '../layout/styleguide.twig' %}
+
+{% block sgContent %}
+  <div class="sg-section h-align-center">
+    <div class="sg-h1">Styles</div>
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-logo" class="sg-section">
+    <div class="sg-h2">Logo</div>
+    <div class="sg-callout sg-callout-info">
+      <p>You can use logo in one color logo in icon or png/svg img original color </p>
+
+      <div class="sg-callout-title">Include logo icon exemple code</div>
+
+      <div class="grid">
+        <div class="col" style="padding: 20px; text-align: center;">
+          <img src="../assets/img/svg/logo.svg" alt="{{ projectRealName }}" width="200">
+        </div>
+        <div class="col" style="padding: 20px; text-align: center;">
+          <img src="../assets/img/common/logo/logo.png" alt="{{ projectRealName }}" width="147">
+        </div>
+      </div>
+    </div>
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-favicons" class="sg-section">
+    <div class="sg-h2">Favicons</div>
+    <div class="sg-callout sg-callout-info">
+      <p>Generate with
+        <a href="http://realfavicongenerator.net/">http://realfavicongenerator.net/</a>
+      </p>
+    </div>
+    <div class="sg-callout sg-callout-warning">
+      <ul>
+        <li>Once you have generate your favicons with <strong>Real FaviconGenerator</strong> remove all files in <code>web/../assets/img/favicons</code></li>
+        <li>Replace it by your good favicons</li>
+        <li>Replace the code of <code>src/templates/inc/head/favicons.html.twig</code> by the new code</li>
+      </ul>
+    </div>
+
+
+    <div class="snippet">
+      <img src="../assets/img/favicons/favicon-16x16.png"> ... <img src="../assets/img/favicons/favicon-32x32.png"> ... <img src="../assets/img/favicons/apple-touch-icon.png"> ...
+    </div>
+
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-colors" class="sg-section">
+    <div class="sg-h2">Colors</div>
+
+    <div class="sg-h3">Main colors</div>
+    {% set aColors = {
+      "primary" : {hex:"#1c74b6"},
+      "secondary" : {hex:"#1cb69e", br: true},
+      "black" : {hex:"#000"},
+      "grey-1" : {hex:"#333"},
+      "grey-2" : {hex:"#666"},
+      "grey-3" : {hex:"#999"},
+      "grey-4" : {hex:"#ccc"},
+      "white" : {hex:"#fff"},
+    } %}
+    {% for key,color in aColors %}
+      <div class="sg-color">
+        <span style="background-color: {{ color.hex }}"></span>
+        <span><strong>{{ color.hex }}</strong><br>$color-{{ key }}</span>
+      </div>
+      {% if color.br is defined %}<br>{% endif -%}
+    {% endfor %}
+
+    <div class="sg-h3">Text</div>
+
+    {% set aColorsText = {
+      "text-0" : {hex:"#000"},
+      "text-1" : {hex:"#2b2b2b"},
+      "text-2" : {hex:"#616060"},
+      "text-3" : {hex:"#b1b2b4"},
+    } %}
+    {% for key,color in aColorsText %}
+      <div class="sg-color">
+        <span style="background-color: {{ color.hex }}"></span>
+        <span><strong>{{ color.hex }}</strong><br>$color-{{ key }}</span>
+      </div>
+      {% if color.br is defined %}<br>{% endif -%}
+    {% endfor %}
+
+    <div class="sg-h3">BG & Borders</div>
+
+    {% set aColorsText = {
+      "bg-1" : {hex:"#2b2b2b"},
+      "border-1" : {hex:"#dedede"},
+    } %}
+    {% for key,color in aColorsText %}
+      <div class="sg-color">
+        <span style="background-color: {{ color.hex }}"></span>
+        <span><strong>{{ color.hex }}</strong><br>$color-{{ key }}</span>
+      </div>
+      {% if color.br is defined %}<br>{% endif -%}
+    {% endfor %}
+
+    <div class="sg-h3">Info / Success / Error / Warning</div>
+    {% set aColorsText = {
+      "info-1" : {hex:"#5aaafa"},
+      "success-1" : {hex:"#5aa700"},
+      "error-1" : {hex:"#e0182d"},
+      "warning-1" : {hex:"#efc100"},
+    } %}
+    {% for key,color in aColorsText %}
+      <div class="sg-color">
+        <span style="background-color: {{ color.hex }}"></span>
+        <span><strong>{{ color.hex }}</strong><br>$color-{{ key }}</span>
+      </div>
+      {% if color.br is defined %}<br>{% endif -%}
+    {% endfor %}
+
+    <br><br>
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-fonts" class="sg-section">
+    <div class="sg-h2">Fonts</div>
+
+    <div class="sg-h3">Oswald</div>
+    <div>
+      <div class="sg-font" style="font-family: 'Oswald', sans-serif;">
+        <div class="sg-font-title">Oswald 400
+          <span>@font-oswald</span>
+        </div>
+        <div>
+          abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br> ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br> 1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+        </div>
+      </div>
+
+      <div class="sg-font" style="font-family:'Oswald', sans-serif; font-weight:700;">
+        <div class="sg-font-title">Oswald 700
+          <span>@font-oswald</span>
+        </div>
+        <div>
+          abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br> ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br> 1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-callout sg-callout-warning">
+      <div class="sg-callout-title">Do not use italic/light/bold property for a font if this property has'nt been loaded</div>
+    </div>
+
+    <div class="sg-h3">Arial</div>
+    <div>
+      <div class="sg-font" style="font-family: Arial, sans-serif;">
+        <div class="sg-font-title">Arial 400
+          <span>@font-arial</span>
+        </div>
+        <div>
+          abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br> ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br> 1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+        </div>
+      </div>
+
+      <div class="sg-font" style="font-family: Arial, sans-serif; font-style: italic;">
+        <div class="sg-font-title">Arial 400 italic
+          <span>@font-arial</span>
+        </div>
+        <div>
+          abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br> ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br> 1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+        </div>
+      </div>
+
+      <div class="sg-font" style="font-family: Arial, sans-serif; font-weight:700;">
+        <div class="sg-font-title">Arial 700
+          <span>@font-arial</span>
+        </div>
+        <div>
+          abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br> ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br> 1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+        </div>
+      </div>
+
+      <div class="sg-font" style="font-family: Arial, sans-serif; font-weight:700; font-style: italic;">
+        <div class="sg-font-title">Arial 700 italic
+          <span>@font-arial</span>
+        </div>
+        <div>
+          abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br> ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br> 1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+        </div>
+      </div>
+    </div>
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-headings" class="sg-section">
+    <div class="sg-h2">Headings</div>
+    <div class="sg-callout sg-callout-info">
+      <div class="sg-callout-title">Options</div>
+      <div class="grid">
+        <div class="col-6">
+          <strong>Title type</strong><br><br>
+          <ul>
+            <li><code>.a-title-1</code></li>
+            <li><code>.a-title-2</code></li>
+            <li><code>.a-title-3</code></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-6">
+        <div data-xrayhtml>
+          <div class="main-title-1">Main Title 1</div>
+          <div class="main-title-2">Main Title 2</div>
+          <div class="main-title-3">Main Title 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-text" class="sg-section">
+    <div class="sg-h2">Text</div>
+    <div data-xrayhtml>
+      <p>Lorem ipsum dolor sit amet, <strong>strong text</strong> adipisicing elit.
+        <a href="#_">Linked text</a>
+        ratione eum nihil quos earum laudantium, eaque ullam omnis ut odio vero illum vel atque nisi iste tempora. Eius excepturi iste repellat, placeat esse aspernatur obcaecati voluptatem dolorum sapiente doloremque magnam.
+      </p>
+
+      <p>Deleniti sapiente blanditiis ipsa quod architecto aliquam asperiores eveniet fugit harum perspiciatis omnis voluptas nam et error itaque impedit, ratione iste accusamus unde, reiciendis quia fuga consequuntur exercitationem dolorem
+        voluptatum. Voluptatibus qui voluptate fuga neque illo debitis corporis cumque. Exercitationem similique, quas obcaecati minima, animi, tenetur ad, quibusdam voluptatum quasi deserunt dolor officia beatae totam odio non? Quam cumque
+        laborum, atque.</p>
+    </div>
+    <div class="sg-h2">Rich Text</div>
+    <div class="sg-callout sg-callout-info">
+      <p>Default styles (margin + list style) are restore in <code>.editor-wysiwyg</code></p>
+    </div>
+    <div data-xrayhtml>
+      <div class="editor-wysiwyg">
+        <h2>Rich text H2 title</h2>
+        <h3>Rich text H3 title</h3>
+        <p>Lorem ipsum dolor sit amet, <strong>strong text</strong> adipisicing , <em>italic text</em>.</p>
+        <p>
+          <a href="#_">Linked text</a>
+          ducimus, ea eum magni maiores natus obcaecati perferendis placeat quo ratione tempore! Aliquid atque culpa illo ipsum, minus perferendis quam qui ratione sequi suscipit vel veritatis voluptates? Atque eaque fugit laudantium,
+          maiores odit tempora tenetur vitae! Mollitia necessitatibus quisquam voluptate!
+        </p>
+        <ul>
+          <li>Lorem</li>
+          <li>ipsum</li>
+          <li>dolor</li>
+          <li>sit</li>
+          <li>amet.</li>
+        </ul>
+        <ol>
+          <li>Lorem</li>
+          <li>ipsum</li>
+          <li>dolor</li>
+          <li>sit</li>
+          <li>amet.</li>
+        </ol>
+        <p>Accusantium dignissimos ducimus, ea eum magni maiores natus obcaecati perferendis placeat quo ratione tempore! Aliquid atque culpa illo ipsum, minus perferendis quam qui ratione sequi suscipit vel veritatis voluptates? Atque
+          eaque fugit laudantium, maiores odit tempora tenetur vitae! Mollitia necessitatibus quisquam voluptate!</p>
+
+        <figure class="wp-caption alignnone">{#  aligments : .alignnone / .alignleft / .alignright / .aligncenter | optionel : .h-hide-s-max  #}
+          <img src="http://placehold.it/300x200" alt="" title="">
+        </figure>
+        <p>Accusantium dignissimos ducimus, ea eum magni maiores natus obcaecati perferendis placeat quo ratione tempore! Aliquid atque culpa illo ipsum, minus perferendis quam qui ratione sequi suscipit vel veritatis voluptates? Atque
+          eaque fugit laudantium, maiores odit tempora tenetur vitae! Mollitia necessitatibus quisquam voluptate!</p>
+
+        <figure class="wp-caption alignleft">{#  aligments : .alignnone / .alignleft / .alignright / .aligncenter | optionel : .h-hide-s-max  #}
+          <img src="http://placehold.it/300x200" alt="" title="">
+        </figure>
+        <p>Accusantium dignissimos ducimus, ea eum magni maiores natus obcaecati perferendis placeat quo ratione tempore! Aliquid atque culpa illo ipsum, minus perferendis quam qui ratione sequi suscipit vel veritatis voluptates? Atque
+          eaque fugit laudantium, maiores odit tempora tenetur vitae! Mollitia necessitatibus quisquam voluptate!</p>
+        <hr class="clearfix">{# have to be visibble in the wysiwyg (BO) #}
+
+        <figure class="wp-caption alignright h-hide-s-max">{#  aligments : .alignnone / .alignleft / .alignright / .aligncenter | optionel : .h-hide-s-max  #}
+          <img src="http://placehold.it/300x200" alt="" title="">
+        </figure>
+        <p>Accusantium dignissimos ducimus, ea eum magni maiores natus obcaecati perferendis placeat quo ratione tempore! Aliquid atque culpa illo ipsum, minus perferendis quam qui ratione sequi suscipit vel veritatis voluptates? Atque
+          eaque fugit laudantium, maiores odit tempora tenetur vitae! Mollitia necessitatibus quisquam voluptate!</p>
+        <hr class="clearfix">{# have to be visibble in the wysiwyg (BO) #}
+
+        <figure class="wp-caption aligncenter">{#  aligments : .alignnone / .alignleft / .alignright / .aligncenter | optionel : .h-hide-s-max  #}
+          <img src="http://placehold.it/300x200" alt="" title="">
+        </figure>
+        <p>Accusantium dignissimos ducimus, ea eum magni maiores natus obcaecati perferendis placeat quo ratione tempore! Aliquid atque culpa illo ipsum, minus perferendis quam qui ratione sequi suscipit vel veritatis voluptates? Atque
+          eaque fugit laudantium, maiores odit tempora tenetur vitae! Mollitia necessitatibus quisquam voluptate!</p>
+        <hr class="clearfix">{# have to be visibble in the wysiwyg (BO) #}
+
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <thead>
+          <tr>
+            <th>Style de tableau</th>
+            <th>Colonne 2</th>
+            <th>colonne 3</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>ipsum</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, dignissimos.</td>
+            <td>sit</td>
+          </tr>
+          <tr>
+            <td>consectetur</td>
+            <td>adipisicing</td>
+            <td>elit</td>
+          </tr>
+          <tr>
+            <td>in iste</td>
+            <td>labore</td>
+            <td>mollitia</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <p>Accusantium dignissimos ducimus, ea eum magni maiores natus obcaecati perferendis placeat quo ratione tempore! Aliquid atque culpa illo ipsum, minus perferendis quam qui ratione sequi suscipit vel veritatis voluptates? Atque
+          eaque fugit laudantium, maiores odit tempora tenetur vitae! Mollitia necessitatibus quisquam voluptate!</p>
+
+      </div>
+    </div>
+  </div>
+  {# /.sg-section  #}
+{% endblock sgContent %}

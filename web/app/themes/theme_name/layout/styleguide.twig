@@ -1,0 +1,154 @@
+{% extends "pages.twig" %}
+{% set pageTitle = 'Styleguide - ' ~  projectRealName  ~ ' - Agence Acti' %}
+{% set pageTemplate = 'sg-body' %}
+{% set pageClass = 'sg-body sg-nav-is-opened' %}
+{% set root = '' %}
+
+{% block font -%}
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  {{ parent() }}
+{%- endblock %}
+
+{%- block stylesheet %}
+  <link rel="stylesheet" href="../_styleguide/js/vendor/X-rayHTML/X-rayHTML.css">
+  <link rel="stylesheet" href="../_styleguide/js/vendor/prism/prism.css">
+  <link rel="stylesheet" href="../_styleguide/css/md-github-flavored.css">
+  <link rel="stylesheet" href="../_styleguide/css/main.css">
+  {{ parent() }}
+{% endblock -%}
+
+{% block body %}
+  <div class="sg-topper">
+    <div class="sg-nav-trigger">
+      <span></span>
+    </div>
+    <div class="sg-topper-title">
+      Styleguide — {{ projectRealName }}
+      <a href="http://www.acti.fr" target="_blank"><img src="../assets/img/svg/logo.svg" alt="{{ projectRealName }}" class="main-logo bottom-margin" height="80"> </a>
+    </div>
+  </div>
+
+
+  <div class="sg-aside">
+    <ul class="sg-nav">
+      <li>
+        <span><a href="index.html">Introduction</a></span>
+      </li>
+      <li>
+        <span>Brand design</span>
+        <ul>
+          <li>
+            <a href="brand-design.html#sg-logo">Logo</a>
+          </li>
+          <li>
+            <a href="brand-design.html#sg-favicons">Favicons</a>
+          </li>
+          <li>
+            <a href="brand-design.html#sg-colors">Colors</a>
+          </li>
+          <li><span>Typography</span>
+            <ul>
+              <li>
+                <a href="brand-design.html#sg-fonts">Fonts</a>
+              </li>
+              <li>
+                <a href="brand-design.html#sg-headings">Headings</a>
+              </li>
+              <li>
+                <a href="brand-design.html#sg-text">Text / RichText</a>
+              </li>
+              {#<li><a href="brand-design.html#sg-lists">Lists</a></li>#}
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>Atoms</span>
+        <ul>
+          <li>
+            <span>Buttons</span>
+            <ul>
+              <li>
+                <a href="atoms.html#sg-buttons">Buttons usage</a>
+              </li>
+              <li>
+                <a href="atoms.html#sg-buttons-plain-colored">Plain colored buttons</a>
+              </li>
+              <li>
+                <a href="atoms.html#sg-buttons-white-ghost">Plain white & ghost buttons</a>
+              </li>
+              <li>
+                <a href="atoms.html#sg-buttons-full-width">Full width buttons</a>
+              </li>
+              <li>
+                <a href="atoms.html#sg-buttons-misc">Misc buttons</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="atoms.html#sg-icons">Icons</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>Components</span>
+        <ul>
+          <li>
+            <a href="components.html#sg-banner-messages">Banner messages</a>
+          </li>
+          <li>
+            <a href="components.html#sg-breadcrumbs">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="components.html#sg-forms">Forms</a>
+          </li>
+          <li>
+            <a href="components.html#sg-images">Images</a>
+          </li>
+          <li>
+            <a href="components.html#sg-msg">Messages Block</a>
+          </li>
+          <li>
+            <a href="components.html#sg-paging">Paging</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span><a href="css-grid.html#sg-grid">Grid system</a></span>
+      </li>
+      <li>
+        <span><a href="css-helpers.html">CSS helpers</a></span>
+      </li>
+      <li>
+        <span>Pages example</span>
+        <ul>
+          <li>
+            <a href="templates.html#sg-pageList">Pages templates</a>
+          </li>
+          <li>
+            <a href="templates.html#sg-popinList">Popins templates</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  {# /.sg-aside  #}
+
+
+  <div class="sg-main">
+    <div class="sg-main-inner">
+
+      {% block sgContent "" %}
+
+    </div>
+    {#/.sg-main-inner #}
+  </div>
+  {#/.sg-main #}
+{% endblock body %}
+
+{% block sgScript %}
+  <script src="../_styleguide/js/vendor/X-rayHTML/X-rayHTML.custom.js"></script>
+  <script src="../_styleguide/js/vendor/prism/prism.js"></script>
+  <script src="../_styleguide/js/vendor/showdown/showdown.js"></script>
+  <script src="../_styleguide/js/main.js"></script>
+{% endblock %}

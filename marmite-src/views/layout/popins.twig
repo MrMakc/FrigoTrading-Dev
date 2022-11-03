@@ -1,0 +1,9 @@
+{% use "use/commonData_fr.twig" %}
+{% set popinClass = popinClass|default('') %}
+{% block commonContent %}
+<div class="popin {{ popinClass }}">
+    {% block popinContent %}
+        Popin Base.
+    {% endblock popinContent %}
+</div>
+{% endblock commonContent %}

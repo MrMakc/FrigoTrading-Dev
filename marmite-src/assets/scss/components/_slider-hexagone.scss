@@ -1,0 +1,68 @@
+.slider-hexagone{
+  margin-top: 7.5rem;
+  .slide{
+    width: 38rem;
+    height: 37rem;
+    overflow: hidden;
+    position: relative;
+    &:last-of-type{
+      .text:after{
+        content: "";
+        width: 2.1rem;
+        height: 2.1rem;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        z-index: 2;
+        background: url('../img/svg/icon-feuille.svg');
+        background-size: contain;
+      }
+    }
+    .text{
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      background-color: $color-primary;
+      transform: rotate(-29deg);
+      width: 18rem;
+      height: 16rem;
+      left: 7.3rem;
+      position: absolute;
+      bottom: 2rem;
+      .content-text{
+        transform: rotate(30deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 1rem;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        p{
+          font-size: 1.5rem;
+          line-height: 1.5;
+          color: white;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .img{
+      transform: rotate(-30deg);
+      position: absolute;
+      width: 34rem;
+      height: 29rem;
+      top: 3rem;
+      margin: auto;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+    img{
+      transform: rotate(30deg);
+      width: 120%;
+      height: 130%;
+    }
+  }
+  .slider-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}

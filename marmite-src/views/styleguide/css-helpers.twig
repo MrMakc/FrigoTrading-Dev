@@ -1,0 +1,70 @@
+{% extends '../layout/styleguide.twig' %}
+
+{% block sgContent %}
+  <div id="sg-helpers" class="sg-section">
+    <div class="sg-h2">CSS Helpers</div>
+
+    <div class="sg-callout sg-callout-info">
+      <div class="grid">
+        <div class="col-4">
+          <p>Helpers are currently prefixed with <code>.h-</code></p><br>
+          <div class="sg-callout-title">Color / bg</div>
+          <ul>
+            {% for key,color in aColors %}
+              <li><code>.h-color-{{ key }}</code> / <code>.h-bg-{{ key }}</code></li>
+            {% endfor %}
+          </ul>
+          <br>
+
+          <div class="sg-callout-title">Font size</div>
+          <ul>
+            <li><code>.h-fz-13</code></li>
+            <li><code>.h-fz-15</code></li>
+            <li><code>.h-fz-17</code></li>
+            <li>...</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <div class="sg-callout-title">Margin & Padding</div>
+          <ul>
+            <li><code>.h-padding-0/-10/-20/-30</code></li>
+            <li><code>.h-padding-top-0/-10/-20/-30</code></li>
+            <li><code>.h-padding-bottom-0/-10/-20/-30</code></li>
+            <li><code>.h-padding-left-0/-10/-20/-30</code></li>
+            <li><code>.h-padding-right-0/-10/-20/-30</code></li>
+            <li><code>.h-padding-vertical-0/-10/-20/-30</code></li>
+            <li><code>.h-padding-horizontal-0/-10/-20/-30</code></li>
+            <li><code>.h-margin-0/-10/-20/-30</code></li>
+            <li><code>.h-margin-top-0/-10/-20/-30</code></li>
+            <li><code>.h-margin-bottom-0/-10/-20/-30</code></li>
+            <li><code>.h-margin-left-0/-10/-20/-30</code></li>
+            <li><code>.h-margin-right-0/-10/-20/-30</code></li>
+            <li><code>.h-margin-vertical-0/-10/-20/-30</code></li>
+            <li><code>.h-margin-horizontal-0/-10/-20/-30</code></li>
+            <li>...</li>
+          </ul>
+          <br>
+        </div>
+        <div class="col-4">
+          <div class="sg-callout-title">Alignment</div>
+          <ul>
+            <li><code>.h-align-left</code></li>
+            <li><code>.h-align-right</code></li>
+            <li><code>.h-align-center</code></li>
+          </ul>
+          <br>
+          <div class="sg-callout-title">Font Styles</div>
+          <ul>
+            <li><code>.h-fw-700 </code> 700</li>
+            <li><code>.h-fw-400</code> 400</li>
+            <li><code>.h-fs-italic</code></li>
+            <li><code>.h-fs-normal</code></li>
+          </ul>
+          <br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  {# /.sg-section  #}
+{% endblock sgContent %}

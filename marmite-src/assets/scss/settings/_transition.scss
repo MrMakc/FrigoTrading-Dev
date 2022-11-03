@@ -1,0 +1,7 @@
+/* ====================== */
+/* transition */
+/* ====================== */
+
+$default-transition-duration: .2s;
+$default-transition-function: ease;
+$default-transition: all $default-transition-duration $default-transition-function;

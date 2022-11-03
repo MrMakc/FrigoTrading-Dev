@@ -1,0 +1,63 @@
+/* ====================== */
+/* colors */
+/* ====================== */
+
+$color-primary: #378CCC; /*--- main color 1 ---*/
+$color-secondary: #ABD200; /*--- main color 2 ---*/
+
+$color-black: #000;         /*--- black ---*/
+$color-grey-1: #F6F6F6;        /*--- grey dark ---*/
+$color-grey-2: #535353;        /*--- grey medium ---*/
+$color-grey-3: #707070;        /*--- grey light ---*/
+$color-grey-4: #504C4B;        /*--- white smoke ---*/
+$color-white: #fff;         /*--- white ---*/
+
+$color-text-0: $color-grey-1; /*--- dark text color ---*/
+$color-text-1: $color-grey-2; /*--- default text color ---*/
+$color-text-2: $color-grey-3; /*--- medium text color ---*/
+$color-text-3: $color-grey-4; /*--- light text color ---*/
+
+$color-info-1: #5aaafa;
+$color-success-1: #5aa700;
+$color-error-1: #e0182d;
+$color-error-2: lighten($color-error-1, 30%);
+$color-warning-1: #efc100;
+
+$color-bg-1: #acadaf;
+$color-border-1: #999;
+
+$color-facebook: #3b5998;   /*--- bleu facebook ---*/
+$color-twitter: #00aced;    /*--- bleu twitter ---*/
+$color-linkedin: #0077b5;   /*--- bleu linkedin ---*/
+$color-pinterest: #cb2028;  /*--- rouge pinterest ---*/
+$color-gplus: #cc3732;      /*--- rouge google+ ---*/
+$color-youtube: #cd201f;    /*--- rouge youtube ---*/
+$color-viadeo: #eb6311;     /*--- orange viadeo ---*/
+$color-vimeo: #009FDE; /*--- orange vimeo ---*/
+$color-instagram: #3f729b;  /*--- bleu instagram ---*/
+$color-tumblr: #529ecc;     /*--- bleu tumblr ---*/
+$color-flickr: #ff0084;     /*--- rose flickr ---*/
+
+
+/* define color array with values you will need for button and icons loop*/
+$a-colors: (
+  black: $color-black,
+  grey-1: $color-grey-1,
+  grey-2: $color-grey-2,
+  grey-3: $color-grey-3,
+  grey-4: $color-grey-4,
+  white: $color-white,
+  primary: $color-primary,
+  secondary: $color-secondary,
+  facebook: $color-facebook,
+  twitter: $color-twitter,
+  linkedin: $color-linkedin,
+  pinterest: $color-pinterest,
+  gplus: $color-gplus,
+  youtube: $color-youtube,
+  viadeo: $color-viadeo,
+  vimeo: $color-vimeo,
+  instagram: $color-instagram,
+  tumblr: $color-tumblr,
+  flickr: $color-flickr,
+);

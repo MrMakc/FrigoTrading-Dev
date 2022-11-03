@@ -1,0 +1,49 @@
+/* Responsive Helper
+ * shows current breakpoint in bottom left corner on resize
+ * if localstorage 'responsive-debug' is true
+   ========================================================================== */
+.responsive-helper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  z-index: 9999999999;
+  border-radius: 0 4px 0 0;
+  height: 40px;
+  width: 50px;
+  line-height: 40px;
+  text-align: center;
+  display: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  &.as--visible {
+    display: block;
+  }
+
+  @for $i from 1 to 8 {
+    $mq: '$mq-#{$i}';
+    @if $i == 1 {
+      @media screen and (max-width: #{$mq}) {
+        &:before {
+          content: 'MQ-#{$i}';
+        }
+      }
+    }
+    @else {
+      $mqBefore: '$mq-#{$i - 1}';
+      @media screen and (min-width: (#{$mqBefore}) + $mq-1px) and (max-width: #{$mq}) {
+        &:before {
+          content: 'MQ-#{$i}';
+        }
+      }
+      @if $i == 7 {
+        @media screen and (min-width: (#{$mq}) + $mq-1px) {
+          &:before {
+            content: 'MQ---';
+          }
+        }
+      }
+    }
+  }
+}

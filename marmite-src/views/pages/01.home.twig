@@ -1,0 +1,399 @@
+{%- extends '../layout/pages.twig' -%}
+{% set pageTitle = 'Home page' %}
+{% set pageTemplate = 'home' %}
+{% set pageClass = 'home-page' %}
+
+
+{%- block mainContent %}
+
+    <div class="sticky-bg bg-left-home"><div class="bg-img"></div></div>
+    <div class="sticky-bg bg-right-home"><div class="bg-img"></div></div>
+
+    <aside>
+        <div class="column-sticky">
+            <div class="devis">
+                <a href="#">
+                    {{ macros.svg('doc','30','white') }}
+                    <p>Demande de devis</p>
+                </a>
+            </div>
+            <div class="contact">
+                <a href="#">
+                    {{ macros.svg('mail','30','white') }}
+                    <p>Contactez nous !</p>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+
+    <div class="main-slider">
+        <div class="bg-triangle"></div>
+        <div class="slider-img">
+            <div class="slider-wrap">
+                <div class="slide">
+                    <a href="#">
+                        <div class="img">
+                            <picture>
+                                <img src="../assets/img/upload/exemple.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="text">
+                            <h1>
+                                Frigo Trading
+                                Solution de stockage
+                                frigorifique mobile
+                            </h1>
+                            <p class="a-button"><span>Nos solutions</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <picture>
+                        <img src="../assets/img/upload/exemple.png" alt="">
+                    </picture>
+                </div>
+                <div class="slide">
+                    <picture>
+                        <img src="../assets/img/upload/exemple2.png" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <div class="white-block">
+            <div class="slick-prev">{{ macros.svg('arrow-white','30','white') }}</div>
+            <div class="counter-slider"></div>
+            <div class="slick-next">{{ macros.svg('arrow-white','30','white') }}</div>
+        </div>
+    </div>
+
+    <p class="pop-in-button video-button" data-target=".pop-in-video">Voir la vidéo</p>
+
+    <div class="pop-in-video pop-in">
+        <div class="close">X</div>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nbfagWzIn8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="title-home">
+        <h2>Containers frigorifiques</h2>
+        <p class="subtitle">Lorem ipsum dolor sit amet, consetetur sa
+            dipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua.
+            At vero eos et accusam et justo duo dolores.
+        </p>
+    </div>
+    <div class="slider-hexagone inner-wrap">
+        <div class="slider-wrap">
+
+            <div class="slide">
+                <a href="#">
+                    <div class="img">
+                        <picture>
+                            <img src="../assets/img/upload/exemple.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="text">
+                        <div class="content-text">
+                            <p>Location De containers containers</p>
+                            {{ macros.svg('arrow-white','30','white') }}
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="slide">
+                <a href="#">
+                    <div class="img">
+                        <picture>
+                            <img src="../assets/img/upload/exemple.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="text">
+                        <div class="content-text">
+                            <p>Location De containers</p>
+                            {{ macros.svg('arrow-white','30','white') }}
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="slide">
+                <a href="#">
+                    <div class="img">
+                        <picture>
+                            <img src="../assets/img/upload/exemple.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="text">
+                        <div class="content-text">
+                            <p>Location De containers</p>
+                            {{ macros.svg('arrow-white','30','white') }}
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="blue-text editor-wysiwyg">
+        <h2>Réalisation sur mesure de vos projets  </h2>
+        <p>
+            De l’étude de vos besoins à l’installation par nos équi
+            pes,  Frigo Trading possède toutes les compétences en in
+            terne pour vous accompagner. Nos moyens de production nous
+            permettent de répondre autant à des sollicitation
+            s standards qu’à des demandes sur mesure.
+        </p>
+        <a href="#" class="a-button"><span>Cycle de vie d'un projet</span></a>
+    </div>
+
+    <div class="full-img inner-wrap">
+        <picture>
+            <img src="../assets/img/upload/exemple2.png" alt="">
+        </picture>
+    </div>
+
+    <div class="blue-text right-side editor-wysiwyg">
+        <h2>Réalisation sur mesure de vos projets  </h2>
+        <p>
+            De l’étude de vos besoins à l’installation par nos équi
+            pes,  Frigo Trading possède toutes les compétences en in
+            terne pour vous accompagner. Nos moyens de production nous
+            permettent de répondre autant à des sollicitation
+            s standards qu’à des demandes sur mesure.
+        </p>
+        <a href="#" class="a-button"><span>Cycle de vie d'un projet</span></a>
+    </div>
+
+    <div class="full-img-blue">
+        <div class="img">
+            <picture>
+                <img src="../assets/img/upload/exemple3.png" alt="">
+            </picture>
+        </div>
+        <div class="text editor-wysiwyg">
+            <h2>Réalisation sur mesure de vos projets  </h2>
+            <p>
+                De l’étude de vos besoins à l’installation par nos équi
+                pes,  Frigo Trading possède toutes les compétences en in
+                terne pour vous accompagner. Nos moyens de production nous
+                permettent de répondre autant à des sollicitation
+                s standards qu’à des demandes sur mesure.
+                pes,  Frigo Trading possède toutes les compétences en in
+                terne pour vous accompagner. Nos moyens de production nous
+                permettent de répondre autant à des sollicitation
+                s standards qu’à des demandes sur mesure.
+                pes,  Frigo Trading possède toutes les compétences en in
+                terne pour vous accompagner. Nos moyens de production nous
+                permettent de répondre autant à des sollicitation
+                s standards qu’à des demandes sur mesure.
+            </p>
+            <a href="#" class="a-button"><span>Cycle de vie d'un projet</span></a>
+        </div>
+    </div>
+
+
+    <div class="full-block-home">
+        <div class="inner-wrap">
+            <div class="title-home">
+                <h2>Découvrez nos solutions</h2>
+                <p class="subtitle">Lorem ipsum dolor sit amet, consetetur sa
+                    dipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores.
+                </p>
+            </div>
+
+
+            <div class="slider-products">
+                <div class="slider-wrap">
+                    <div class="slide" data-categorie="Options et Accessoires">
+                        <div class="flex-columns">
+                            <div class="left editor-wysiwyg">
+                                <h2>Nos containers frigorifiques</h2>
+                                <p>
+                                    De l’étude de vos besoins à l’installation par nos équi
+                                    pes,  Frigo Trading possède toutes les compétences en in
+                                    terne pour vous accompagner. Nos moyens de production nous
+                                    permettent de répondre autant à des sollicitation
+                                    s standards qu’à des demandes sur mesure.
+                                </p>
+                                <a href="#" class="a-button"><span>Cycle de vie d'un projet</span></a>
+                            </div>
+                            <div class="right">
+                                <picture>
+                                    <img src="../assets/img/upload/double-container.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide"  data-categorie="Chambres froides mobiles">
+                        <div class="flex-columns">
+                            <div class="left editor-wysiwyg">
+                                <h2>Nos containers frigorifiques</h2>
+                                <p>
+                                    De l’étude de vos besoins à l’installation par nos équi
+                                    pes,  Frigo Trading possède toutes les compétences en in
+                                    terne pour vous accompagner. Nos moyens de production nous
+                                    permettent de répondre autant à des sollicitation
+                                    s standards qu’à des demandes sur mesure.
+                                </p>
+                                <a href="#" class="a-button"><span>Cycle de vie d'un projet</span></a>
+                            </div>
+                            <div class="right">
+                                <picture>
+                                    <img src="../assets/img/upload/double-container.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-categorie="catégorie 3">
+                        <div class="flex-columns">
+                            <div class="left editor-wysiwyg">
+                                <h2>Réalisation sur mesure de vos projets  </h2>
+                                <p>
+                                    De l’étude de vos besoins à l’installation par nos équi
+                                    pes,  Frigo Trading possède toutes les compétences en in
+                                    terne pour vous accompagner. Nos moyens de production nous
+                                    permettent de répondre autant à des sollicitation
+                                    s standards qu’à des demandes sur mesure.
+                                </p>
+                                <a href="#" class="a-button"><span>Cycle de vie d'un projet</span></a>
+                            </div>
+                            <div class="right">
+                                <picture>
+                                    <img src="../assets/img/upload/double-container.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrows">
+                <div class="arrow-prev">
+                    <div class="slick-prev">{{ macros.svg('arrow-white','30','white') }}<p class="categorie-prev"></p></div>
+                </div>
+                <div class="arrow-next">
+                    <div class="slick-next"><p class="categorie-next"></p>{{ macros.svg('arrow-white','30','white') }}</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="block-partners inner-wrap">
+        <div class="title">
+            <h2>Ils nous font confiance</h2>
+            <div class="arrows">
+                <div class="slick-prev">{{ macros.svg('prev-blue','30','white') }}</div>
+                <div class="slick-next">{{ macros.svg('next-blue','30','white') }}</div>
+            </div>
+        </div>
+        <div class="slider-partners">
+            <div class="slider-wrap">
+
+                <div class="slide">
+                    <a href="#">
+                        <div class="img">
+                            <picture>
+                                <img src="../assets/img/upload/carrefour.png" alt="">
+                            </picture>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="#">
+                        <div class="img">
+                            <picture>
+                                <img src="../assets/img/upload/carrefour.png" alt="">
+                            </picture>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="#">
+                        <div class="img">
+                            <picture>
+                                <img src="../assets/img/upload/carrefour.png" alt="">
+                            </picture>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="#">
+                        <div class="img">
+                            <picture>
+                                <img src="../assets/img/upload/carrefour.png" alt="">
+                            </picture>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block-actus">
+        <div class="inner-wrap">
+            <div class="title-home">
+                <h2>Nos dernières actualités</h2>
+            </div>
+            <div class="slider-actus">
+                <div class="slider-wrap">
+
+                    <div class="slide">
+                        <div class="flex-columns">
+                            <div class="left">
+                                <picture>
+                                    <img src="../assets/img/upload/exemple.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="right editor-wysiwyg">
+                                <h2>Nos containers frigorifiques</h2>
+                                <p>
+                                    De l’étude de vos besoins à l’installation par nos équi
+                                    pes,  Frigo Trading possède toutes les compétences en in
+                                    terne pour vous accompagner. Nos moyens de production nous
+                                    permettent de répondre autant à des sollicitation
+                                    s standards qu’à des demandes sur mesure.
+                                </p>
+                                <a href="#" class="a-button as--grey-4"><span>Cycle de vie d'un projet</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="flex-columns">
+                            <div class="left editor-wysiwyg">
+                                <picture>
+                                    <img src="../assets/img/upload/exemple.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="right">
+                                <h2>Nos containers frigorifiques</h2>
+                                <p>
+                                    De l’étude de vos besoins à l’installation par nos équi
+                                    pes,  Frigo Trading possède toutes les compétences en in
+                                    terne pour vous accompagner. Nos moyens de production nous
+                                    permettent de répondre autant à des sollicitation
+                                    s standards qu’à des demandes sur mesure.
+                                </p>
+                                <a href="#" class="a-button as--grey-4"><span>Cycle de vie d'un projet</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="arrows">
+                <div class="slick-prev">{{ macros.svg('prev-blue','30','white') }}</div>
+                <div class="slick-next">{{ macros.svg('next-blue','30','white') }}</div>
+            </div>
+            <a href="#" class="see-more">En voir davantage</a>
+        </div>
+    </div>
+
+{% endblock mainContent -%}

@@ -1,0 +1,16 @@
+{% set dataFeLanguage = dataFeLanguage|default('fr') %}
+{% set dataFeLongLanguage = dataFeLongLanguage|default('fr-FR') %}
+{% set dataFeDateFormatJs = dataFeDateFormatJs|default('dd/mm/yy') %}
+{% set dataFeDateFormatTwig = dataFeDateFormatTwig|default('d/m/Y') %}
+{% set dataFeDateFormatLabel = dataFeDateFormatLabel|default('jj/mm/aaaa') %}
+{% set pageTitle = pageTitle | default('Styleguide - ' ~  projectRealName  ~ ' - Agence Acti') %}
+{% set pageTemplate = pageTemplate | default('') %}
+{% set pageClass = pageClass | default('') %}
+
+{% set defaultRequiredMsg = defaultRequiredMsg | default('Ce champs est requis.') %}
+{% set defaultErrorMsg = defaultErrorMsg | default('Ce champs n\'est pas valide.') %}
+{% set defaultPwdErrorMsg = defaultPwdErrorMsg | default('Le mot de passe et le mot de passe de confirmation doivent correspondre.') %}
+
+{% set images_sizes = {
+  exemple: {w: 500, h: 500},
+} %}

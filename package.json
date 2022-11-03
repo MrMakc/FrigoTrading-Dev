@@ -1,0 +1,82 @@
+{
+  "name": "marmite",
+  "projectRealName": "Marmite",
+  "projectFolderName": "marmite",
+  "title": "Front-end Project Quick Init",
+  "url": "http://gitlab.c2is.fr/marmite",
+  "author": "ACTI - front-end team",
+  "version": "1.0.0",
+  "license": "MIT",
+  "path": {
+    "src": "marmite-src",
+    "dist": "marmite-dist",
+    "vendors": "node_modules",
+    "prepUrl": "inte-prep-ssh@inte-prep.infra.acti.fr:integration/"
+  },
+  "scripts": {
+    "prepWin": "rsync -r -v --size-only --chmod=ugo=rwX %npm_package_path_dist%/ %npm_package_path_prepUrl%%npm_package_projectFolderName% && echo URL de la prep: https://integration.acti.fr/%npm_package_projectFolderName%/pages/",
+    "prepNix": "rsync -r -v --size-only --chmod=ugo=rwX $npm_package_path_dist/ $npm_package_path_prepUrl$npm_package_projectFolderName && echo URL de la prep: https://integration.acti.fr/$npm_package_projectFolderName/pages/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.c2is.fr/marmite"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^16.2.3",
+    "browserify-shim": "^3.8.14",
+    "colors": "^1.3.3",
+    "del": "^3.0.0",
+    "file-system": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-connect-multi": "^1.0.8",
+    "gulp-header": "^1.8.12",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jshint": "^2.1.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-modernizr": "^2.0.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-run": "^1.7.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-to-json": "^1.0.1",
+    "gulp-twig": "^0.7.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.10.2",
+    "os": "^0.1.1",
+    "prompt": "^1.0.0",
+    "run-sequence": "^2.2.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^1.1.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie >= 11"
+  ],
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  },
+  "dependencies": {
+    "gridlex": "^2.7.1",
+    "jquery": "^3.3.1",
+    "jquery-colorbox": "^1.6.4",
+    "jquery.easing": "^1.4.1",
+    "normalize-scss": "^7.0.1",
+    "slick-carousel": "^1.8.1",
+    "svgxuse": "^1.2.6"
+  }
+}

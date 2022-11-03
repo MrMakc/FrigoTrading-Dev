@@ -1,0 +1,67 @@
+#cboxTopLeft,
+#cboxTopRight,
+#cboxMiddleLeft,
+#cboxMiddleRight,
+#cboxBottomLeft,
+#cboxBottomRight {
+  width: 0;
+  background: none;
+}
+
+#cboxTopLeft,
+#cboxTopRight,
+#cboxTopCenter,
+#cboxBottomCenter,
+#cboxBottomLeft,
+#cboxBottomRight {
+  height: 0;
+  background: none;
+}
+
+#cboxContent,
+.cboxIframe {
+  background: none;
+}
+
+#cboxOverlay {
+  background: #000;
+}
+
+#colorbox,
+#cboxOverlay,
+#cboxWrapper,
+#cboxContent {
+  overflow: visible;
+}
+
+#cboxClose {
+  //@extend .sprite;
+  bottom: 100%;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  margin: 0 0 10px;
+  border: 1px solid $color-white;
+  border-radius: 20px;
+  background-position: -40px -150px;
+  color: $color-white;
+  transition: all $default-transition-duration $default-transition-function;
+  &:hover,
+  &:focus {
+    background-color: $color-primary;
+    background-position: -40px -150px;
+  }
+}
+
+#cboxPrevious,
+#cboxNext {
+  background: none;
+}
+
+#cboxLoadingOverlay {
+  background: $color-white;
+}
+
+#cboxLoadingGraphic {
+  //background-image: url('../img/loading.gif');
+}

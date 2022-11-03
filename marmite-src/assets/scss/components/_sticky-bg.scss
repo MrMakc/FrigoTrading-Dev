@@ -1,0 +1,48 @@
+.sticky-bg{
+  position: absolute;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  .bg-img{
+    background-size: contain;
+    position: sticky;
+    width: 20rem;
+    height: 36rem;
+  }
+  &.bg-left-home{
+    height: calc(100% - 1710px);
+    top: 1710px;
+    .bg-img{
+      background: url('../img/common/bg/sticky-home-left.png') no-repeat;
+      top: 20vh;
+    }
+  }
+  &.bg-right-home{
+    height: calc(100% - 2330px);
+    top: 2330px;
+    right: 0;
+    .bg-img{
+      background: url('../img/common/bg/sticky-home-right.png') no-repeat;
+      top: 70vh;
+    }
+  }
+  &.bg-left-edito{
+    height: calc(100% - 1310px);
+    top: 1310px;
+    .bg-img{
+      background: url('../img/common/bg/sticky-edito-left.png') no-repeat;
+      top: 20vh;
+    }
+  }
+  &.bg-right-edito{
+    height: calc(100% - 1310px);
+    top: 1610px;
+    right: 0;
+    .bg-img{
+      background: url('../img/common/bg/sticky-edito-right.png') no-repeat;
+      top: 60vh;
+      background-size: contain;
+      background-position-x: right;
+    }
+  }
+}

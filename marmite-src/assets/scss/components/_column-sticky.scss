@@ -1,0 +1,36 @@
+aside {
+  position: absolute;
+  right: 0;
+  top: 84rem;
+  z-index: 2;
+  height: 100%;
+}
+.column-sticky {
+  position: sticky;
+  top: 40vh;
+  svg{
+    fill: white;
+    margin-bottom: 0.8rem;
+  }
+  a{
+    display: flex;
+    justify-content: center;
+    width: 9.4rem;
+    height: 10rem;
+    padding: 1.3rem;
+    background: radial-gradient(circle, rgba(171,210,0,1) 0%, rgba(93,172,23,1) 100%);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+  .devis a{
+    border-radius: 5px 0 0 0;
+    border-bottom: 1px dotted white;
+  }
+  .contact a{
+    border-radius: 0 0 0 5px;
+  }
+}

@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Paginations
+   ========================================================================== */
+.c-pagination {
+  text-align: center;
+  > * {
+    display: inline-block;
+    margin: 0 3px;
+    &:not(.dots) {
+      @media screen and (max-width: $mq-6) {
+        display: none;
+      }
+    }
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .as--active {
+    a {
+      text-decoration: none;
+      pointer-events: none;
+    }
+  }
+}
+
+
+
+
+
+

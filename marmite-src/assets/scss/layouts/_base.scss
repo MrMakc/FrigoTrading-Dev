@@ -1,0 +1,102 @@
+/* ====================== */
+/* BASE */
+/* ====================== */
+html {
+  font-size: .625em;
+}
+body {
+  font-size: 1.3rem;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 16rem;
+  &.overlay-open, &.overlay-show{
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.2;
+      z-index: 3;
+      pointer-events: none;
+    }
+  }
+}
+
+.main-content{
+  position: relative;
+}
+
+.flex-columns {
+  display: flex;
+}
+
+.inner-wrap{
+  max-width: 1396px;
+  margin: 0 auto;
+}
+
+.sub-wrap{
+  max-width: 1236px;
+  margin: 0 auto;
+}
+
+.see-more{
+  display: flex;
+  max-width: fit-content;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  color: $color-text-1;
+  padding-bottom: 1rem;
+  &:after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $color-text-1;
+    transition: 0.5s;
+  }
+  &:hover:after{
+    width: 0;
+  }
+}
+
+body,
+select,
+input,
+textarea,
+button {
+  color: $color-text-1;
+  font-family: $font-primary;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul, li {
+  margin: 0; padding: 0;
+  list-style: none;
+}
+strong, b {
+  font-weight: bold;
+}
+em, i {
+  font-style: italic;
+}
+a {
+  transition: $default-transition;
+}
+
+::-moz-selection{ background: $color-primary; color: $color-white; text-shadow: none; }
+::selection { background: $color-primary; color: $color-white; text-shadow: none; }
+a {
+  color: $color-primary;
+  -webkit-tap-highlight-color: rgba($color-primary, .2);
+}

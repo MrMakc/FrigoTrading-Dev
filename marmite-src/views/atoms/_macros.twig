@@ -1,0 +1,94 @@
+{# **********
+    MACROS
+********** #}
+
+{# SVG #}
+{% macro svg(name, size, class) %}
+  <svg class="a-icon as--{{ size | default(20) }}{% if class %} {{ class }}{% endif %}" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-{{ name }}"></use>
+  </svg>
+{% endmacro %}
+
+
+
+{# a.a-button #}
+{% macro btnLink(content, class, link, iconName, iconSize, iconPosition, attributes) %}
+  {% from _self import svg %}
+  <a href="{{ link }}" title="{{ content }}" class="a-button{% if class %} {{ class }}{% endif %}{% if iconPosition %} as--{{ iconPosition }}{% endif %}"{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}>
+  {% if iconName %}{{ svg(iconName, iconSize) }}{% endif %}
+  {% if content %}{{ content }}{% endif %}
+  </a>
+{% endmacro %}
+
+{# span.a-button #}
+{% macro btnSpan(content, class, iconName, iconSize, iconPosition, attributes) %}
+  {% from _self import svg %}
+  <span class="a-button{% if class %} {{ class }}{% endif %}{% if iconPosition %} as--{{ iconPosition }}{% endif %}"{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}>
+  {% if iconName %}{{ svg(iconName, iconSize) }}{% endif %}
+  {% if content %}{{ content }}{% endif %}
+  </span>
+{% endmacro %}
+
+{# button.a-button #}
+{% macro btnButton(content, class, iconName, iconSize, iconPosition, attributes) %}
+  {% from _self import svg %}
+  <button type="button" class="a-button{% if class %} {{ class }}{% endif %}{% if iconPosition %} as--{{ iconPosition }}{% endif %}"{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}>
+  {% if iconName %}{{ svg(iconName, iconSize) }}{% endif %}
+  {% if content %}{{ content }}{% endif %}
+  </button>
+{% endmacro %}
+
+{# input[submit].a-button #}
+{% macro btnSubmit(content, class, iconName, iconSize, iconPosition, attributes) %}
+  {% from _self import svg %}
+  <button type="submit" class="a-button{% if class %} {{ class }}{% endif %}{% if iconPosition %} as--{{ iconPosition }}{% endif %}"{% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}>
+  {% if iconName %}{{ svg(iconName, iconSize) }}{% endif %}
+  {% if content %}{{ content }}{% endif %}
+  </button>
+{% endmacro %}
+
+
+
+{# INPUTS #}
+{% macro input(name, label, value, type, attributes) %}
+  {% from _self import svg %}
+  <div class="form-field{% if attributes['data-msg-error'] is not null %} as--invalid{% endif %}{% if attributes['icon'] is not null %} as--icon{% endif %}">
+    <label for="input_{{ name }}">{{ label }}{% if attributes['required'] is not null %}<sup>*</sup>{% endif %}</label>
+    <div class="input-wrapper">
+      <input
+        name="{{ name }}"
+        type="{{ type|default('text') }}"
+        id="input_{{ name }}"
+        value="{{ value|e }}"
+        {% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}>
+      {% if attributes['icon'] is not null %}
+        {{ svg(attributes['icon'], attributes['icon-size'], attributes['icon-class']) }}
+      {% endif %}
+    </div>
+    {% if attributes['data-msg-error'] is not null %}
+      <div class="form-msg-error" id="input_{{ name }}-error">
+        {{ attributes['data-msg-error'] }}
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+
+
+{# SELECT #}
+{% macro select(name, label, values, value, attributes) %}
+  <div class="form-field{% if attributes['data-msg-error'] is not null %} as--invalid{% endif %}">
+    <label for="input_{{ name }}">{{ label }}{% if attributes['required'] is not null %}<sup>*</sup>{% endif %}</label>
+
+    <select id="input_{{ name }}" name="{{ name }}" {% for attr, value in attributes %} {{ attr }}="{{ value }}"{% endfor %}>
+      {% if attributes['include_blank'] is not null %}
+        <option disabled selected>{{ attributes['include_blank'] }}</option>
+      {% endif %}
+      {% for key, name in values %}
+        <option value="{{ key }}"{% if value == key %} selected="selected"{% endif %}>{{ name }}</option>
+      {% endfor %}
+    </select>
+    {{ form.error_block(error) }}
+    </div>
+  </div>
+{% endmacro %}

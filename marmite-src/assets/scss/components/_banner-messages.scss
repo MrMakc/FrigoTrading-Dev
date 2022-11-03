@@ -1,0 +1,47 @@
+/* ==========================================================================
+   MESSAGES BANNER ( Cookies / warning / news ...)
+   ========================================================================== */
+
+.c-banner-messages {
+  position: relative;
+  margin: 0 auto;
+  padding: 4rem 12rem 4rem 6rem;
+  background: $color-bg-1;
+  align-items: left;
+  color: $color-white;
+  overflow: hidden;
+  @media screen and (max-width: $mq-6) {
+    padding: 3rem 9rem 3rem 3rem;
+  }
+  @media screen and (max-width: $mq-3) {
+    padding: 1.5rem 7.5rem 1.5rem 1.5rem;
+  }
+  p {
+    margin: 0 30% 1rem 0;
+    font-size: 1.2rem;
+    @media screen and (max-width: $mq-4) {
+      margin: 0;
+    }
+    a {
+      color: inherit;
+      font-weight: 700;
+    }
+  }
+  .a-button:not(.as--close) {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+  }
+  .a-button.as--close {
+    top: 4rem;
+    right: 6rem;
+    @media screen and (max-width: $mq-6) {
+      top: 3rem;
+      right: 3rem;
+    }
+    @media screen and (max-width: $mq-3) {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+  }
+}
+

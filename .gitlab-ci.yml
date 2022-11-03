@@ -1,0 +1,4 @@
+include:
+  - project: "acti/deploy"
+    ref: main
+    file: "/.gitlab-ci.yml"

@@ -1,0 +1,527 @@
+/* ==========================================================================
+   FORMS
+   ========================================================================== */
+$color-form-bg: $color-white;
+$color-form-border: $color-border-1;
+$color-form-border-focused: lighten($color-form-border, 15%);
+
+$input-text : "input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='image']):not([type='submit']):not([type='button']):not([type='reset'])";
+
+button, input, select, textarea {
+  border-radius: 0;
+}
+
+.form-group {
+  > legend {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.form-field {
+  font-size: 1.4rem;
+  position: relative;
+  margin-bottom: 1rem;
+
+
+  /* Labels
+     ========================================================================== */
+  > label {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 1.3rem .5rem 0 0;
+    line-height: 1.9rem;
+    color: $color-text-1;
+    font-weight: 700;
+    .ex {
+      font-size: 1.4rem;
+      display: block;
+      text-transform: none;
+      font-weight: normal;
+    }
+  }
+
+  &.as--icon {
+    > div {
+      position: relative;
+      > .a-icon,
+      > .a-button{
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        z-index: $zindex-form-input-icon;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+    }
+    #{$input-text} {
+      padding-right: 4rem;
+    }
+    &.as--btn-password {
+      .a-button {
+        cursor: pointer;
+        pointer-events: auto;
+        transition: .35s;
+        opacity: .8;
+        border: 0;
+        background: none;
+        padding: 0;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .btn-password-hide {
+        display: none;
+      }
+      &.as--visible {
+        .btn-password-hide {
+          display: block;
+        }
+        .btn-password-show {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.as--btn-clear {
+    #{$input-text} {
+      padding-right: 4rem;
+    }
+    > div {
+      position: relative;
+    }
+    .btn-clear {
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: .5rem;
+      z-index: $zindex-form-input-icon;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 3rem;
+      font-weight: 700;
+      color: $color-grey-3;
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+      text-align: center;
+      transition: .35s;
+      &:hover {
+        color: $color-grey-2;
+      }
+      .as--icon#{&} {
+        right: 3.5rem;
+      }
+    }
+    &.as--not-empty {
+      .btn-clear  {
+        display: block;
+      }
+    }
+    &.as--icon {
+      #{$input-text} {
+        padding-right: 8rem;
+      }
+      .btn-clear {
+        right: 3.5rem;
+      }
+    }
+  }
+
+  &.field-animated {
+    padding-top: 3rem;
+    > label {
+      position: absolute;
+      top: 3rem; left: 1.8rem;
+      z-index: 1;
+      margin: 0;
+      pointer-events: none;
+      transition: .2s;
+    }
+    #{$input-text} {}
+  }
+  &.as--focused {
+    > label {
+      top: 0; left: 0;
+      padding: 0;
+      font-size: 1.3rem;
+    }
+  }
+
+
+  /* Inputs
+   ========================================================================== */
+  ::-webkit-input-placeholder { color: fade-out($color-text-3, 0.2); font-family: inherit;}
+  ::-moz-placeholder { color: fade-out($color-text-3, 0.2); font-family: inherit;}
+  :-ms-input-placeholder { color: fade-out($color-text-3, 0.2) !important; font-family: inherit !important;}
+  input:-moz-placeholder { color: fade-out($color-text-3, 0.2); font-family: inherit;}
+  input.placeholder {color: fade-out($color-text-3, 0.2); font-family: inherit;}
+
+  textarea,
+  #{$input-text},
+  select {
+    font-family: inherit;
+    font-weight:600;
+    color: $color-text-1;
+    appearance: none; //fix ios
+    &.h-no-border {
+      border: 0 !important;
+    }
+    &.h-no-bg {
+      background: transparent !important;
+    }
+  }
+
+  #{$input-text},
+  //.file-text-holder,
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    line-height: 1.9rem;
+    font-size: 1.6rem;
+    border: .1rem solid $color-form-border;
+    padding: 1.3rem 1.8rem;
+    background: $color-form-bg;
+    &:focus {
+      border-color: $color-form-border-focused;
+      outline:none;
+    }
+    &::-ms-clear {
+      display: none; // remove close icon to empty field on IE10+
+    }
+  }
+
+  /*.input-file {
+    input[type="file"] {
+      cursor: pointer;
+      font-size: 10rem;
+      height: 100%;
+      opacity: 0.01;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .file-text-holder {
+      width: calc(100% - 1rem);
+      line-height: 3.8rem;
+    }
+  }*/
+
+  /* Textarea
+   ========================================================================== */
+  textarea {
+    resize: vertical;
+    height: 14rem;
+  }
+
+  /* Select
+   ========================================================================== */
+  .select-wrapper {
+    position: relative;
+    overflow: hidden;
+    border: .1rem solid $color-form-border;
+    background: $color-form-bg;
+    padding: 0;
+    &.h-no-border {
+      border: 0 !important;
+    }
+    &.h-no-bg {
+      background: transparent !important;
+    }
+    &:focus-within {
+      border-color: $color-form-border-focused;
+    }
+    select {
+      height: 100%;
+      width: 100%;
+      padding-right: 3rem;
+      border: 0;
+      background: transparent;
+      appearance: none; // hide arrow FF, Chome, Edge
+      cursor: pointer;
+      &::-ms-expand { // fallback ie11 => hide arrow
+        display: none;
+      }
+    }
+    &::after {
+      content:'';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      border: transparent solid;
+      border-width: 1rem .5rem 0 .5rem;
+      margin-top: -.5rem;
+      border-top-color: $color-text-1;
+      pointer-events: none;
+    }
+    @each $colorname, $color in $a-colors {
+      &.h-color-#{$colorname}{
+        border-color: $color;
+
+        &:focus-within {
+          border-color: lighten($color, 15%);
+        }
+        select {
+          color: $color;
+          @if lightness($color) > lightness(#eee) {
+            option {
+              color: $color-text-1;
+            }
+          }
+        }
+        &::after {
+          border-top-color: $color;
+        }
+      }
+    }
+  }
+
+  /* errors
+     ========================================================================== */
+  &.as--valid {
+    #{$input-text} {
+      //background: $color-error-2;
+      border-color: $color-success-1;
+      color: $color-success-1;
+    }
+  }
+  &.as--invalid {
+    #{$input-text} {
+      //background: $color-error-2;
+      border-color: $color-error-1;
+      color: $color-error-1;
+    }
+  }
+  .form-msg-error {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: $color-error-1;
+    margin-top: .5rem;
+  }
+
+  .input-helper {
+    display: none; // regarder si il faut l'afficher, si oui /!\ à la position absolue des icon et bouton
+  }
+
+  .input-btn-check-group {
+    margin: -.7rem;
+    font-size: 0;
+    flex: auto;
+    //text-align: center;
+  }
+
+
+} //.form-field
+
+
+/* Radio + Checkbox
+   ========================================================================== */
+.input-checkbox,
+.input-radio {
+  line-height: 1.6rem;
+  padding: .5rem 0;
+  display: inline-block;
+  white-space: nowrap;
+  input {
+    position:absolute;
+    clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+    & + span,
+    & + label {
+      position: relative;
+      cursor: pointer;
+      text-transform: none;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      font-size: 1.6rem;
+      font-weight:600;
+      &::before,
+      &::after {
+        content: '';
+        position:absolute;
+        transition: .2s;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        height: 2.5rem;
+        width: 2.5rem;
+        border: .1rem solid $color-form-border;
+        background: $color-white;
+      }
+    }
+
+    // Focus
+    &:focus + span,
+    &:focus + label {
+      &::before {
+        border-color: $color-form-border-focused;
+      }
+    }
+
+    // Disabled
+    &[disabled] + span,
+    &[disabled] + label {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}
+
+// Checkbox
+.input-checkbox {
+  input {
+    & + span,
+    & + label {
+      padding-left: 3.5rem;
+      &::before {
+      }
+      &::after {
+        left: 1.2rem;
+        top: 1.2rem;
+        height: 0;
+        width: 0;
+        background: $color-primary;
+      }
+    }
+    // Checkbox - checked
+    &:checked + span,
+    &:checked + label {
+      &::after {
+        left: .6rem;
+        top: .6rem;
+        height: 1.3rem;
+        width: 1.3rem;
+      }
+    }
+  }
+}
+
+// Radio
+.input-radio {
+  input {
+    & + span::before,
+    & + label::before {
+      content: '';
+      position:absolute;
+      top: 0;
+      left: 0;
+      height: 2.5rem;
+      width: 2.5rem;
+      border: .1rem solid $color-form-border;
+      border-radius: 50%;
+      background: $color-primary;
+      box-shadow: inset 0 0 0 1.3rem #fff;
+      transition: .3s;
+    }
+
+    // Radio - checked
+    &:checked + span::before,
+    &:checked + label::before {
+      box-shadow: inset  0 0 0 .6rem #fff;
+    }
+  }
+
+}
+
+
+
+.input-btn-check {
+  //line-height: 1.6rem;
+  padding: .7rem;
+  display: inline-block;
+  white-space: nowrap;
+  input {
+    position:absolute;
+    clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+    & + span,
+    & + label {
+      @extend %a-button;
+      @include a-button-color($color-primary);
+      margin: 0;
+      &:not(.as--no-hover):hover {
+        color: $color-white;
+        background: rgba($color-secondary,.9);
+      }
+    }
+
+    // Focus
+    &:focus + span,
+    &:focus + label {
+    }
+
+    // Radio - checked
+    &:checked + span,
+    &:checked + label {
+      background: transparent;
+      color: $color-secondary;
+      &:not(.a-button.as--no-hover):hover {
+        color: $color-secondary;
+        background: rgba($color-secondary,.1);
+      }
+    }
+
+    // Disabled
+    &[disabled] + span,
+    &[disabled] + label {
+      pointer-events: none;
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}
+
+
+.form-help {
+  //font-size: 1.2rem;
+  //line-height: 1.2rem;
+  color: $color-text-3;
+  font-style: italic;
+}
+
+// Auto suggest
+// use with jquery-ui
+.form-field-autosuggest {
+  position: relative;
+  input {
+    position: relative;
+    z-index: $zindex-form-input;
+  }
+}
+.form-field-autosuggest-dropdown {
+  display: none;
+  position: absolute; top: 100%; left: 0; right: 0; z-index: $zindex-form-dropdown;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  background: $color-secondary;
+  //font-family: $font-2;
+  font-weight:700;
+  color: $color-white;
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 2rem;
+    border: transparent solid;
+    border-width: 0 1.1rem 1.1rem 1.1rem;
+    border-bottom-color: $color-secondary;
+  }
+  li {
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .35s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .onlyMarmite input:focus ~ & {
+    display: block;
+  }
+}

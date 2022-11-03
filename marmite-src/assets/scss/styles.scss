@@ -1,0 +1,93 @@
+/* ==========================================================================
+   GLOBAL LESS
+   ========================================================================== */
+
+/* Settings
+   ========================================================================== */
+@import
+"settings/colors"
+, "settings/fonts"
+, "settings/mediaqueries"
+, "settings/transition"
+, "settings/zindex"
+;
+
+
+/* Tools : Mixins & Reset
+   ========================================================================== */
+@import
+"tools/mixins"
+, "tools/reset"
+;
+
+
+/* Vendors
+   ========================================================================== */
+@import
+//"vendors/gridlex"
+"vendors/normalize/import-now"
+, "vendors/slick"
+, "vendors/colorbox_custom"
+;
+
+
+/* Layout
+   ========================================================================== */
+@import
+"layouts/base"
+, "layouts/header"
+, "layouts/footer"
+, "layouts/home"
+, "layouts/liste-produits"
+, "layouts/detail-produit"
+;
+
+
+/* Atoms
+   ========================================================================== */
+@import
+"atoms/buttons"
+,"atoms/icons"
+,"atoms/headings"
+,"atoms/loading"
+,"atoms/pict"
+,"atoms/responsive-debug"
+,"atoms/richtext"
+, "atoms/tip"
+;
+
+
+/* Components
+   ========================================================================== */
+@import
+"components/banner-messages"
+,"components/breadcrumb"
+,"components/forms"
+,"components/messages-block"
+,"components/paging"
+,"components/switch-container"
+,"components/bg-triangle"
+,"components/main-slider"
+,"components/popin"
+,"components/slider-hexagone"
+,"components/blue-text"
+,"components/full-img"
+,"components/full-img-blue"
+,"components/title-home"
+,"components/full-block-home"
+,"components/block-partners"
+,"components/block-actus"
+, "components/column-sticky"
+,"components/title-edito"
+,"components/sticky-bg"
+,"components/graph-full-img"
+;
+
+/* Helpers & Theming
+   ========================================================================== */
+@import "helpers";
+
+
+/* Print
+   ========================================================================== */
+@import "print";

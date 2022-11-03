@@ -1,0 +1,65 @@
+{%- use "use/marmiteConfigData.twig" -%}
+{%- use "use/commonData_fr.twig" -%}
+{% set root = '../' %}
+{% import "../atoms/_macros.twig" as macros %}
+<!doctype html>
+<html class="onlyMarmite" lang="{{ dataFeLongLanguage }}">{# DEV BE: delete onlyMarmite classname #}
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">  {# SEO #}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  {# GOOGLE ANALYTICS #}
+  {# <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  </script> #}
+
+  {% block font -%}
+    {# CSS GOOGLE FONTS #}
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+  {%- endblock %}
+  {%- block stylesheet %}
+    {# CSS #}
+    <link rel="stylesheet" href="{{ root }}assets/css/styles.css">
+  {% endblock -%}
+  {# FAVICONS #}{%- include "inc/favicons.twig" -%}
+
+  {# JS DATA #}{% block topScript %}{% include "inc/scripts_top.twig" %}{% endblock %}
+</head>
+<body class="{{ pageClass }}">
+{% block body %}
+  <div id="body">
+    <a id="anchor-body" tabindex="-1"></a>
+    {% block header %}
+      {%- include "../components/header/base.twig" -%}
+    {% endblock %}
+    <main role="main">
+      <div id="main-content" class="main-content">
+        {% block mainContent "" %}
+      </div>
+    </main>
+    {% block footer %}
+      {%- include "../components/footer/base.twig" -%}
+    {% endblock %}
+  </div>
+{% endblock body %}
+{% block bottomScript %}
+  {%- include "inc/scripts_bottom.twig" -%}
+{% endblock bottomScript %}
+{% block sgScript %}{% endblock %} {# Need to be empty #}
+</body>
+</html>

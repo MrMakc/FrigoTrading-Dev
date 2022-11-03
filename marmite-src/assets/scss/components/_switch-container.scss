@@ -1,0 +1,94 @@
+.switch-container{
+  h2{
+    font-size: 2rem;
+  }
+  .switch-buttons{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid $color-bg-1;
+    max-width: fit-content;
+    margin: 0 auto 9.5rem auto;
+    p{
+      cursor: pointer;
+      font-weight: 600;
+      position: relative;
+      text-align: center;
+      margin: 0 3rem;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      &:after{
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: $color-secondary;
+        display: block;
+        transition: 0.5s;
+        left: 0;
+        right: 0;
+        margin: 0.5rem auto 0 auto;
+      }
+      &:hover:after{
+        width: 80%;
+      }
+      &.is-active{
+        &:after{
+          width: 80%;
+        }
+      }
+    }
+  }
+  .switch-block{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    &.is-active{
+      opacity: 1;
+      max-height: 50000px;
+      .is-inview{
+        opacity: 1;
+        padding-top: 0rem;
+        transition-delay: 0.3s;
+      }
+    }
+    h2{
+      font-size: 2rem;
+    }
+    .text-full.inner-wrap{
+      margin: 3rem auto;
+    }
+    > div:first-child{
+      margin-top: 0;
+    }
+  }
+
+  @media only screen and (max-width: $mq-4) {
+    .switch-buttons{
+      flex-direction: column;
+      max-width: 100%;
+      border-bottom : none;
+      margin: 0 auto 2.5rem auto;
+      p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 2rem 0;
+        width: fit-content;
+        margin: auto;
+        &:before{
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100vw;
+          border: 1px solid $color-bg-1;
+        }
+        &:after{
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,91 @@
+.pop-in-button:not(.a-button){
+  width: 22rem;
+  height: 11rem;
+  background-color: $color-primary;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover{
+    background: darken($color-primary, 20%);
+  }
+}
+
+.video-button{
+  margin-left: calc(((100vw - 1855px) / 2));
+  margin-bottom: 5rem;
+}
+
+.pop-in{
+  position: fixed;
+  top: 16rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+  transition: 0.5s;
+  padding: 4rem;
+  background-color: white;
+  z-index: 3;
+  pointer-events: none;
+  &.is-show{
+    pointer-events: initial;
+    transform: scale(1);
+    opacity: 1;
+  }
+  .close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.6rem;
+  }
+}
+
+.pop-in-pdf{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  padding: 13rem;
+  top: 0;
+  bottom: 0;
+  form{
+    display: flex;
+    align-items: center;
+  }
+  input[type="submit"]{
+    cursor: pointer;
+    font-size: 1.5rem;
+    justify-content: center;
+    line-height: 1;
+    margin: 0 0 0 1.5rem;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    vertical-align: middle;
+    z-index: 1;
+    color: $color-grey-4;
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    border: 1px solid $color-grey-4;
+    padding: 1.8rem 2.5rem;
+  }
+  label{
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-right: 1.5rem;
+  }
+}

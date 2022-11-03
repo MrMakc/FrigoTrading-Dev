@@ -1,0 +1,37 @@
+.blue-text{
+  background: linear-gradient(180deg, rgba(55,140,204,1) 0%, rgba(60,94,169,1) 100%);
+  padding: 11rem 6.5rem;
+  max-width: 91rem;
+  margin-left: calc(((100vw - 1412px) / 2));
+  margin-top: 15rem;
+  position: relative;
+  &:before{
+    content: " ";
+    width: calc(((100vw - 1396px) / 2));
+    height: 100%;
+    background-color: $color-primary;
+    position: absolute;
+    left: calc(((100vw - 1396px) / 2) * -1);
+    top: 0;
+    opacity: 0.8;
+  }
+  &.editor-wysiwyg{
+    h2,h3,li,a,span,{
+      color: white;
+    }
+  }
+  p{
+    font-weight: 600;
+    color: white;
+  }
+
+  &.right-side{
+    margin-left: calc(((100vw + -439px) / 2));
+    margin-top: -11rem;
+    &:before{
+      left: auto;
+      width: calc(((100vw - 1415px) / 2));
+      right: calc(((100vw - 1415px) / 2) * -1);
+    }
+  }
+}

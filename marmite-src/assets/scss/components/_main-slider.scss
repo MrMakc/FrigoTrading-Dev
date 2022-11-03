@@ -1,0 +1,108 @@
+.main-slider{
+  position: relative;
+  height: 61rem;
+  overflow: hidden;
+  &:before {
+    content: "";
+    width: 1.9rem;
+    height: 1.6rem;
+    background: url(../img/common/bg/grey-solo-triangle.png);
+    background-size: contain;
+    position: absolute;
+    bottom: 13rem;
+    left: calc((100vw - 1576px) / 2);
+  }
+  &:after{
+    content: "";
+    width: 39rem;
+    height: 68rem;
+    bottom: 0;
+    right: -3px;
+    position: absolute;
+    background: url('../img/common/bg/blue-triangle-right.png') no-repeat;
+  }
+  .slider-img{
+    max-width: 139.6rem;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    height: 100%;
+    .slick-slider, .slick-list, .slick-track, .slick-slide, .slide, .slick-slide > div, .slide > a, .img{
+      height: 100%;
+    }
+    .slide > a{
+      display: block;
+    }
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .slide{
+      position: relative;
+    }
+    &:after{
+      content: "";
+      width: 49rem;
+      height: 32rem;
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+      background-color: $color-primary;
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      right: -13rem;
+      z-index: 2;
+    }
+    .text{
+      position: absolute;
+      bottom: 9rem;
+      left: 7rem;
+      max-width: 70rem;
+      h1{
+        font-size: 6rem;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        position: relative;
+        &:before {
+          content: "";
+          width: 1.9rem;
+          height: 1.6rem;
+          background: url(../img/common/bg/grey-solo-triangle.png);
+          background-size: contain;
+          display: block;
+          transform: rotate(90deg);
+          top: -2.5rem;
+          position: relative;
+          left: -1.9rem;
+        }
+      }
+    }
+  }
+  .white-block {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: calc((100vw - 986px) / 2);
+    height: 23.2rem;
+    background: white;
+    z-index: 2;
+    display: flex;
+    padding: 4rem 0 0 3.5rem;
+    &:after{
+      content: "";
+      width: 13rem;
+      height: 11rem;
+      position: absolute;
+      background: url('../img/common/bg/grey-solo-triangle.png'), white;
+      background-size: contain;
+      right: -3px;
+      top: 0;
+    }
+    .counter-slider {
+      margin: 0 3.5rem;
+      font-size: 1.6rem;
+      font-family: $font-secondary;
+    }
+  }
+}

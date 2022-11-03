@@ -1,0 +1,813 @@
+{% extends '../layout/styleguide.twig' %}
+
+{% block sgContent %}
+  <div class="sg-section h-align-center">
+    <div class="sg-h1">Components</div>
+  </div>
+
+  {#<div id="sg-lists" class="sg-section">
+    <div class="sg-h2">Lists</div>
+    <div data-xrayhtml>
+      <ul>
+        <li>Lorem ipsum dolor</li>
+        <li>Ipsa quod architecto</li>
+        <li>Ratione iste accusamus</li>
+      </ul>
+    </div>
+  </div>#}
+  {# /.sg-section  #}
+
+  <div id="sg-banner-messages" class="sg-section">
+    <div class="sg-h2">Banner messages</div>
+    <div class="sg-callout sg-callout-info">
+      <div class="sg-callout-title">JS Options</div>
+      <code><pre>
+{
+  project: 'projectJsName',
+  hideJs: true, // if hideJs == true, hideClass is note needed
+  hideClass: 'hide-banner', // class to animate the hide if hideJs = false
+  hiddenClass: 'as--hidden', // class to remove when banner is hidden by default
+  caping: 0,
+  container: '.c-banner-messages',
+  availableDuration: 13,
+}
+      </pre>
+      </code>
+      <div class="sg-callout-title">
+        <br>HTML Options
+      </div>
+      <code><pre>
+{
+  banner: 'bannerName',
+  hideJs: true,
+  hideClass: 'hide-banner',
+  hiddenClass: 'as--hidden',
+  caping: 3,
+  availableDuration: 13,
+}
+        </pre>
+      </code>
+
+    </div>
+    <div class="sg-callout sg-callout-info">
+      <div class="sg-callout-title">Usage</div>
+      <div class="grid">
+        <div class="col-6_mq3-12">
+          <p><strong>If you click on the consent button <code>.js-banner-btn-accept</code> :</strong><br> - the banner close<br> - the cookie `projectJsName``bannerName` is create<br> - the the banner won't display again for 13 month
+            duration.<br> <br> <strong>If you click on the close button <code>.js-banner-btn-close</code> :</strong><br> - the banner close<br> - the sessionStorage item `projectJsName``bannerName` is create<br> - the banner won't display
+            until you close your session. </p>
+        </div>
+        <div class="col-6_mq3-12">
+          <p>
+            <strong>If you don't click on these two button and don't set <code>caping</code> option :</strong><br> - the banner will still display if you reload or change page.<br> <br> <strong>If you don't click on these two button and set
+              <code>caping</code> option (n > 0) :</strong><br> - the banner will display <strong>n</strong> times if you reload or change page.<br> - <strong>THEN</strong>, the banner won't display any more until you close your session.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-callout sg-callout-warning">
+      <p>The button <code>.sg-banner-messages-reset</code> is only used in the styleguide.<br> Never use it in your website. </p>
+    </div>
+    <div data-xrayhtml>
+      {% include '../components/banner-messages/banner-cookies-consent.twig' %}
+    </div>
+    <div data-xrayhtml>
+      {% include '../components/banner-messages/banner-message-exemple.twig' %}
+    </div>
+    <p class="as--hidden">Delete Cookies Messages to show the .c-banner-messages ->
+      <button type="button" class="sg-banner-messages-reset">Delete Cookies Messages</button>
+    </p>
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-breadcrumbs" class="sg-section">
+    <div class="sg-h2">Breadcrumbs</div>
+
+
+    <div class="xrayhtml">
+      <div class="snippet">
+        {% block sgBreadcrumbExemple %}
+
+          {# to dynamise #}
+          <ol class="c-breadcrumb" aria-label="breadcrumb" role="navigation" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#_" aria-level="1">
+                <span itemprop="name">Accueil</span>
+              </a>
+              <meta itemprop="position" content="1"/>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#_" aria-level="2">
+                <span itemprop="name">Rubrique</span>
+              </a>
+              <meta itemprop="position" content="2"/>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#_" aria-level="3">
+                <span itemprop="name">Sous rubrique</span>
+              </a>
+              <meta itemprop="position" content="3"/>
+            </li>
+          </ol>
+        {% endblock sgBreadcrumbExemple %}
+
+      </div>
+
+      <div class="source-panel">
+                <pre>
+                    <code class="language-markup">
+{{ block('sgBreadcrumbExemple')|replace({'<': '&lt;'})|raw }}
+                    </code>
+                </pre>
+      </div>
+    </div>
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-forms" class="sg-section">
+
+    <div class="switch">
+      <input id="sgAddValidationForm" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" autocomplete="off"> <label for="sgAddValidationForm">
+        <span>Validation</span>
+      </label>
+    </div>
+    <div class="sg-h2">Forms</div>
+    <div class="sg-callout sg-callout-info">
+      <div class="sg-callout-title">Structure</div>
+      <pre><code>&lt;input
+          type="text"
+          required
+          id="reg-lastname"
+          pattern="[a-zA-Zçàéèëìîïòõôûùñ '-]+"
+          title="Lettres uniquement"
+          aria-labelledby="reg-lastname-label"
+          data-msg-required="Le champs Nom est requis"
+          data-msg-error="Le champs Nom ne doit contenir que des lettres."></code></pre>
+      <div class="sg-callout-title">HTML5 Validation</div>
+      <div class="sg-callout-title">Autocomplete</div>
+      <ul>
+        <li>
+          Name (Full name) <br>
+          => autocomplete="name" autocorrect="off"</li>
+        <li>Honorific Prefix (Mr., Ms., Dr., etc.) <br>
+          => autocomplete="honorific-prefix" autocapitalize="on"</li>
+        <li>Additional Name <br>
+          => autocomplete="additionalname" autocorrect="off"</li>
+        <li>Email <br>
+          => autocomplete="email" autocapitalize="off" autocorrect="off"</li>
+        <li>Organization <br>
+          => autocomplete="organization" autocapitalize="on"</li>
+        <li>Street Address <br>
+          => autocomplete="street-address" autocorrect="off"</li>
+        <li>Address Line 1 <br>
+          => autocomplete="address-line1" autocorrect="off"</li>
+        <li>Country <br>
+          => autocomplete="country"</li>
+        <li>Postal Code <br>
+          => novalidate autocomplete="postal-code" autocorrect="off" type="number"</li>
+        <li>URL <br>
+          => autocomplete="url" autocapitalize="off" autocorrect="off" type="url"</li>
+      </ul>
+    </div>
+
+    <form action="#" id="formSG">
+      <fieldset role="region" aria-labelledby="profile_information" class="form-group">
+        <legend id="profile_information" role="heading" aria-level="3">Fieldset title</legend>
+
+        <div data-xrayhtml>
+          {{ macros.input('name-1', 'Text input (simple, not required)','my value','text',{
+            'placeholder': 'Text du placeholder'
+          }) }}
+        </div>
+        <div data-xrayhtml>
+          {{ macros.input('name-1', 'Text input (simple, required)','my value','text',{
+            'placeholder': 'Text du placeholder',
+            'required': true,
+            'data-msg-required': 'Ce champs requis',
+            'data-msg-error': 'Ce champs n\'est pas valide.'
+          }) }}
+        </div>
+        <div data-xrayhtml>
+          {{ macros.input('user-email', 'Email input (required)','','email',{
+            'placeholder':"name@example.com",
+            'autocapitalize':"off",
+            'autocorrect':"off",
+            'required': true
+          }) }}
+        </div>
+        <div data-xrayhtml>
+          {{ macros.input('user-tel', 'Tel input (with required pattern)','','tel',{
+            'placeholder':"0123456789",
+            'pattern':"^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$",
+            'required': true
+          }) }}
+          <small>See <a href="http://html5pattern.com" target="_blank">html5pattern.com</a> for more patterns</small>
+        </div>
+
+        <div class="form-field as--btn-clear as--not-empty">
+          <label for="input-clear">Text input with clear button</label>
+          <div class="input-wrapper">
+            <input id="input-clear" name="input-clear" type="text" value="value to clear">
+            <span class="btn-clear" data-js-clear-field>&times;</span>
+          </div>
+        </div>
+
+
+        {{ macros.input('icon', 'Text input with icon','','text',{
+          'icon':"twitter",
+          'icon-size':"20",
+          'icon-class':"as--primary"
+        }) }}
+
+        {{ macros.input('list', 'Text input with datalist','','text',{
+          'list':"datalist_example",
+          'placeholder':"type 'v'"
+        }) }}
+        <datalist id="datalist_example" class="as--hidden">
+          <option value="value #1">Data list value #1</option>
+          <option value="value #2">Data list value #2</option>
+          <option value="value #3">Data list value #3</option>
+          <option value="value #4">Data list value #4</option>
+        </datalist>
+
+        <div class="form-field as--btn-password as--icon">
+          <label for="input-password">Password</label>
+          <div class="input-wrapper">
+            <input id="input-password" name="input-password" type="password" value="myPassword" aria-describedby="helper_password" autocapitalize="off" autocorrect="off">
+            <span id="helper_password" class="input-helper">Must be a string of 6 digits</span>
+            <button type="button" class="a-button btn-password btn-password-show" title="Afficher le mot de passe">
+              <svg class="a-icon as--20" aria-hidden="true" focusable="false">
+                <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-eye"></use>
+              </svg>
+            </button>
+            <button type="button" class="a-button btn-password btn-password-hide" title="Masquer le mot de passe">
+              <svg class="a-icon as--20" aria-hidden="true" focusable="false">
+                <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-eye-closed"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+{#
+        <div class="form-field field-animated">
+          <label for="input-animated-label">animated label on focus with class JS activated</label>
+          <div class="input-wrapper">
+            <input id="input-animated-label" name="input-animated-label" type="text" value="" required>
+          </div>
+          <small>Uncomment <code>AnimatedLabelField</code> JS class in <code>scripts-front.js</code> to view</small>
+        </div>#}
+
+      </fieldset>
+
+      <div class="form-submit h-align-center">
+        {{ macros.btnSubmit('Valider','as--primary') }}
+      </div>
+
+      <p class="form-help">*champs obligatoires</p>
+
+      {{ macros.select('select-1', 'Liste déroulante', {
+        'option-1':'option 1',
+        'option-2':'option 2',
+        'option-3':'option 3',
+        'option-4':'option 4',
+      }, 'option-2', {
+        'data-msg-error':'Error',
+        'required': true
+      }) }}
+    </form>
+
+    {#<form action="#" class="valid-form">
+      <fieldset role="region" aria-labelledby="profile_information" class="form-group">
+        <div data-xrayhtml>
+          <div class="form-field">
+            <label id="reg-lastname-label" for="reg-lastname">Votre nom :</label>
+            <div class="input-wrapper">
+              <input id="reg-lastname" type="text" required="" pattern="[a-zA-Zçàéèëìîïòõôûùñ '-]+" title="Lettres uniquement" aria-labelledby="reg-lastname-label" data-msg-error="Le champs Nom ne doit contenir que des lettres.">
+            </div>
+          </div>
+        </div>
+        <div class="form-field">
+          <label id="reg-firstname-label" for="reg-firstname">Votre prénom :</label>
+          <div class="input-wrapper">
+            <input id="reg-firstname" type="text" required="" pattern="[a-zA-Zçàéèëìîïòõôûùñ '-]+" title="Lettres uniquement" aria-labelledby="reg-firstname-label" data-msg-error="Le champs Prénom ne doit contenir que des lettres.">
+          </div>
+        </div>
+        <div class="form-field">
+          <label id="reg-function-label" for="reg-function">Votre Fonction :</label>
+          <div class="input-wrapper">
+            <input id="reg-function" name="reg-function" type="text" placeholder="PDG" autocapitalize="off" autocorrect="off" required="" pattern="[a-zA-Zçàéèëìîïòõôûùñ '-]+" title="Lettres uniquement" aria-labelledby="reg-function-label"
+                   data-msg-error="Le champs fonction ne doit contenir que des lettres.">
+          </div>
+        </div>
+        <div class="form-field">
+          <label id="reg-bday-label" for="reg-firstname">Votre année de naissance :</label>
+          <div class="input-wrapper">
+            <input id="reg-bday" type="number" required="" min="1900" max="2099" placeholder="AAAA" aria-labelledby="reg-bday-label" data-msg-error="Ce champs ne doit contenir que des chiffres.">
+          </div>
+        </div>
+        <div class="form-field">
+          <label id="reg-email-label" for="reg-email">Votre email :</label>
+          <div class="input-wrapper">
+            <input id="reg-email" type="email" required="" aria-labelledby="reg-email-label" data-msg-required="Le champs email est requis" data-msg-error="Le champs email n'est pas valide">
+          </div>
+        </div>
+        <div class="form-field as--btn-password as--icon">
+          <label id="reg-password-label" for="reg-password">Votre mot de passe :</label>
+          <div class="input-wrapper">
+            <input id="reg-password" aria-describedby="helper_password" autocapitalize="off" autocorrect="off" type="password" required="" pattern="(?=^.{8,}$).*$"
+              #}{#pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"#}{#
+                   aria-labelledby="reg-password-label" data-msg-required="Le champs Mot de passe est requis." data-msg-error="Le mot de passe doit contenir au minimum 8 caractères.">
+
+            <button type="button" class="btn-password icon as--25 btn-password-show" title="Afficher le mot de passe">
+              <svg class="a-icon as--20" aria-hidden="true" focusable="false">
+                <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-eye"></use>
+              </svg>
+            </button>
+            <button type="button" class="btn-password icon as--25 btn-password-hide" title="Masquer le mot de passe">
+              <svg class="a-icon as--20" aria-hidden="true" focusable="false">
+                <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-eye"></use>
+              </svg>
+            </button>
+          </div>
+          <span class="input-helper">Le mot de passe doit contenir au minimum 8 caractères#}{# et inclure des lettres (dont au moins une Majuscule) ET un ou plusieurs chiffre(s)#}{#.</span>
+        </div>
+
+        <div class="form-field as--btn-password as--icon">
+          <label for="reg-password-conf">Confirmer votre mot de passe :</label>
+          <div class="input-wrapper">
+            <input id="reg-password-conf" autocapitalize="off" autocorrect="off" type="password" required="">
+            <button type="button" class="btn-password icon as--25 btn-password-show" title="Afficher le mot de passe">
+              <svg class="a-icon as--20" aria-hidden="true" focusable="false">
+                <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-eye"></use>
+              </svg>
+            </button>
+            <button type="button" class="btn-password icon as--25 btn-password-hide" title="Masquer le mot de passe">
+              <svg class="a-icon as--20" aria-hidden="true" focusable="false">
+                <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-eye"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <fieldset class="input-wrapper">
+          <div class="input-checkbox">
+            <input type="checkbox" id="reg-stayConnected"> <label for="reg-stayConnected">Maintenir mon compte connecté</label>
+          </div>
+        </fieldset>
+
+        <div class="form-submit h-align-center h-margin-top-40">
+          <button type="submit" class="a-button as--ghost ">
+            <span>Créer mon compte</span>
+          </button>
+        </div>
+      </fieldset>
+    </form>#}
+
+
+
+    <div class="xrayhtml">
+      <div class="snippet">
+        {% block sgFormSelectExemple %}
+          <div class="grid">
+            <div class="col-6">
+              <div class="form-field">
+                <label for="input-select-1">Select default with "fake" placeholder</label>
+                <div class="select-wrapper">
+                  <select id="input-select-1" name="input-select-1">
+                    <option value="" disabled selected hidden>Select your option</option> {# See : https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box #}
+                    <option value="0">Évènement zéro</option>
+                    <option value="1">Évènement un</option>
+                    <option value="2">Évènement deux</option>
+                    <option value="3">Évènement trois</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-6" style="background:#ccc">
+              <div class="form-field">
+                <label for="input-select-2">Select white no bg no border</label>
+                <div class="select-wrapper h-color-white h-no-border h-no-bg">
+                  <select id="input-select-2" name="input-select-2">
+                    <option value="" disabled selected hidden>Select your option</option>
+                    <option value="0">Évènement zéro</option>
+                    <option value="1">Évènement un</option>
+                    <option value="2">Évènement deux</option>
+                    <option value="3">Évènement trois</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-field">
+                <label for="input-select-3">Select color-primary</label>
+                <div class="select-wrapper h-color-primary">
+                  <select id="input-select-3" name="input-select-3">
+                    <option value="1">Évènement un</option>
+                    <option value="2">Évènement deux</option>
+                    <option value="3">Évènement trois</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-field">
+                <label for="input-select-4">Select color-secondary</label>
+                <div class="select-wrapper h-color-secondary">
+                  <select id="input-select-4" name="input-select-4">
+                    <option value="1">Évènement un</option>
+                    <option value="2">Évènement deux</option>
+                    <option value="3">Évènement trois</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endblock sgFormSelectExemple %}
+
+      </div>
+
+      <div class="source-panel">
+                <pre>
+                    <code class="language-markup">
+{{ block('sgFormSelectExemple')|replace({'<': '&lt;'})|raw }}
+                    </code>
+                </pre>
+      </div>
+    </div>
+
+    <div data-xrayhtml>
+      <div class="form-field">
+        <label>Checkbox group</label>
+        <fieldset class="input-wrapper">
+          <!-- input before label -->
+          <div class="input-checkbox">
+            <input type="checkbox" id="defaultCheckbox1"> <label for="defaultCheckbox1">Check me out 1</label>
+          </div>
+          <!-- input in label -->
+          <label class="input-checkbox"> <input type="checkbox">
+            <span>Check me out 2</span>
+          </label>
+          <!-- input in label -->
+          <label class="input-checkbox"> <input type="checkbox" disabled>
+            <span>Check me out disabled</span>
+          </label>
+        </fieldset>
+      </div>
+      <div class="form-field">
+        <label>Radio group</label>
+        <fieldset class="input-wrapper">
+          <!-- input before label -->
+          <div class="input-radio">
+            <input type="radio" name="defaultradio" id="defaultradio1" checked> <label for="defaultradio1">Radio 1</label>
+          </div>
+          <!-- input in label -->
+          <label class="input-radio"> <input type="radio" name="defaultradio">
+            <span>Radio 2</span>
+          </label>
+          <!-- input in label -->
+          <label class="input-radio"> <input type="radio" name="defaultradio2" disabled>
+            <span>Radio disabled</span>
+          </label>
+        </fieldset>
+      </div>
+      <div class="form-field">
+        <label>Checkbox a-button group</label>
+        <fieldset class="input-wrapper input-btn-check-group">
+          <!-- input before label -->
+          <div class="input-btn-check">
+            <input type="checkbox" id="btnCheckbox1"> <label for="btnCheckbox1">Check me out 1</label>
+          </div>
+          <!-- input in label -->
+          <label class="input-btn-check"> <input type="checkbox">
+            <span>Check me out 2</span>
+          </label>
+          <!-- input in label -->
+          <label class="input-btn-check"> <input type="checkbox" checked>
+            <span>Check me out 3</span>
+          </label>
+          <!-- input in label -->
+          <label class="input-btn-check"> <input type="checkbox" disabled>
+            <span>Check me out disabled</span>
+          </label>
+        </fieldset>
+      </div>
+    </div>
+
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-images" class="sg-section">
+    <div class="sg-h2">Images</div>
+    <div class="sg-callout sg-callout-warning">
+      <div class="sg-callout-title">Images Size</div>
+      <p>Different image size for all template</p><br>
+      <div class="sg-callout-title">Available image size</div>
+      <ul>
+        {% for key, sizes in images_sizes %}
+          <li><code>{{ key }}</code> ({{ sizes.w }}x{{ sizes.h }})</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="sg-callout sg-callout-info">
+      <div class="sg-callout-title">Images are in bg cover</div>
+      <p>You have to set the <code>figure[data-pict]</code> dimensions in css and the image will always be covered.</p>
+      <p>The <code>img</code> is crop with the css property object-fit</p><br>
+      <div class="sg-callout-title">Options</div>
+      <ul>
+        <li><code>[data-pict="top"]</code> (force align top)</li>
+        <li><code>[data-pict="bottom"]</code> (force align bottom)</li>
+        <li><code>[data-pict="left"]</code> (force align left)</li>
+        <li><code>[data-pict="right"]</code> (force align right)</li>
+        <li><code>[data-pict="bg-contain"]</code> (force bg size contain)</li>
+        <li><code>[data-pict="default"]</code> (restore image default size)</li>
+      </ul>
+    </div>
+    <div class="sg-callout">
+      <div class="sg-callout-title">Usefull : Images generator</div>
+      <ul>
+        <li>
+          <a href="https://unsplash.it/" target="_blank">https://unsplash.it/</a>
+        </li>
+        <li>
+          <a href="http://placehold.it/" target="_blank">http://placehold.it/</a>
+        </li>
+        <li>...</li>
+      </ul>
+    </div>
+    <style>
+      .sg-pict-exemple-0 figure {
+        width: 400px;
+      }
+
+      .sg-pict-exemple-1 figure {
+        width: 300px;
+        height: 200px;
+      }
+
+      .sg-pict-exemple-2 figure {
+        width: 200px;
+        height: 400px;
+      }
+
+      .sg-pict-exemple-3 figure {
+        width: 150px;
+        height: 150px;
+      }
+
+      .sg-pict-exemple-4 figure {
+        width: 300px;
+        height: 200px;
+      }
+
+      .sg-pict-exemple-5 figure {
+        width: 200px;
+        height: 400px;
+      }
+
+      .sg-pict-exemple-6 figure {
+        width: 200px;
+        height: 400px;
+      }
+
+      .sg-pict-exemple-7 figure {
+        width: 300px;
+        height: 200px;
+        border: solid 1px #ccc;
+      }
+
+      .sg-pict-exemple-8 figure {
+      }
+
+      .sg-pict-exemple-9 figure,
+      .sg-pict-exemple-10 picture {
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .sg-pict-exemple-9 figure,
+        .sg-pict-exemple-10 picture {
+          width: 500px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .sg-pict-exemple-9 figure,
+        .sg-pict-exemple-10 picture {
+          width: 300px;
+        }
+      }
+
+    </style>
+    <div class="grid">
+      <div class="col-4 sg-pict-exemple-0" data-push-right="off-8">
+        <div class="sg-h3">Container : 400x? & [data-pict="homothetic"] <br> If no height, picture will be homothetic</div>
+        <div data-xrayhtml>
+          {% set img = '../assets/img/upload/__exemple.jpg' %}
+          <figure data-pict="homothetic">
+            <img src="{{ img }}" width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-1">
+        <div class="sg-h3">Container : 300x200</div>
+        <div data-xrayhtml>
+          {% set img = '../assets/img/upload/__exemple.jpg' %}
+          <figure data-pict="pict">
+            <img src="{{ img }}" width="{{ images_sizes.header_home.w }}" height="{{ images_sizes.header_home.h }}" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-2">
+        <div class="sg-h3">Container : 200x400</div>
+        <div data-xrayhtml>
+          {% set img = '../assets/img/upload/__exemple.jpg' %}
+          <figure data-pict="pict">
+            <img src="{{ img }}" width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-3">
+        <div class="sg-h3">Container : 150x150</div>
+        <div data-xrayhtml>
+          {% set img = '../assets/img/upload/__exemple.jpg' %}
+          <figure data-pict="pict">
+            <img src="{{ img }}" width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-4">
+        <div class="sg-h3">Container : 300x200 & [data-pict="top"]</div>
+        <div data-xrayhtml>
+          {% set img = '../assets/img/upload/__exemple.jpg' %}
+          <figure data-pict="pict top">
+            <img src="{{ img }}" width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-5">
+        <div class="sg-h3">Container : 200x400 & [data-pict="left"]</div>
+        <div data-xrayhtml>
+          {% set img = '../assets/img/upload/__exemple.jpg' %}
+          <figure data-pict="pict left">
+            <img src="{{ img }}" width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-4 sg-pict-exemple-6">
+        <div class="sg-h3">Container : 200x400 & [data-pict="bottom right"]</div>
+        <div data-xrayhtml>
+          {% set img = '../assets/img/upload/__exemple.jpg' %}
+          <figure data-pict="pict bottom right">
+            <img src="{{ img }}" width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+
+      <div class="col-6 sg-pict-exemple-7">
+        <div class="sg-h3">Container : 300x200 & [data-pict="bg-contain"]</div>
+        <div data-xrayhtml>
+          {% set img = '../assets/img/upload/__exemple.jpg' %}
+          <figure data-pict="pict bg-contain">
+            <img src="{{ img }}" width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      <div class="col-6 sg-pict-exemple-8">
+
+        <div class="sg-h3">Restore real size<br> Container : no dimension & [data-pict="default"]</div>
+        <div data-xrayhtml>
+          {% set img = '../assets/img/upload/__exemple.jpg' %}
+          <figure data-pict="pict default">
+            <img src="{{ img }}" width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}" alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div>
+      {# srcset pas stable -> stand by #}
+      {# <div class="col-12 sg-pict-exemple-9">
+        <div class="sg-h3">srcset</div>
+        <div data-xrayhtml>
+          {% set imgDefault = '../assets/img/upload/__exemple.jpg' %}
+          {% set imgDefault2x = '../assets/img/upload/__exemple@2x.jpg' %}
+          {% set imgSmall = '../assets/img/upload/__exemple-small.jpg' %}
+          {% set imgSmall2x = '../assets/img/upload/__exemple-small@2x.jpg' %}
+          {% set imgBig = '../assets/img/upload/__exemple-big.jpg' %}
+          {% set imgBig2x = '../assets/img/upload/__exemple-big@2x.jpg' %}
+          <figure data-pict="homothetic">
+            <img src="{{ imgDefault }}"
+                 {!# srcset="{{ imgSmall }} 600px,
+                         {{ imgDefault }} 1x,
+                         {{ imgDefault2x }} 2x,
+                         {{ imgDefault2x }} 3x,
+                         {{ imgSmall2x }} 600w 2x,
+                         {{ imgSmall2x }} 600w 3x,
+                         {{ imgBig }},
+                         {{ imgBig2x }} 2x" #!}
+                  srcset=" {{ imgSmall }} 600w,
+                           {{ imgDefault }} 900w,
+                           {{ imgBig }} "
+                 sizes=""
+                 width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}"
+                 alt="Image name" title="Image name">
+          </figure>
+        </div>
+      </div> #}
+
+      <div class="col-12 sg-pict-exemple-10">
+        <div class="sg-h3">responsive images art direction (picture)</div>
+        <div data-xrayhtml>
+          {% set imgDefault = '../assets/img/upload/__exemple-2.jpg' %}
+          {% set imgDefault2x = '../assets/img/upload/__exemple@2x.jpg' %}
+          {% set imgSmall = '../assets/img/upload/__exemple-small.jpg' %}
+          {% set imgSmall2x = '../assets/img/upload/__exemple-small@2x.jpg' %}
+          {% set imgBig = '../assets/img/upload/__exemple-big.jpg' %}
+          {% set imgBig2x = '../assets/img/upload/__exemple-big@2x.jpg' %}
+          <picture data-pict="homothetic">
+            <source media="(max-width: 600px) " srcset="{{ imgSmall }}">
+            <source media="(min-width: 1201px)" srcset="{{ imgBig }}">
+            <img src="{{ imgDefault }}" width="{{ images_sizes.exemple.w }}" height="{{ images_sizes.exemple.h }}" alt="Image name" title="Image name">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-msg" class="sg-section">
+    <div class="sg-h2">Messages Block</div>
+    <div data-xrayhtml>
+      <div class="c-msg-block">
+        <strong class="title">Simple message</strong>
+        <p>Dolor sit amet, consectetur adipisicing elit. Et, nulla!</p>
+        <ul>
+          <li>consectetur adipisicing elit</li>
+          <li>Et, nulla</li>
+        </ul>
+      </div>
+      <div class="c-msg-block msg-info">
+        <strong class="title">Info message</strong>
+        <p>Dolor sit amet, consectetur adipisicing elit. Et, nulla!</p>
+      </div>
+      <div class="c-msg-block msg-success">
+        <strong class="title">Confirm message</strong>
+        <p>Dolor sit amet, consectetur adipisicing elit. Et, nulla!</p>
+      </div>
+      <div class="c-msg-block msg-error">
+        <strong class="title">Error message</strong>
+        <p>il y a less erreurs suivantes :</p>
+        <ul>
+          <li>Prénom : champs obligatoire</li>
+          <li>Email : mauvais format d'email</li>
+          <li>...</li>
+        </ul>
+      </div>
+      <div class="c-msg-block msg-warning">
+        <strong class="title">Warning message !</strong>
+        <p>Dolor sit amet, consectetur adipisicing elit. Et, nulla!</p>
+      </div>
+    </div>
+  </div>
+  {# /.sg-section  #}
+
+  <div id="sg-paging" class="sg-section">
+    <div class="sg-h2">Paging</div>
+    <div data-xrayhtml>
+      <nav class="h-align-center">
+        <ul class="c-pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo; précédent</span>
+            </a>
+          </li>
+          <li>
+            <a href="#_">1</a>
+          </li>
+          <li class="dots">
+            <a>...</a>
+          </li>
+          <li>
+            <a href="#_">4</a>
+          </li>
+          <li class="as--active">
+            <a href="#_">5</a>
+          </li>
+          <li>
+            <a href="#_">6</a>
+          </li>
+          <li class="dots">
+            <a>...</a>
+          </li>
+          <li>
+            <a href="#_">10</a>
+          </li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">suivant &raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  {# /.sg-section  #}
+{% endblock sgContent %}

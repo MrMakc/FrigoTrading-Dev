@@ -1,0 +1,133 @@
+/* ====================== */
+/* footer */
+/* ====================== */
+.footer{
+  min-height: 100rem;
+  background: url('../img/common/bg/bg-footer.png'), no-repeat;
+  background-size: 100% 100%;
+  padding: 7.5rem 0 9.5rem;
+  p{
+    color: white;
+    opacity: 0.5;
+  }
+  .logo {
+    text-align: center;
+  }
+  h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight:500;
+    margin-bottom: 3rem;
+    color: white;
+  }
+  .editor-wysiwyg {
+    h3{
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight:500;
+      margin-bottom: 3rem;
+    }
+    p{
+      opacity: 0.5;
+    }
+  }
+  .block-text{
+    margin-bottom: 6rem;
+  }
+  .flex-columns{
+    justify-content: space-between;
+    margin-top: 12rem;
+    h3{
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .columns-pictos{
+      display: grid;
+      grid-template-columns:50% 50%;
+      .picto {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.5rem;
+        &:nth-child(odd){
+          margin-right: 9rem;
+        }
+      }
+      .img{
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        background-color: $color-grey-3;
+        padding: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text{
+        margin-left: 2rem;
+        span{
+          color: white;
+          opacity: 0.5;
+        }
+        p{
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .subfooter{
+    .list-links{
+      ul{
+        display: flex;
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+        li{
+          position: relative;
+          display: flex;
+          &:not(:last-of-type):after{
+            content: "-";
+            display: inline-flex;
+            color: white;
+            opacity: 0.5;
+            margin: 0 0.3rem;
+          }
+          a,p{
+            text-decoration: none;
+            color: white;
+            opacity: 0.5;
+            transition: 0.5s;
+            &:hover{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .links-circle {
+      display: flex;
+      .circle{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        background-color: RGBA(246,246,246,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        transform: scale(1);
+        svg{
+          fill: white;
+          width: 5rem;
+          height: auto;
+        }
+        &:hover{
+          transform: scale(1.1);
+        }
+        &:last-of-type{
+          margin: 0 0 0 3.5rem;
+        }
+
+      }
+    }
+  }
+}

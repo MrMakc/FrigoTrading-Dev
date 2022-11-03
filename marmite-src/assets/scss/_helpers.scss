@@ -1,0 +1,104 @@
+/* ====================== */
+/* HELPERS - UNCOMMENT IF NEEDED */
+/* ====================== */
+
+/* ====================== */
+/* colors, bg, btn, icons */
+/* ====================== */
+/* define color array with values you will need */
+
+@each $colorname, $color in $a-colors {
+  .h-color-#{$colorname} {
+    color: $color;
+  }
+  .h-bg-#{$colorname} {
+    background-color: $color;
+  }
+}
+
+
+// Will output :
+// .h-color-white {color: #fff;}
+// .h-color-black {color: #000;}
+// .h-color-primary {color: #1c74b6;}
+// .h-bg-white { background-color: #fff;}
+// .h-bg-black { background-color: #000;}
+// .h-bg-primary { background-color: #1c74b6;}
+
+
+/* ====================== */
+/* Font size */
+/* ====================== */
+/* define font-size array with values you will need */
+
+$a-font-size: 1.3 1.5 1.7;
+
+@each $current-fz in $a-font-size {
+  .h-fz-#{$current-fz * 10} {
+    font-size: #{$current-fz}rem;
+  }
+}
+
+
+// Will output :
+// .h-fz-13 {font-size: 1.3rem;}
+// .h-fz-15 {font-size: 1.5rem;}
+// .h-fz-17 {font-size: 1.7rem;}
+
+
+/* ====================== */
+/* Margin & Padding */
+/* ====================== */
+/* define spacing array with values you will need */
+
+$a-spacings: 0 1.5 2 3;
+
+@each $current-space in $a-spacings {
+  .h-margin-#{$current-space * 10} { margin: #{$current-space}rem; }
+  .h-margin-top-#{$current-space * 10} { margin-top: #{$current-space}rem; }
+  .h-margin-bottom-#{$current-space * 10} { margin-bottom: #{$current-space}rem; }
+  .h-margin-left-#{$current-space * 10} { margin-left: #{$current-space}rem; }
+  .h-margin-right-#{$current-space * 10} { margin-right: #{$current-space}rem; }
+  .h-margin-vertical-#{$current-space * 10} { margin-top:#{$current-space}rem; margin-bottom: #{$current-space}rem; }
+  .h-margin-horizontal-#{$current-space * 10} { margin-left:#{$current-space}rem; margin-right: #{$current-space}rem; }
+  .h-padding-#{$current-space * 10} { padding: #{$current-space}rem; }
+  .h-padding-top-#{$current-space * 10} { padding-top: #{$current-space}rem; }
+  .h-padding-bottom-#{$current-space * 10} { padding-bottom: #{$current-space}rem; }
+  .h-padding-left-#{$current-space * 10} { padding-left: #{$current-space}rem; }
+  .h-padding-right-#{$current-space * 10} { padding-right: #{$current-space}rem; }
+  .h-padding-vertical-#{$current-space * 10} { padding-top:#{$current-space}rem; padding-bottom: #{$current-space}rem; }
+  .h-padding-horizontal-#{$current-space * 10} { padding-left:#{$current-space}rem; padding-right: #{$current-space}rem; }
+}
+
+
+// Will output :
+// .h-margin-0 {margin: 0rem;}
+// .h-margin-top-0 {margin-top: 0rem;}
+// .h-margin-bottom-0 {margin-bottom: 0rem;}
+// ...
+// ...
+// .h-margin-15 {margin: 1.5rem;}
+// .h-margin-top-15 {margin-top: 1.5rem;}
+// .h-margin-bottom-15 {margin-bottom: 1.5rem;}
+// ...
+// ...
+
+
+/* ====================== */
+/* Misc */
+/* ====================== */
+
+
+.h-fw-400 {font-weight: 400;}
+.h-fw-700 {font-weight: 700;}
+
+.h-fs-normal {font-style: normal;}
+.h-fs-italic {font-style: italic;}
+
+.h-align-center {text-align: center;}
+.h-align-left {text-align: left;}
+.h-align-right {text-align: right;}
+
+.h-uppercase {text-transform: uppercase;}
+.h-lowercase {text-transform: lowercase;}
+

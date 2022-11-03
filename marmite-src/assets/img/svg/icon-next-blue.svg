@@ -1,0 +1,9 @@
+<svg id="FLECHE" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <g id="Ellipse_12" data-name="Ellipse 12" fill="none" stroke="#378ccc" stroke-width="3">
+    <circle cx="27" cy="27" r="27" stroke="none"/>
+    <circle cx="27" cy="27" r="25.5" fill="none"/>
+  </g>
+  <g id="FLECHE_PETITE" data-name="FLECHE PETITE" transform="translate(21.78 16.456)">
+    <path id="Tracé_290" data-name="Tracé 290" d="M1.726,0,0,1.41,7.55,10.544,0,19.679l1.726,1.409L10.44,10.544Z" transform="translate(0 0)" fill="#378ccc"/>
+  </g>
+</svg>

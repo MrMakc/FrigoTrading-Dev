@@ -1,0 +1,92 @@
+.detail-produit{
+  .title-edito{
+    max-width: 40rem;
+    position: relative;
+    .flex-columns {
+      display: flex;
+      .bg-triangle{
+        right: 0;
+      }
+    }
+  }
+  .title-detail{
+    position: relative;
+    overflow: hidden;
+    &:after{
+      content: "";
+      width: 39rem;
+      height: 68rem;
+      right: -3px;
+      top: -7rem;
+      position: absolute;
+      background: url('../img/common/bg/blue-triangle-right.png') no-repeat;
+    }
+    .bg-triangle{
+      right: 0;
+      width: 84%;
+      height: 61rem;
+    }
+  }
+  .main-slider{
+    padding-left: 10rem;
+    height: max-content;
+    &:after{
+      display: none;
+    }
+    .slider-img{
+      height: 61rem;
+    }
+  }
+
+  .download-pdf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2.5rem;
+    background-color: $color-grey-1;
+    margin-bottom: 6rem;
+  }
+
+  .columns-picts{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    .pict{
+      border: 4px solid white;
+      height: 25rem;
+      flex-grow: 1;
+      background-color: $color-grey-1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      p{
+        font-size: 2.2rem;
+        text-align: center;
+        font-weight: 300;
+        max-width: 15rem;
+      }
+      &:first-of-type{
+        border-left: none;
+      }
+      &:last-of-type{
+        border-right: none;
+      }
+    }
+  }
+  .triangle-counter{
+    position: absolute;
+    top: 3rem;
+    right: calc((100% - 896px)/2);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    .counter-slider {
+      margin: 0 3.5rem;
+      font-size: 1.6rem;
+      font-family: $font-secondary;
+      color: white;
+    }
+  }
+}

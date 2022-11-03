@@ -1,0 +1,112 @@
+<header role="banner">
+    <div id="header" class="header">
+        <div class="bg-triangle"></div>
+        <div class="header-inner">
+
+          <div class="logo">
+              <a href="#">
+                  <picture>
+                      <img src="../assets/img/common/logo/logo.png" alt="">
+                  </picture>
+              </a>
+          </div>
+
+          {#     1er type de menu     #}
+          <div class="main-menu">
+            {#    1er niveeau    #}
+            <ul class="first-lvl">
+              <li><a href="#">Nos solutions</a></li>
+              <li class="has-submenu">
+                <a href="#">Nos activités</a>
+                {#    2ème niveau   #}
+                <ul class="second-lvl">
+                  <a href="#" class="resp-link">Nos activités</a>
+                  <div class="close"></div>
+                  <li><a href="#">Grande distribution et grossistes</a></li>
+                  <li><a href="#">Pharmaceutique et cosmétique</a></li>
+                  <li><a href="#">Agro-alimentaire et agricuture</a></li>
+                  <li><a href="#">Logistique</a></li>
+                  <li><a href="#">Industrie</a></li>
+                  <li><a href="#">Evénementiel loisirs et restauration</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Nos secteurs</a></li>
+            </ul>
+          </div>
+            {#     Fin 1er type de menu     #}
+
+            <div class="contact-buttons">
+                <div class="tel">
+                    {{ macros.svg('tel','white') }}
+                    <p>04 82 29 55 94</p>
+                </div>
+                <div class="contact">
+                    <a href="#">Demande de devis</a>
+                </div>
+            </div>
+
+          {#     2ème type de menu, menu burger     #}
+          <div class="burger-menu">
+            <div class="burger">
+              <div id="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="switch-container inner-wrap">
+              <div class="switch-buttons">
+                <p class="is-active" data-switch="1">Frigo trading</p>
+                <a href="#">Nos avantages</a>
+                <p data-switch="2">Nos réalisations</p>
+                <a href="#">Guide de location</a>
+                <p data-switch="3">Actualités</p>
+              </div>
+
+              <div class="switch-content">
+                <div class="switch-block is-active" data-switch="1">
+                  <ul>
+                    <li><a href="#">Historique</a></li>
+                    <li><a href="#">Notre équipe</a></li>
+                    <li><a href="#">Notre activité</a></li>
+                    <li><a href="#">Nos références / clients</a></li>
+                    <li><a href="#">Carte des ports</a></li>
+                  </ul>
+                </div>
+                <div class="switch-block" data-switch="2">
+                  <ul>
+                    <li><a href="#">Historique</a></li>
+                    <li><a href="#">Notre équipe</a></li>
+                    <li><a href="#">Notre activité</a></li>
+                    <li><a href="#">Nos références / clients</a></li>
+                    <li><a href="#">Carte des ports</a></li>
+                  </ul>
+                </div>
+                <div class="switch-block" data-switch="3">
+                  <ul>
+                    <li><a href="#">Historique</a></li>
+                    <li><a href="#">Notre équipe</a></li>
+                    <li><a href="#">Notre activité</a></li>
+                    <li><a href="#">Nos références / clients</a></li>
+                    <li><a href="#">Carte des ports</a></li>
+                  </ul>
+                </div>
+              </div>
+                <div class="links-circle">
+                    <div class="circle">
+                        <a href="#">{{ macros.svg('linkedin','white') }}</a>
+                    </div>
+                    <div class="circle">
+                        <a href="#">{{ macros.svg('youtube','white') }}</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        {#      Fin menu burger      #}
+
+
+
+        </div>
+    </div>
+</header>

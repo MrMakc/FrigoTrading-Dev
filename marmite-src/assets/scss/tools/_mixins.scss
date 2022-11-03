@@ -1,0 +1,82 @@
+/* ====================== */
+/* MIXINS */
+/* ====================== */
+
+
+/* ====================== */
+/* Clearer */
+/* ====================== */
+  @mixin clearer {
+    &:after,
+    &:before {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+/* ====================== */
+/* Case */
+/* ====================== */
+  @mixin capitalize {
+    text-transform: lowercase;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+
+/* ====================== */
+/* custom */
+/* ====================== */
+  @mixin word-wrap-hyphens {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+  }
+  @mixin break-inside($value : auto) {
+      column-break-inside: $value;
+      page-break-inside: $value;
+      break-inside: $value;
+  }
+  @mixin break-after($value : auto) {
+      column-break-after: $value;
+      page-break-after: $value;
+      break-after: $value;
+  }
+  @mixin break-before($value : auto) {
+      column-break-before: $value;
+      page-break-before: $value;
+      break-before: $value;
+  }
+  @mixin collapsible {
+      overflow: hidden;
+      visibility: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: opacity $default-transition-duration $default-transition-function, max-height $default-transition-duration $default-transition-function;
+  }
+  @mixin collapsible-open {
+      visibility: visible;
+      max-height: 1000em;
+      opacity: 1;
+  }
+  @mixin shadow-1 {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+/* ====================== */
+/* deco picto */
+/* ====================== */
+  @mixin parent-deco {
+      position: relative;
+      overflow: hidden;
+      text-indent: -999em;
+  }
+  @mixin child-deco {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+  }
