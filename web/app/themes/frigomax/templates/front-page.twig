@@ -1,0 +1,239 @@
+{% extends "base.twig" %}
+{% import '_macros.twig' as macros %}
+{% set pageTitle = 'Home page' %}
+{% set pageTemplate = 'home' %}
+{% set pageClass = 'home-page' %}
+
+{% set banniereElem = post.meta('banniere').element %}
+{% set banniere = post.meta('banniere') %}
+{% set contenu = post.meta('home_contenu') %}
+
+{%- block content %}
+
+    <div class="sticky-bg bg-left-home"><div class="bg-img"></div></div>
+    <div class="sticky-bg bg-right-home"><div class="bg-img"></div></div>
+
+
+{#    <pre>#}
+{#        {{ dump(news) }}#}
+{#    </pre>#}
+
+    <div class="main-slider">
+        <div class="bg-triangle"></div>
+        <div class="slider-img">
+            <div class="slider-wrap">
+                {% for banniereElement in banniereElem %}
+                <div class="slide">
+                    <a href="{{ banniereElement.lien.url }}">
+                        <div class="img ">
+                            <picture>
+                                <img src="{{ banniereElement.image.url }}" alt="{{ banniereElement.image.alt }}">
+                            </picture>
+                        </div>
+                        {% if banniereElement.titre|length > 0 %}
+                        <div class="text js-item-inview opacity-transition">
+                            <h1>
+                                {{ banniereElement.titre }}
+                            </h1>
+                            {% if banniereElement.lien.title|length > 0 %}
+                            <p class="a-button"><span>{{ banniereElement.lien.title }}</span></p>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="white-block">
+            <div class="slick-prev">{{ macros.svg('arrow-white','30','white') }}</div>
+            <div class="counter-slider"></div>
+            <div class="slick-next">{{ macros.svg('arrow-white','30','white') }}</div>
+        </div>
+    </div>
+
+    <p class="pop-in-button video-button" data-target=".pop-in-video">Voir la vidéo</p>
+
+    <div class="pop-in-video pop-in">
+        <div class="close">X</div>
+        <iframe width="100%" height="100%" src="{{ banniere.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="title-home">
+        <h2>{{ contenu.section_1.titre }}</h2>
+        <p class="subtitle">
+            {{ contenu.section_1.description }}
+        </p>
+    </div>
+    <div class="slider-hexagone inner-wrap">
+        <div class="slider-wrap">
+            {% for cardElement in contenu.section_1.cartes %}
+            <div class="slide js-item-inview opacity-transition">
+                <a href="#">
+                    <div class="img">
+                        <picture>
+                            <img src="{{ cardElement.image_carte.url }}" alt="{{ cardElement.image_carte.alt }}">
+                        </picture>
+                    </div>
+                    <div class="text">
+                        <div class="content-text">
+                            <p>{{ cardElement.titre_carte }}</p>
+                            {{ macros.svg('arrow-white','30','white') }}
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div class="blue-text editor-wysiwyg js-item-inview opacity-transition">
+        <h2> {{ contenu.bleu_fonce_1.titre}} </h2>
+        <p>
+            {{ contenu.bleu_fonce_1.description }}
+        </p>
+        <a href="{{ contenu.bleu_fonce_1.lien.url }}" class="a-button"><span>{{ contenu.bleu_fonce_1.lien.title }}</span></a>
+    </div>
+
+    <div class="full-img inner-wrap js-item-inview opacity-transition">
+        <picture>
+            <img src="{{ contenu.image_entre_bleu_fonce.url }}" alt="{{ contenu.image_entre_bleu_fonce.alt }}">
+        </picture>
+    </div>
+
+    <div class="blue-text right-side editor-wysiwyg js-item-inview opacity-transition">
+        <h2> {{ contenu.bleu_fonce_2.titre}} </h2>
+        <p>
+            {{ contenu.bleu_fonce_2.description }}
+        </p>
+        <a href="{{ contenu.bleu_fonce_2.lien.url }}" class="a-button"><span>{{ contenu.bleu_fonce_2.lien.title }}</span></a>
+    </div>
+
+    <div class="full-img-blue">
+        <div class="img js-item-inview opacity-transition">
+            <picture>
+                <img src="{{ contenu.bleu_clair.background.url }}" alt="{{ contenu.bleu_clair.background.alt }}">
+            </picture>
+        </div>
+        <div class="text editor-wysiwyg js-item-inview opacity-transition has-delay">
+            <h2>{{ contenu.bleu_clair.titre }}</h2>
+            <p>
+                {{ contenu.bleu_clair.description }}
+            </p>
+            <a href="{{ contenu.bleu_clair.lien.url }}" class="a-button"><span>{{ contenu.bleu_clair.lien.title }}</span></a>
+        </div>
+    </div>
+
+
+    <div class="full-block-home">
+        <div class="inner-wrap">
+            <div class="title-home js-item-inview opacity-transition">
+                <h2>{{ contenu.decouvrez_solutions.titre }}</h2>
+                <p class="subtitle">
+                    {{ contenu.decouvrez_solutions.description }}
+                </p>
+            </div>
+
+
+            <div class="slider-products js-item-inview opacity-transition">
+                <div class="slider-wrap">
+                    {% for categories in terms %}
+                    <div class="slide" data-categorie="{{ categories.name }}">
+                        <div class="flex-columns">
+                            <div class="left editor-wysiwyg">
+                                <h2>{{ categories.name }}</h2>
+                                <p>
+                                    {{ categories.description }}
+                                </p>
+                                <a href="{{ categories.link }}" class="a-button"><span>Voir {{ categories.name }} </span></a>
+                            </div>
+                            <div class="right">
+                                <picture>
+                                    <img src="{{ categories.image.url }}" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="arrows">
+                <div class="arrow-prev">
+                    <div class="slick-prev">{{ macros.svg('arrow-white','30','white') }}<p class="categorie-prev"></p></div>
+                </div>
+                <div class="arrow-next">
+                    <div class="slick-next"><p class="categorie-next"></p>{{ macros.svg('arrow-white','30','white') }}</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="block-partners inner-wrap js-item-inview opacity-transition">
+        <div class="title">
+            <h2>Ils nous font confiance</h2>
+            <div class="arrows arrows-desktop">
+                <div class="slick-prev">{{ macros.svg('prev-blue','30','white', '') }}</div>
+                <div class="slick-next">{{ macros.svg('next-blue','30','white') }}</div>
+            </div>
+        </div>
+        <div class="slider-partners">
+            <div class="slider-wrap">
+            {% for acteur in contenu.confiance %}
+                <div class="slide">
+                    <a href="#">
+                        <div class="img">
+                            <picture>
+                                <img src="{{ acteur.logo.url }}" alt="{{ acteur.logo.alt }}">
+                            </picture>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        <div class="arrows arrows-resp">
+            <div class="slick-prev">{{ macros.svg('prev-blue','30','white') }}</div>
+            <div class="slick-next">{{ macros.svg('next-blue','30','white') }}</div>
+        </div>
+    </div>
+
+
+    <div class="block-actus js-item-inview opacity-transition">
+        <div class="inner-wrap">
+            <div class="title-home">
+                <h2>Nos dernières actualités</h2>
+            </div>
+            <div class="slider-actus">
+                <div class="slider-wrap">
+                    {% for article in news %}
+                    <div class="slide">
+                        <div class="flex-columns">
+                            <div class="left">
+                                <picture>
+                                    <img src="{{ article.thumbnail.src }}" alt="">
+                                </picture>
+                            </div>
+                            <div class="right editor-wysiwyg">
+                                <h2>{{ article.post_title }}</h2>
+                                <p>
+                                    {{ article.description_courte }}
+                                </p>
+                                <a href="{{ article.link }}" class="a-button as--grey-4"><span>Lire plus</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="arrows">
+                <div class="slick-prev">{{ macros.svg('prev-blue','30','white') }}</div>
+                <div class="slick-next">{{ macros.svg('next-blue','30','white') }}</div>
+            </div>
+            <a href="#" class="see-more">En voir davantage</a>
+        </div>
+    </div>
+
+{% endblock content -%}

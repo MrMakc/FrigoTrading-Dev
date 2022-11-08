@@ -1,0 +1,33 @@
+.block-citation{
+  background-color: $color-primary;
+  padding: 6rem 2.5rem;
+  text-align: center;
+  h2{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    &:before{
+      content: "-";
+      display: inline-block;
+      color: white;
+      margin-right: 0.5rem;
+    }
+    &:after{
+      content: "-";
+      display: inline-block;
+      color: white;
+      margin-left: 0.5rem;
+    }
+  }
+  p{
+    color: white;
+    font-size: 2.8rem;
+    font-style: italic;
+    font-family: $font-ternary;
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+}

@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * The template for displaying all pages.
  *
@@ -20,10 +22,30 @@
  * @subpackage  Timber
  * @since    Timber 0.1
  */
-
 $context = Timber::context();
-
 $timber_post     = new Timber\Post();
+
+//Get the post
 $context['post'] = $timber_post;
+
+//Get terms of category-solutions taxonomy to display title and description of the different category
+$context['terms'] = Timber::get_terms(array(
+    'taxonomy' => 'category-solutions',
+));
+
+//Get the last 3 news post type
+$newsArgs = array(
+    'post_type' => 'news',
+    'posts_per_page' => 3,
+    'orderby' => array(
+        'date' => 'DESC'
+    )
+);
+$context['news'] = Timber::get_posts($newsArgs);
+
+
+//echo '<pre>';
+//var_dump($context['post']);
+//echo '</pre>';
 
 Timber::render( array( 'front-page.twig' ), $context );

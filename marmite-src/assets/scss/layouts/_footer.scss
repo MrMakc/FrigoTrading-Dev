@@ -24,7 +24,7 @@
     h3{
       font-size: 2.5rem;
       text-transform: uppercase;
-      font-weight:500;
+      font-weight:400;
       margin-bottom: 3rem;
     }
     p{
@@ -33,6 +33,9 @@
   }
   .block-text{
     margin-bottom: 6rem;
+    p{
+      line-height: 2;
+    }
   }
   .flex-columns{
     justify-content: space-between;
@@ -40,6 +43,7 @@
     h3{
       text-align: center;
       margin-bottom: 2.5rem;
+      font-weight:400;
     }
     .columns-pictos{
       display: grid;
@@ -56,11 +60,15 @@
         width: 13rem;
         height: 13rem;
         border-radius: 50%;
-        background-color: $color-grey-3;
+        background-color: rgba(246,246,246,0.1);
         padding: 2.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        img{
+          width: 8rem;
+          max-height: 7.5rem;
+        }
       }
       .text{
         margin-left: 2rem;
@@ -72,6 +80,10 @@
           font-size: 3rem;
         }
       }
+    }
+    h3{
+      text-align: left;
+      margin-top: 0;
     }
   }
   .subfooter{
@@ -109,7 +121,7 @@
         width: 10rem;
         height: 10rem;
         border-radius: 50%;
-        background-color: RGBA(246,246,246,0.5);
+        background-color: rgba(246,246,246,0.1);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -130,4 +142,60 @@
       }
     }
   }
+  @media only screen and (max-width: $mq-5) {
+    .right{
+      display: none;
+    }
+    .flex-columns{
+      justify-content: center;
+      margin-top: 6rem;
+    }
+    .block-text {
+      margin-bottom: 4rem;
+    }
+    .subfooter{
+      .flex-columns{
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+      .list-links{
+        margin-top: 9rem;
+        padding: 0 4rem;
+        ul{
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mq-2) {
+    padding: 7.5rem 4rem 9.5rem 4rem;
+    .logo img{
+      width: 29rem;
+    }
+    .block-text h3{
+      text-align: left;
+      font-size: 2.1rem;
+    }
+    .subfooter .list-links {
+      padding: 0;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

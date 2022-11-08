@@ -2,7 +2,7 @@
   margin-top: 3rem;
   margin-bottom: 7rem;
   h1{
-    font-size: 6rem;
+    font-size: 5rem;
     color: $color-text-1;
     text-transform: uppercase;
     margin-bottom: 2.2rem;
@@ -13,5 +13,15 @@
     font-size: 2.2rem;
     font-weight: 300;
     line-height: 1.5;
+  }
+
+  @media only screen and (max-width: $mq-5) {
+    padding: 0 4rem;
+  }
+
+  @media only screen and (max-width: $mq-4) {
+    h1{
+      font-size: 3.5rem
+    }
   }
 }

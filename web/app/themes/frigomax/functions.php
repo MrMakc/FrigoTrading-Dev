@@ -1,7 +1,7 @@
 <?php
 
 if (!session_id()) {
-    session_name('theme_name');
+    session_name('frigomax');
     session_start();
 }
 /**
@@ -66,3 +66,5 @@ require get_template_directory() . '/inc/custom-fields.php';
 require get_template_directory() . '/inc/class-custom-site.php';
 require get_template_directory() . '/inc/class-custom-builder.php';
 require get_template_directory() . '/inc/class-custom-ajax.php';
+
+

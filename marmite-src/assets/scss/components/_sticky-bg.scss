@@ -6,12 +6,13 @@
   .bg-img{
     background-size: contain;
     position: sticky;
-    width: 20rem;
+    width: 21rem;
     height: 36rem;
   }
   &.bg-left-home{
     height: calc(100% - 1710px);
     top: 1710px;
+    left: -7rem;
     .bg-img{
       background: url('../img/common/bg/sticky-home-left.png') no-repeat;
       top: 20vh;
@@ -44,5 +45,9 @@
       background-size: contain;
       background-position-x: right;
     }
+  }
+
+  @media only screen and (max-width: $mq-5) {
+    display: none;
   }
 }

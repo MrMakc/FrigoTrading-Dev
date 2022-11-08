@@ -13,7 +13,7 @@ class CustomAjax extends Timber\Site
 //        add_action('wp_ajax_nopriv_theme_name_loadmore_news', array($this, 'theme_name_loadmore_news'));
 
 //        add_action('rest_api_init', function () {
-//            register_rest_route('theme_name', 'offerCity', [
+//            register_rest_route('frigomax', 'offerCity', [
 //            'methods' => 'GET',
 //            'callback' => array($this, 'theme_name_offerCity')
 //            ]);

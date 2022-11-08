@@ -29,7 +29,7 @@
     <div class="title-detail">
         <div class="bg-triangle"></div>
         <div class="flex-columns inner-wrap">
-            <div class="title-edito">
+            <div class="title-edito js-item-inview opacity-transition">
                 <h1>Containers frigorifiques</h1>
                 <p class="subtitle">Lorem ipsum dolor sit amet, consetetur sa
                     dipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -45,7 +45,7 @@
                     <div class="counter-slider"></div>
                     <div class="slick-next">{{ macros.svg('arrow-white','30','white') }}</div>
                 </div>
-                <div class="slider-img">
+                <div class="slider-img js-item-inview opacity-transition has-delay">
 
                     <div class="slider-wrap">
                         <div class="slide">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
 
-                <div class="details-product">
+                <div class="details-product js-item-inview opacity-transition">
                     <div class="columns-picts">
                         <div class="pict palette">
                             {{ macros.svg('palette','30','white') }}
@@ -109,296 +109,176 @@
 
     <div class="switch-container inner-wrap">
         <div class="switch-buttons">
-            <p class="is-active" data-switch="1">block 1</p>
-            <p data-switch="2">block 2</p>
-            <p data-switch="3">block 3</p>
+            <p class="is-active" data-switch="1">Description</p>
+            <p data-switch="2">Options</p>
+            <p data-switch="3">Certificats / Normes</p>
+            <p data-switch="4">Contactez-nous</p>
         </div>
 
         <div class="switch-content">
-            <div class="switch-block is-active" data-switch="1">
+            <div class="switch-block js-item-inview is-active" data-switch="1">
+                <div class="text js-item-inview opacity-transition editor-wysiwyg">
+                    <h2>Kikoolol je suis encore un titre h2 mdr</h2>
+                    <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
+                    <h4>Titre h4 mdr lolilol</h4>
+                    <p>
+                        s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
+                        m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
+                        xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
+                        s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
+                        am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
+                    </p>
+                    <ul>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                    </ul>
+                </div>
 
-                {#     TODO Nils     #}
-                <div class="left-img-switch">
-                    <div class="left">
+                <div class="inner-wrap block-accordeon js-item-inview opacity-transition">
+                    <div class="tabs">
+                        <div class="tab">
+                            <input type="checkbox" id="chck1">
+                            <label class="tab-label" for="chck1">{{ macros.svg('cube','30','white') }}Item 1</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                </ul>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet
+                                    <a href="#"> consequuntur debitis</a> doloremque earum expedita fuga illo ita
+                                    que labore laudantium minima placeat quaerat quia quisquam soluta sunt unde, vel. Eveniet.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2">
+                            <label class="tab-label" for="chck2">{{ macros.svg('eclair','30','white') }}Item 2</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2">
+                            <label class="tab-label" for="chck2">{{ macros.svg('temperature','30','white') }}Item 2</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2">
+                            <label class="tab-label" for="chck2">{{ macros.svg('palette-bis','30','white') }}Item 2</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2">
+                            <label class="tab-label" for="chck2">{{ macros.svg('prise','30','white') }}Item 2</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
                         <picture>
-                            <img src="../assets/img/common/bg/banner.png" alt="">
+                            <img src="../assets/img/common/pict/depannage.png" alt="">
                         </picture>
                     </div>
-                    <div class="right">
-                        <div class="text editor-wysiwyg">
-                            <h3>text edito</h3>
-                            <h2>text edito</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisi
-                                cing elit. Accusantium adipisci beatae doloribus e
-                                aque inventore ipsa magnam, minus modi non nulla par
-                                iatur perferendis possimus voluptatem! Accusamus adi
-                                pisci cum dignissimos explicabo voluptatem?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {#     Fin TODO Nils     #}
-
-                {#    les blocks ici peuvent se trouver dans n'importe quel switch-block et il peut y avoir n'importe quel block de la page edito    #}
-
-                {#      attention, block de la map différent de celui de la home    #}
-                <div class="mini-map">
-                    <h2>On vous guide !</h2>
-                    {# rajouter appel de la map avec liens cdn #}
-                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-                          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-                          crossorigin=""/>
-
-                    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-                            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-                            crossorigin=""></script>
-
-                    <div class="map-wrapper">
-                        <div class="content-map js-item-inview opacity-transition">
-                            <div class="desc">
-                                <p class="big-text">{{ macros.svg('car','30','primary') }} En voiture</p>
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                                    aliquid assumenda at eligendi enim impedit odio optio, q
-                                    uam quod ratione sequi soluta. A ad beatae, consequuntur eaque magnam quaerat veritatis.
-                                </p>
-                            </div>
-                            <div class="desc">
-                                <p class="big-text">{{ macros.svg('train','30','primary') }} Par train</p>
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                                    aliquid assumenda at eligendi enim impedit odio optio, q
-                                    uam quod ratione sequi soluta. A ad beatae, consequuntur eaque magnam quaerat veritatis.
-                                </p>
-                            </div>
-                            <div class="desc">
-                                <p class="big-text">{{ macros.svg('plane','30','primary') }} Par avion</p>
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                                    aliquid assumenda at eligendi enim impedit odio optio, q
-                                    uam quod ratione sequi soluta. A ad beatae, consequuntur eaque magnam quaerat veritatis.
-                                </p>
-                            </div>
-                            <div class="desc">
-                                <p class="big-text">{{ macros.svg('megaphone','30','primary') }} Par t'as daronne</p>
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                                    aliquid assumenda at eligendi enim impedit odio optio, q
-                                    uam quod ratione sequi soluta. A ad beatae, consequuntur eaque magnam quaerat veritatis.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="legend-map js-item-inview opacity-transition">
-                            <div class="labels">
-                                <div class="card-map">
-                                    <div class="text">
-                                        <p class="title">Azureva Hendededezd</p>
-                                        <p class="country">289 rue Garibaldi Lyon</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="map"></div>
-                        </div>
-                    </div>
-                    <script>
-                      var markerIcon = L.Icon.extend({
-                        options: {
-                          iconSize:     [50, 62], // size of the icon
-                          iconAnchor:   [25, 62], // point of the icon which will correspond to marker's location
-                          popupAnchor:  [0, -70] // point from which the popup should open relative to the iconAnchor
-                        }
-                      });
-
-                      var labelised = new markerIcon({iconUrl: '../assets/img/common/pict/marker_blue.svg'});
-                      var unLibalised = new markerIcon({iconUrl: '../assets/img/common/pict/marker_red.svg'});
-
-                      var marker = [47.99948069747909, -3.831594396658009, labelised];
-
-                      var map = L.map('map', {
-                        center: [47.16838657947098, 2.3280071852925412],
-                        zoom: 10,
-                        scrollWheelZoom: false
-                      });
-
-                      // Create a Tile Layer and add it to the map
-                      var tiles = new L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-                      }).addTo(map);
-
-                      var m =  L.marker( [marker[0], marker[1]], {icon: marker[2]}).addTo(map);
-                      map.panTo(new L.LatLng(marker[0],marker[1]));
-
-                    </script>
-
-                    {#      adresse de dépard prise dans la div legend-map -> country    #}
-                    <div class="redirect-map inner-wrap">
-                        <h2>Entrez votre adresse pour calculer votre itinéraire</h2>
-                        <div class="input-adresse">
-                            <input class="adresse" type="text" placeholder="Votre adresse de départ"><button class="a-button as--primary calculate-map">Calculer</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                {# block identique à celui de l'édito, Modifier classe columns-2 pour afficher 2 , 3 ou 4 colonnes #}
-                <div class="columns-text inner-wrap columns-3">
-                    <div class="column js-item-inview opacity-transition">
-                        <div class="img js-item-inview opacity-transition">
-                            <picture>
-                                <img src="../assets/img/upload/bg-block-edito.png" alt="">
-                            </picture>
-                        </div>
-                        <div class="editor-wysiwyg">
-                            <h2>Kikoolol je suis encore un titre h2 mdr</h2>
-                            <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
-                            <h4>Titre h4 mdr lolilol</h4>
-                            <p>
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
-                                m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
-                                xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
-                                am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
-                            </p>
-                            <ul>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="column js-item-inview opacity-transition">
-                        <div class="editor-wysiwyg">
-                            <h2>Kikoolol je suis encore un titre h2 mdr</h2>
-                            <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
-                            <p>
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
-                                m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
-                                xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
-                                am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
-                            </p>
-                            <ul>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="column js-item-inview opacity-transition">
-                        <div class="editor-wysiwyg">
-                            <h2>Kikoolol je suis encore un titre h2 mdr</h2>
-                            <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
-                            <p>
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
-                                m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
-                                xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
-                                am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
-                            </p>
-                            <ul>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="list-pictos-columns">
-
-                    <div class="text editor-wysiwyg">
-                        <p>contenu 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eveniet, vero? Asperiores consectetur, cum, ea eo
-                            s esse et, exercitationem facere in incidunt pariatur porro quaerat quidem tenetur vel veritatis voluptas.
-                        </p>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="list-pictos">
-                        <div class="picto">
-                            {{ macros.svg('group','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                            {{ macros.svg('assiette','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                            {{ macros.svg('bed','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                            {{ macros.svg('cocktail','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                            {{ macros.svg('wifi','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                            {{ macros.svg('parking','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                            {{ macros.svg('parking','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                            {{ macros.svg('parking','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                            {{ macros.svg('parking','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                            {{ macros.svg('parking','30','white') }}
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-            <div class="switch-block" data-switch="2">
-                {#    les blocks ici peuvent se trouver dans n'importe quel switch-block et il peut y avoir n'importe quel block de la page edito    #}
+            <div class="switch-block js-item-inview" data-switch="2">
+                <div class="js-item-inview opacity-transition">
+                    {# bloc identique à l'édito, Modifier classe columns-2 pour afficher 2 , 3 ou 4 colonnes #}
+                    <div class="columns-text inner-wrap columns-2">
+                        <div class="column js-item-inview opacity-transition">
+                            <div class="text editor-wysiwyg">
+                                <h2>Kikoolol je suis encore un titre h2 mdr</h2>
+                                <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
+                                <h4>Titre h4 mdr lolilol</h4>
+                                <p>
+                                    s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
+                                    m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
+                                    xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
+                                    s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
+                                    am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur a
+                                        dipisicing elit. Aliquam asperiores dolor et mi
+                                        nima mollitia repudiandae suscipit voluptatibus?
+                                        Aperiam eveniet fugiat molestiae, nemo, odit pers
+                                        piciatis quia, quis repellendus rerum sequi soluta.</li>
+                                    <li>periam eveniet fugiat molestiae, nemo, odit pers
+                                        piciatis quia, quis repellendus rerum sequi soluta.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="column js-item-inview opacity-transition">
+                            <div class="text editor-wysiwyg">
+                                <h2>Kikoolol je suis encore un titre h2 mdr</h2>
+                                <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
+                                <p>
+                                    s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
+                                    m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
+                                    xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
+                                    s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
+                                    am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
+                                </p>
+                                <ul>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="switch-block js-item-inview" data-switch="3">
                 <div class="column js-item-inview opacity-transition">
-                    <div class="editor-wysiwyg">
-                        <h2>contenu 2</h2>
+
+                    <div class="text editor-wysiwyg">
                         <h2>Kikoolol je suis encore un titre h2 mdr</h2>
                         <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
+                        <h4>Titre h4 mdr lolilol</h4>
                         <p>
                             s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
                             m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
@@ -407,19 +287,80 @@
                             am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
                         </p>
                         <ul>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
+                            <li>Lorem ipsum dolor sit amet, consectetur a
+                                dipisicing elit. Aliquam asperiores dolor et mi
+                                nima mollitia repudiandae suscipit voluptatibus?
+                                Aperiam eveniet fugiat molestiae, nemo, odit pers
+                                piciatis quia, quis repellendus rerum sequi soluta.</li>
+                            <li>periam eveniet fugiat molestiae, nemo, odit pers
+                                piciatis quia, quis repellendus rerum sequi soluta.</li>
                         </ul>
                     </div>
+
+                    <div class="hexagone-form">
+                        <div class="hexagone">
+                            <div class="text">
+                                <div class="content-text">
+                                    <span>Attestation de</span>
+                                    <p>Capacité</p>
+                                </div>
+                            </div>
+                            <p class="subtext">Frigoriste interne de qualité</p>
+                        </div>
+
+                        <div class="hexagone">
+                            <div class="text">
+                                <div class="content-text">
+                                    <span>15947</span>
+                                    <p>CERFA</p>
+                                </div>
+                            </div>
+                            <p class="subtext">Frigoriste interne de qualité</p>
+                        </div>
+
+
+                        <div class="hexagone">
+                            <div class="text">
+                                <div class="content-text">
+                                    <span>Adapté</span>
+                                    <p>HACCP</p>
+                                </div>
+                            </div>
+                            <p class="subtext">Frigoriste interne de qualité</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="switch-block" data-switch="3">
-                {#    les blocks ici peuvent se trouver dans n'importe quel switch-block et il peut y avoir n'importe quel block de la page edito    #}
+            <div class="switch-block js-item-inview" data-switch="4">
+                <div class="column js-item-inview opacity-transition">
 
+                    <div class="text editor-wysiwyg">
+                        <h2>Siège social Frigo Trading</h2>
+                        <p>215 rue Georges Charpak - Technoparc - 01390 CIVRIEUX - Tél : 04 74 14 06 84</p>
+                    </div>
+
+                    <div class="hexagone-form with-img">
+
+                        <div class="hexagone">
+                            <div class="left">
+                                <div class="text">
+                                    <div class="content-text"></div>
+                                </div>
+                                <picture>
+                                    <img src="../assets/img/upload/profil.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="right editor-wysiwyg">
+                                <p>Votre chargé d'affaire</p>
+                                <p class="name">Nils le DarkSasuke du web</p>
+                                <a href="#" class="a-button as--grey-4"><span>Contactez-moi !</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

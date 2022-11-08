@@ -1,11 +1,12 @@
 .switch-container{
+  margin-top: 10rem;
   h2{
     font-size: 2rem;
   }
   .switch-buttons{
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid $color-bg-1;
+    border-bottom: 2px solid #E1E1E1;
     max-width: fit-content;
     margin: 0 auto 9.5rem auto;
     p{
@@ -25,7 +26,7 @@
         transition: 0.5s;
         left: 0;
         right: 0;
-        margin: 0.5rem auto 0 auto;
+        margin: 1rem auto -2.5px auto;
       }
       &:hover:after{
         width: 80%;
@@ -42,6 +43,10 @@
     max-height: 0;
     overflow: hidden;
     transition: 0.5s;
+    .is-inview{
+      opacity: 0;
+      padding-top: 3rem;
+    }
     &.is-active{
       opacity: 1;
       max-height: 50000px;

@@ -1,7 +1,7 @@
 .block-actus{
   background: url('../img/common/bg/bg-actus.png') no-repeat;
   background-position: 50% 50%;
-  background-size: 100% 900px;
+  background-size: 108% 900px;
   min-height: 111.5rem;
   display: flex;
   align-items: center;
@@ -50,4 +50,103 @@
   .see-more{
     margin: 8rem auto 0 auto;
   }
+
+  .arrows-resp{
+    display: none;
+  }
+  .arrows-desktop{
+    display: flex;
+    margin-top: 3.5rem;
+    .slick-prev{
+      margin-right: 1.5rem;
+    }
+  }
+  .slick-arrow {
+    border-radius: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.slick-prev {
+      margin-right: 1.5rem;
+    }
+
+    svg {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+  }
+
+  @media only screen and (max-width: $mq-6) {
+    margin-top: 7rem;
+    .slider-actus{
+      .flex-columns {
+        justify-content: center;
+      }
+      .left {
+        width: 95%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mq-5) {
+    margin-top: 17rem;
+    padding: 0 0 4rem 0;
+    background-position: top center;
+    background-size: 110% 66rem;
+    .title-home {
+      margin-top: -3rem;
+      padding-bottom: 4rem;
+      background-color: white;
+    }
+    .slider-actus {
+      .flex-columns {
+        flex-direction: column;
+        align-items: center;
+      }
+      .left {
+        height: auto;
+        &:before{
+          display: none;
+        }
+      }
+      .right {
+        max-width: 100%;
+        width: 100%;
+        padding: 6rem 4rem;
+        background: #F2F2F2;
+      }
+    }
+    .arrows {
+      justify-content: center;
+      background: #F2F2F2;
+      padding-bottom: 5rem;
+    }
+  }
+
+  @media only screen and (max-width: $mq-2) {
+    background-position: 0% 0;
+    background-size: 370% 50%;
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

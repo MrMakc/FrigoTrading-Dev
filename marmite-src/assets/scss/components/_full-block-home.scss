@@ -9,9 +9,13 @@
   margin-top: 30rem;
   margin-bottom: 19rem;
 
-  .slider-products img{
-    max-width: 75rem;
+  .slider-products {
+    height: 43rem;
+    img{
+      max-width: 75rem;
+    }
   }
+
   .title-home{
     margin-top: -13rem;
     margin-bottom: 16rem;
@@ -37,6 +41,8 @@
     margin-bottom: 6.5rem;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
+    position: relative;
     .slick-arrow{
       display: flex;
       cursor: pointer;
@@ -46,9 +52,110 @@
     }
     .arrow-prev p{
       color: white;
+      margin-left: 2.5rem;
     }
     .arrow-next p{
       color: $color-text-1;
+      margin-right: 2.5rem;
+    }
+
+  }
+
+  @media only screen and (max-width: $mq-6) {
+    margin-top: 30rem;
+    margin-bottom: 9rem;
+    .title-home {
+      margin-top: -23rem;
+    }
+    .flex-columns {
+      .left h2 {
+        font-size: 4rem;
+      }
+    }
+    .slider-products img {
+      max-width: 55rem;
     }
   }
+
+  @media only screen and (max-width: $mq-5) {
+    margin-top: 8rem;
+    margin-bottom: 0;
+    background: none;
+    min-height: auto;
+    .arrows {
+      background-color: $color-primary;
+      margin-top: 0;
+      margin-bottom: 6rem;
+      padding-bottom: 6rem;
+      padding-left: 4rem;
+      justify-content: flex-start;
+      .arrow-prev{
+        display: none;
+      }
+      .arrow-next{
+        svg{
+          fill: white;
+        }
+        p {
+          color: white;
+        }
+      }
+    }
+    .title-home {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .slider-products {
+      height: auto;
+      img {
+        margin: auto;
+      }
+    }
+    .flex-columns{
+      flex-direction: column-reverse;
+      .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30rem;
+        width: 100%;
+        background: url('../img/common/bg/bg-img-full.png') no-repeat;
+        background-position: center;
+        background-size: 110% 130%;
+        background-position-x: -10rem;
+      }
+      .left{
+        background-color: $color-primary;
+        padding: 6rem 4rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mq-4) {
+    .slider-products img {
+      width: 100%;
+    }
+    .flex-columns .right{
+      background-size: 150% 130%;
+    }
+    .arrows{
+      margin-top: -5rem;
+      padding-top: 2rem;
+    }
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

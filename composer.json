@@ -80,7 +80,8 @@
     "wpackagist-plugin/duplicate-page": "^4.4",
     "wpackagist-plugin/tinymce-advanced": "^5.6",
     "wpackagist-plugin/wordpress-seo": "^19.2",
-    "wp-media/wp-rocket": "^3.11"
+    "wp-media/wp-rocket": "^3.11",
+    "wpackagist-plugin/classic-editor": "^1.6"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.2",

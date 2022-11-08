@@ -1,0 +1,27 @@
+.hexagone-form{
+  .text{
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: $color-primary;
+    transform: rotate(-29deg);
+    width: 18rem;
+    height: 16rem;
+    .content-text{
+      transform: rotate(30deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 1rem;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      p{
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

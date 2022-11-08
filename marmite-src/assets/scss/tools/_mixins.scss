@@ -1,7 +1,35 @@
 /* ====================== */
 /* MIXINS */
 /* ====================== */
+.is-inview{
+  transition: 0.5s ease-in-out;
+}
+.has-delay{
+  transition-delay: 0.5s;
+}
+.opacity-transition{
+  opacity: 0;
+  padding-top: 3rem;
+  &.is-inview{
+    opacity: 1;
+    padding-top: 0;
+  }
+}
 
+@keyframes fadeInAndOut{
+  0%{
+    opacity: 1;
+    max-height: 3000px;
+  }
+  50%{
+    opacity: 0;
+    max-height: 0;
+  }
+  100%{
+    opacity: 1;
+    max-height: 3000px;
+  }
+}
 
 /* ====================== */
 /* Clearer */

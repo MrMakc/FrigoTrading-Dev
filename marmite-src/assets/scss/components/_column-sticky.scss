@@ -26,11 +26,69 @@ aside {
     flex-direction: column;
     text-transform: uppercase;
   }
-  .devis a{
-    border-radius: 5px 0 0 0;
-    border-bottom: 1px dotted white;
+  .devis {
+    svg{
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+    a{
+      border-radius: 5px 0 0 0;
+      border-bottom: 1px dotted white;
+    }
   }
+
+
   .contact a{
     border-radius: 0 0 0 5px;
   }
 }
+
+
+@media only screen and (max-width: $mq-5) {
+  .column-sticky {
+    display: flex;
+    top: 90vh;
+    a{
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%!important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg{
+        margin: 0;
+      }
+      p{
+        display: none;
+      }
+    }
+    .devis{
+      margin-right: 1rem;
+    }
+  }
+  aside {
+    position: fixed;
+    right: 0;
+    bottom: 2rem;
+    left: 0;
+    z-index: 2;
+    justify-content: center;
+    height: fit-content;
+    display: flex;
+    top: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

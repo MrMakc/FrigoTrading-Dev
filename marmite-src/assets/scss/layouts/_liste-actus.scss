@@ -1,0 +1,53 @@
+.liste-actus{
+
+  .title-edito{
+    margin-bottom: 12rem;
+  }
+
+  .block-liste-actus{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .actu{
+      width: calc(50% - 25px);
+      margin-bottom: 10rem;
+      &:nth-of-type(even){
+        transition-delay: 0.5s;
+      }
+      .text{
+        padding: 7rem 2rem;
+      }
+      .img{
+        max-height: 46rem;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: $mq-5) {
+    .block-liste-actus{
+      padding: 0 4rem;
+      .actu{
+        width: calc(50% - 4rem);
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mq-4) {
+    .block-liste-actus .actu{
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: $mq-2) {
+    .block-liste-actus .actu .img {
+      height: auto;
+    }
+  }
+}

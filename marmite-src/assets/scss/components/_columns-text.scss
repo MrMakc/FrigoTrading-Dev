@@ -1,0 +1,90 @@
+.columns-text{
+  display: flex;
+  justify-content: center;
+  .img{
+    height: 29rem;
+    position: relative;
+    margin-bottom: 2rem;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .column{
+    padding: 9rem 7rem;
+    background-color: white;
+    max-width: 53rem;
+    &.is-inview{
+      padding-top: 9rem!important;
+    }
+  }
+  &.columns-2{
+    .column{
+      width: 50%;
+      &:first-child{
+        margin-right: 1rem;
+      }
+      &:last-child{
+        margin-left: 1rem;
+      }
+    }
+  }
+  &.columns-3{
+    .column{
+      width: 33.33%;
+      &:first-child{
+        margin-right: 2rem;
+      }
+      &:nth-child(2){
+        margin: 0 2rem;
+      }
+      &:last-child{
+        margin-left: 2rem;
+      }
+    }
+  }
+  &.columns-4{
+    .column{
+      width: 25%;
+      &:first-child{
+        margin-right: 2rem;
+      }
+      &:nth-child(2){
+        margin: 0 2rem;
+      }
+      &:nth-child(3){
+        margin: 0 2rem;
+      }
+      &:last-child{
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mq-5) {
+    &[class^='columns-'] {
+      flex-direction: column;
+      .column{
+        width: 100%!important;
+        margin: 0 0 4.5rem 0!important;
+        .editor-wysiwyg{
+          padding: 2.5rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mq-4) {
+    .img {
+      min-height: auto;
+    }
+    .column.is-inview {
+      padding-top: 1rem !important;
+    }
+    .column{
+      padding: 1rem;
+    }
+  }
+
+}

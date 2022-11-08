@@ -15,6 +15,7 @@ class CustomSite extends Timber\Site
         add_action('after_setup_theme', [$this, 'theme_theme_supports']);
         add_action('login_enqueue_scripts', [$this, 'theme_login_style']);
 
+        add_action( 'admin_menu', [$this, 'remove_default_post_type'] );
 
         add_filter('timber/context', [$this, 'add_to_context']);
         add_filter('timber/twig', [$this, 'add_to_twig']);
@@ -44,7 +45,7 @@ class CustomSite extends Timber\Site
         wp_enqueue_style('theme-styles', get_template_directory_uri() . '/assets/css/styles.min.css', false, '1.0.0', 'all');
 
         wp_deregister_script('jquery');
-//        wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/libs/jquery.min.js', array(), '3.6.0', true);
+        wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/libs/jquery.min.js', array(), '3.6.0', true);
         wp_enqueue_script('modernizr', get_template_directory_uri() . '/assets/js/libs/modernizr.min.js', [], '1.0.0', true);
         wp_enqueue_script('theme-vendors', get_template_directory_uri() . '/assets/js/vendors.js', [], '1.0.0', true);
 
@@ -89,6 +90,7 @@ class CustomSite extends Timber\Site
             'edit.php',                // Posts
             'separator2',              // Separator
             'edit.php?post_type=news',
+            'edit.php?post_type=solutions',
             'separator3',                    // Separator
             'upload.php',                    // Media
             'separator4',                    // Separator
@@ -268,6 +270,14 @@ class CustomSite extends Timber\Site
 
         return $init;
     }
+
+    /**
+     * Remove default article post type from admin menu
+     */
+    public function remove_default_post_type() {
+        remove_menu_page( 'edit.php' );
+    }
+
 }
 
 new CustomSite();

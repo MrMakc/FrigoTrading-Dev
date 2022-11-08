@@ -1,11 +1,26 @@
 .slider-hexagone{
   margin-top: 7.5rem;
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    right: -3.5rem;
+    width: 11rem;
+    height: 11rem;
+    bottom: -15rem;
+    background: url('../img/common/pict/flocon.png') no-repeat;
+    background-size: contain;
+  }
   .slide{
-    width: 38rem;
-    height: 37rem;
+    width: 34rem;
+    height: 39rem;
     overflow: hidden;
     position: relative;
-    &:last-of-type{
+    &:first-of-type{
+      transition-delay: 0.2s;
+    }
+    &:nth-of-type(2){
+      transition-delay: 0.5s;
       .text:after{
         content: "";
         width: 2.1rem;
@@ -18,12 +33,15 @@
         background-size: contain;
       }
     }
+    &:last-of-type{
+      transition-delay: 0.8s;
+    }
     .text{
       clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background-color: $color-primary;
       transform: rotate(-29deg);
-      width: 18rem;
-      height: 16rem;
+      width: 20rem;
+      height: 18rem;
       left: 7.3rem;
       position: absolute;
       bottom: 2rem;
@@ -32,16 +50,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         left: 1rem;
+        padding: 2rem 1rem 0 1rem;
         position: relative;
         height: 100%;
-        width: 100%;
+        width: 18rem;
         text-align: center;
+        svg{
+          transform: rotate(180deg);
+          margin-top: 1.5rem;
+          width: 1.5rem;
+          height: 2.5rem;
+        }
         p{
           font-size: 1.5rem;
           line-height: 1.5;
           color: white;
-          font-weight: 700;
+          font-weight: 500;
           text-transform: uppercase;
         }
       }
@@ -49,20 +75,61 @@
     .img{
       transform: rotate(-30deg);
       position: absolute;
-      width: 34rem;
-      height: 29rem;
+      width: 36rem;
+      height: 31rem;
       top: 3rem;
       margin: auto;
       clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     }
     img{
       transform: rotate(30deg);
-      width: 120%;
-      height: 130%;
+      width: 107%;
+      height: 114%;
+      top: -20px;
+      position: relative;
+      object-fit: cover;
+      object-position: center;
     }
   }
   .slider-wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
+
+  @media only screen and (max-width: 1500px) {
+    &:after{
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $mq-5) {
+    .slick-arrow{
+      display: none!important;
+    }
+    .slick-slide{
+      width: 38rem;
+    }
+  }
+
+  @media only screen and (max-width: $mq-4) {
+    .slick-slide{
+      width: 32rem;
+    }
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
