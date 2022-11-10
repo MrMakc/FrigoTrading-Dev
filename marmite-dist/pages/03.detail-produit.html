@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html class="onlyMarmite" lang="fr-FR">
 <head>
@@ -13,9 +15,11 @@
   <meta name="viewport" content="width=device-width">
 
   
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>    
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    
     <link rel="stylesheet" href="../assets/css/styles.css">
   
+
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
@@ -23,6 +27,7 @@
   <meta name="msapplication-TileColor" content="#000000">
   <meta name="theme-color" content="#ffffff">
   <meta name="apple-mobile-web-app-title" content="Marmite">
+
 <meta property="app:site_data:projectJsName" content="marmite">
 <meta property="app:site_data:sLanguage" content="fr">
 <meta property="app:site_data:sDateFormat" content="dd/mm/yy">
@@ -32,8 +37,10 @@
 <meta property="app:msg_data:defaultRequiredMsg" content="Ce champs est requis.">
 <meta property="app:msg_data:defaultErrorMsg" content="Ce champs n'est pas valide.">
 <meta property="app:msg_data:defaultPwdErrorMsg" content="Le mot de passe et le mot de passe de confirmation doivent correspondre.">
+
 </head>
-<body class="detail-produit">  <div id="body">
+<body class="detail-produit">
+  <div id="body">
     <a id="anchor-body" tabindex="-1"></a>
     <header role="banner">
     <div id="header" class="header">
@@ -52,7 +59,16 @@
           <div class="main-menu">
             
             <ul class="first-lvl">
-              <li><a href="#">Nos solutions</a></li>
+              <li class="has-submenu">
+                <a href="#">Nos solutions</a>
+                <ul class="second-lvl">
+                  <a href="#" class="resp-link">Nos solutions</a>
+                  <div class="close"></div>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">Ipsum</a></li>
+                  <li><a href="#">Dolor sit amet</a></li>
+                </ul>
+              </li>
               <li class="has-submenu">
                 <a href="#">Nos activités</a>
                 
@@ -67,14 +83,24 @@
                   <li><a href="#">Evénementiel loisirs et restauration</a></li>
                 </ul>
               </li>
-              <li><a href="#">Nos secteurs</a></li>
+              <li  class="has-submenu">
+                <a href="#">Nos secteurs</a>
+                <ul class="second-lvl">
+                  <a href="#" class="resp-link">Nos secteurs</a>
+                  <div class="close"></div>
+                  <li><a href="#">Dolor sit amet</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">Ipsum</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
             
 
             <div class="contact-buttons">
                 <div class="tel">
-                      <svg class="a-icon as--white" aria-hidden="true" focusable="false">
+                    
+  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-tel"></use>
   </svg>
 
@@ -97,7 +123,7 @@
 
             <div class="switch-container inner-wrap">
               <div class="switch-buttons">
-                <p class="is-active" data-switch="1">Frigo trading</p>
+                <p data-switch="1">Frigo trading</p>
                 <a href="#">Nos avantages</a>
                 <p data-switch="2">Nos réalisations</p>
                 <a href="#">Guide de location</a>
@@ -105,7 +131,7 @@
               </div>
 
               <div class="switch-content">
-                <div class="switch-block is-active" data-switch="1">
+                <div class="switch-block" data-switch="1">
                   <ul>
                     <li><a href="#">Historique</a></li>
                     <li><a href="#">Notre équipe</a></li>
@@ -135,13 +161,15 @@
               </div>
                 <div class="links-circle">
                     <div class="circle">
-                        <a href="#">  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
+                        <a href="#">
+  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-linkedin"></use>
   </svg>
 </a>
                     </div>
                     <div class="circle">
-                        <a href="#">  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
+                        <a href="#">
+  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-youtube"></use>
   </svg>
 </a>
@@ -149,13 +177,116 @@
                 </div>
             </div>
           </div>
-        
+            
 
+            
+            <div class="burger-resp">
+                <div class="burger">
+                    <div id="nav-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-resp">
 
+                
+                <div class="first-menu">
+                    <ul class="first-lvl-resp">
+                        <li><a href="#">Nos solutions</a></li>
+                        <li class="has-submenu">
+                            <a href="#">Nos activités</a>
+                            
+                            <ul class="second-lvl-resp">
+                                <div class="close-resp">Retour</div>
+                                <a href="#" class="resp-link">Nos activités</a>
+                                <li><a href="#">Grande distribution et grossistes</a></li>
+                                <li><a href="#">Pharmaceutique et cosmétique</a></li>
+                                <li><a href="#">Agro-alimentaire et agricuture</a></li>
+                                <li><a href="#">Logistique</a></li>
+                                <li><a href="#">Industrie</a></li>
+                                <li><a href="#">Evénementiel loisirs et restauration</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Nos secteurs</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="second-menu">
+                    <ul class="first-lvl-resp">
+                        <li class="has-submenu">
+                            <a href="#">Frigo trading</a>
+                            
+                            <ul class="second-lvl-resp">
+                                <div class="close-resp">Retour</div>
+                                <a href="#" class="resp-link">Frigo trading</a>
+                                <li><a href="#">Historique</a></li>
+                                <li><a href="#">Notre équipe</a></li>
+                                <li><a href="#">Notre activité</a></li>
+                                <li><a href="#">Nos références / clients</a></li>
+                                <li><a href="#">Carte des ports</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Nos avantages</a>
+                            
+                            <ul class="second-lvl">
+                                <div class="close-resp">Retour</div>
+                                <a href="#" class="resp-link">Nos avantages</a>
+                                <li><a href="#">Lien 1</a></li>
+                                <li><a href="#">Lien 2</a></li>
+                                <li><a href="#">Lien 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Nos réalisations</a></li>
+                        <li><a href="#">Guide de location</a></li>
+                        <li><a href="#">Actualités</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="links-contact">
+                    <div class="contact-buttons">
+                        <div class="tel">
+                            
+  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-tel"></use>
+  </svg>
+
+                            <p>04 82 29 55 94</p>
+                        </div>
+                        <div class="contact">
+                            <a href="#">Demande de devis</a>
+                        </div>
+                    </div>
+                    <div class="links-circle">
+                        <div class="circle">
+                            <a href="#" class="a-button">
+  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-linkedin"></use>
+  </svg>
+</a>
+                        </div>
+                        <div class="circle">
+                            <a href="#" class="a-button">
+  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-youtube"></use>
+  </svg>
+</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
 
         </div>
     </div>
 </header>
+
     <main role="main">
       <div id="main-content" class="main-content">
         
@@ -167,7 +298,8 @@
         <div class="column-sticky">
             <div class="devis">
                 <a href="#">
-                      <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+                    
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-doc"></use>
   </svg>
 
@@ -176,7 +308,8 @@
             </div>
             <div class="contact">
                 <a href="#">
-                      <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+                    
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-mail"></use>
   </svg>
 
@@ -189,7 +322,7 @@
     <div class="title-detail">
         <div class="bg-triangle"></div>
         <div class="flex-columns inner-wrap">
-            <div class="title-edito">
+            <div class="title-edito js-item-inview opacity-transition">
                 <h1>Containers frigorifiques</h1>
                 <p class="subtitle">Lorem ipsum dolor sit amet, consetetur sa
                     dipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -201,17 +334,19 @@
             
             <div class="main-slider product-slider">
                 <div class="triangle-counter">
-                    <div class="slick-prev">  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+                    <div class="slick-prev">
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-arrow-white"></use>
   </svg>
 </div>
                     <div class="counter-slider"></div>
-                    <div class="slick-next">  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+                    <div class="slick-next">
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-arrow-white"></use>
   </svg>
 </div>
                 </div>
-                <div class="slider-img">
+                <div class="slider-img js-item-inview opacity-transition has-delay">
 
                     <div class="slider-wrap">
                         <div class="slide">
@@ -235,31 +370,35 @@
                     </div>
                 </div>
 
-                <div class="details-product">
+                <div class="details-product js-item-inview opacity-transition">
                     <div class="columns-picts">
                         <div class="pict palette">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+                            
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-palette"></use>
   </svg>
 
                             <p>4 palettes euros</p>
                         </div>
                         <div class="pict volume">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+                            
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-volume"></use>
   </svg>
 
                             <p>4 palettes euros</p>
                         </div>
                         <div class="pict surface">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+                            
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-surface"></use>
   </svg>
 
                             <p>4 palettes euros</p>
                         </div>
                         <div class="pict longueur">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+                            
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
     <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-longueur"></use>
   </svg>
 
@@ -287,338 +426,196 @@
 
     <div class="switch-container inner-wrap">
         <div class="switch-buttons">
-            <p class="is-active" data-switch="1">block 1</p>
-            <p data-switch="2">block 2</p>
-            <p data-switch="3">block 3</p>
+            <p class="is-active" data-switch="1">Description</p>
+            <p data-switch="2">Options</p>
+            <p data-switch="3">Certificats / Normes</p>
+            <p data-switch="4">Contactez-nous</p>
         </div>
 
         <div class="switch-content">
-            <div class="switch-block is-active" data-switch="1">
+            <div class="switch-block js-item-inview is-active" data-switch="1">
+                <div class="text js-item-inview opacity-transition editor-wysiwyg">
+                    <h2>Kikoolol je suis encore un titre h2 mdr</h2>
+                    <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
+                    <h4>Titre h4 mdr lolilol</h4>
+                    <p>
+                        s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
+                        m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
+                        xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
+                        s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
+                        am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
+                    </p>
+                    <ul>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                        <li><a href="#">liste 1</a></li>
+                    </ul>
+                </div>
 
-                
-                <div class="left-img-switch">
-                    <div class="left">
+                <div class="inner-wrap block-accordeon js-item-inview opacity-transition">
+                    <div class="tabs">
+                        <div class="tab">
+                            <input type="checkbox" id="chck1">
+                            <label class="tab-label" for="chck1">
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-cube"></use>
+  </svg>
+Item 1</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostru
+                                        m obcaecati quibusdam tempore. Aspernatur consectetur dignissimos d
+                                        oloribus dolorum est facilis iste, molestiae nihil non nostrum numquam qui rerum sit suscipit, voluptatibus .
+                                    </li>
+                                </ul>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet
+                                    <a href="#"> consequuntur debitis</a> doloremque earum expedita fuga illo ita
+                                    que labore laudantium minima placeat quaerat quia quisquam soluta sunt unde, vel. Eveniet.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2">
+                            <label class="tab-label" for="chck2">
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-eclair"></use>
+  </svg>
+Item 2</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2">
+                            <label class="tab-label" for="chck2">
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-temperature"></use>
+  </svg>
+Item 2</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2">
+                            <label class="tab-label" for="chck2">
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-palette-bis"></use>
+  </svg>
+Item 2</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2">
+                            <label class="tab-label" for="chck2">
+  <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-prise"></use>
+  </svg>
+Item 2</label>
+                            <div class="tab-content editor-wysiwyg">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
                         <picture>
-                            <img src="../assets/img/common/bg/banner.png" alt="">
+                            <img src="../assets/img/common/pict/depannage.png" alt="">
                         </picture>
                     </div>
-                    <div class="right">
-                        <div class="text editor-wysiwyg">
-                            <h3>text edito</h3>
-                            <h2>text edito</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisi
-                                cing elit. Accusantium adipisci beatae doloribus e
-                                aque inventore ipsa magnam, minus modi non nulla par
-                                iatur perferendis possimus voluptatem! Accusamus adi
-                                pisci cum dignissimos explicabo voluptatem?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-
-                
-
-                
-                <div class="mini-map">
-                    <h2>On vous guide !</h2>
-                    
-                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-                          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-                          crossorigin=""/>
-
-                    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-                            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-                            crossorigin=""></script>
-
-                    <div class="map-wrapper">
-                        <div class="content-map js-item-inview opacity-transition">
-                            <div class="desc">
-                                <p class="big-text">  <svg class="a-icon as--30 primary" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-car"></use>
-  </svg>
- En voiture</p>
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                                    aliquid assumenda at eligendi enim impedit odio optio, q
-                                    uam quod ratione sequi soluta. A ad beatae, consequuntur eaque magnam quaerat veritatis.
-                                </p>
-                            </div>
-                            <div class="desc">
-                                <p class="big-text">  <svg class="a-icon as--30 primary" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-train"></use>
-  </svg>
- Par train</p>
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                                    aliquid assumenda at eligendi enim impedit odio optio, q
-                                    uam quod ratione sequi soluta. A ad beatae, consequuntur eaque magnam quaerat veritatis.
-                                </p>
-                            </div>
-                            <div class="desc">
-                                <p class="big-text">  <svg class="a-icon as--30 primary" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-plane"></use>
-  </svg>
- Par avion</p>
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                                    aliquid assumenda at eligendi enim impedit odio optio, q
-                                    uam quod ratione sequi soluta. A ad beatae, consequuntur eaque magnam quaerat veritatis.
-                                </p>
-                            </div>
-                            <div class="desc">
-                                <p class="big-text">  <svg class="a-icon as--30 primary" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-megaphone"></use>
-  </svg>
- Par t'as daronne</p>
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                                    aliquid assumenda at eligendi enim impedit odio optio, q
-                                    uam quod ratione sequi soluta. A ad beatae, consequuntur eaque magnam quaerat veritatis.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="legend-map js-item-inview opacity-transition">
-                            <div class="labels">
-                                <div class="card-map">
-                                    <div class="text">
-                                        <p class="title">Azureva Hendededezd</p>
-                                        <p class="country">289 rue Garibaldi Lyon</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="map"></div>
-                        </div>
-                    </div>
-                    <script>
-                      var markerIcon = L.Icon.extend({
-                        options: {
-                          iconSize:     [50, 62], // size of the icon
-                          iconAnchor:   [25, 62], // point of the icon which will correspond to marker's location
-                          popupAnchor:  [0, -70] // point from which the popup should open relative to the iconAnchor
-                        }
-                      });
-
-                      var labelised = new markerIcon({iconUrl: '../assets/img/common/pict/marker_blue.svg'});
-                      var unLibalised = new markerIcon({iconUrl: '../assets/img/common/pict/marker_red.svg'});
-
-                      var marker = [47.99948069747909, -3.831594396658009, labelised];
-
-                      var map = L.map('map', {
-                        center: [47.16838657947098, 2.3280071852925412],
-                        zoom: 10,
-                        scrollWheelZoom: false
-                      });
-
-                      // Create a Tile Layer and add it to the map
-                      var tiles = new L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-                      }).addTo(map);
-
-                      var m =  L.marker( [marker[0], marker[1]], {icon: marker[2]}).addTo(map);
-                      map.panTo(new L.LatLng(marker[0],marker[1]));
-
-                    </script>
-
-                    
-                    <div class="redirect-map inner-wrap">
-                        <h2>Entrez votre adresse pour calculer votre itinéraire</h2>
-                        <div class="input-adresse">
-                            <input class="adresse" type="text" placeholder="Votre adresse de départ"><button class="a-button as--primary calculate-map">Calculer</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                
-                <div class="columns-text inner-wrap columns-3">
-                    <div class="column js-item-inview opacity-transition">
-                        <div class="img js-item-inview opacity-transition">
-                            <picture>
-                                <img src="../assets/img/upload/bg-block-edito.png" alt="">
-                            </picture>
-                        </div>
-                        <div class="editor-wysiwyg">
-                            <h2>Kikoolol je suis encore un titre h2 mdr</h2>
-                            <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
-                            <h4>Titre h4 mdr lolilol</h4>
-                            <p>
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
-                                m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
-                                xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
-                                am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
-                            </p>
-                            <ul>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="column js-item-inview opacity-transition">
-                        <div class="editor-wysiwyg">
-                            <h2>Kikoolol je suis encore un titre h2 mdr</h2>
-                            <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
-                            <p>
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
-                                m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
-                                xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
-                                am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
-                            </p>
-                            <ul>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="column js-item-inview opacity-transition">
-                        <div class="editor-wysiwyg">
-                            <h2>Kikoolol je suis encore un titre h2 mdr</h2>
-                            <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
-                            <p>
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
-                                m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
-                                xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
-                                s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
-                                am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
-                            </p>
-                            <ul>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                                <li><a href="#">liste 1</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="list-pictos-columns">
-
-                    <div class="text editor-wysiwyg">
-                        <p>contenu 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eveniet, vero? Asperiores consectetur, cum, ea eo
-                            s esse et, exercitationem facere in incidunt pariatur porro quaerat quidem tenetur vel veritatis voluptas.
-                        </p>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at deserunt dignissimos dolore facere facilis in, libero ne
-                                cessitatibus sapiente voluptatibus! Doloremque eos ipsum modi nam officia, quis rem sapiente. Ipsum.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="list-pictos">
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-group"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-assiette"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-bed"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-cocktail"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-wifi"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-parking"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-parking"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-parking"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-parking"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-
-                        <div class="picto">
-                              <svg class="a-icon as--30 white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-parking"></use>
-  </svg>
-
-                            <p class="desc">7 salles de réunion 10 à 200 places</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-            <div class="switch-block" data-switch="2">
-                
+            <div class="switch-block js-item-inview" data-switch="2">
+                <div class="js-item-inview opacity-transition">
+                    
+                    <div class="columns-text inner-wrap columns-2">
+                        <div class="column js-item-inview opacity-transition">
+                            <div class="text editor-wysiwyg">
+                                <h2>Kikoolol je suis encore un titre h2 mdr</h2>
+                                <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
+                                <h4>Titre h4 mdr lolilol</h4>
+                                <p>
+                                    s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
+                                    m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
+                                    xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
+                                    s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
+                                    am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur a
+                                        dipisicing elit. Aliquam asperiores dolor et mi
+                                        nima mollitia repudiandae suscipit voluptatibus?
+                                        Aperiam eveniet fugiat molestiae, nemo, odit pers
+                                        piciatis quia, quis repellendus rerum sequi soluta.</li>
+                                    <li>periam eveniet fugiat molestiae, nemo, odit pers
+                                        piciatis quia, quis repellendus rerum sequi soluta.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="column js-item-inview opacity-transition">
+                            <div class="text editor-wysiwyg">
+                                <h2>Kikoolol je suis encore un titre h2 mdr</h2>
+                                <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
+                                <p>
+                                    s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
+                                    m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
+                                    xplicabo <a href="#">laudantium, totam rem</a> aperiam, eaque ipsa quae ab illo inventore. Sed ut perspiciati
+                                    s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperi
+                                    am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
+                                </p>
+                                <ul>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                    <li><a href="#">liste 1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="switch-block js-item-inview" data-switch="3">
                 <div class="column js-item-inview opacity-transition">
-                    <div class="editor-wysiwyg">
-                        <h2>contenu 2</h2>
+
+                    <div class="text editor-wysiwyg">
                         <h2>Kikoolol je suis encore un titre h2 mdr</h2>
                         <h3>Kikoolol je suis encore un titre h3 xD des barres !</h3>
+                        <h4>Titre h4 mdr lolilol</h4>
                         <p>
                             s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia
                             m, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt e
@@ -627,22 +624,84 @@
                             am, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
                         </p>
                         <ul>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
-                            <li><a href="#">liste 1</a></li>
+                            <li>Lorem ipsum dolor sit amet, consectetur a
+                                dipisicing elit. Aliquam asperiores dolor et mi
+                                nima mollitia repudiandae suscipit voluptatibus?
+                                Aperiam eveniet fugiat molestiae, nemo, odit pers
+                                piciatis quia, quis repellendus rerum sequi soluta.</li>
+                            <li>periam eveniet fugiat molestiae, nemo, odit pers
+                                piciatis quia, quis repellendus rerum sequi soluta.</li>
                         </ul>
                     </div>
+
+                    <div class="hexagone-form">
+                        <div class="hexagone">
+                            <div class="text">
+                                <div class="content-text">
+                                    <span>Attestation de</span>
+                                    <p>Capacité</p>
+                                </div>
+                            </div>
+                            <p class="subtext">Frigoriste interne de qualité</p>
+                        </div>
+
+                        <div class="hexagone">
+                            <div class="text">
+                                <div class="content-text">
+                                    <span>15947</span>
+                                    <p>CERFA</p>
+                                </div>
+                            </div>
+                            <p class="subtext">Frigoriste interne de qualité</p>
+                        </div>
+
+
+                        <div class="hexagone">
+                            <div class="text">
+                                <div class="content-text">
+                                    <span>Adapté</span>
+                                    <p>HACCP</p>
+                                </div>
+                            </div>
+                            <p class="subtext">Frigoriste interne de qualité</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="switch-block" data-switch="3">
-                
+            <div class="switch-block js-item-inview" data-switch="4">
+                <div class="column js-item-inview opacity-transition">
 
+                    <div class="text editor-wysiwyg">
+                        <h2>Siège social Frigo Trading</h2>
+                        <p>215 rue Georges Charpak - Technoparc - 01390 CIVRIEUX - Tél : 04 74 14 06 84</p>
+                    </div>
+
+                    <div class="hexagone-form with-img">
+
+                        <div class="hexagone">
+                            <div class="left">
+                                <div class="text">
+                                    <div class="content-text"></div>
+                                </div>
+                                <picture>
+                                    <img src="../assets/img/upload/profil.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="right editor-wysiwyg">
+                                <p>Votre chargé d'affaire</p>
+                                <p class="name">Nils le DarkSasuke du web</p>
+                                <a href="#" class="a-button as--grey-4"><span>Contactez-moi !</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
+
 
 
 
@@ -756,14 +815,16 @@
                     <div class="links-reseaux">
                         <div class="links-circle">
                             <div class="circle">
-                                <a href="#">  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-linkedin"></use>
+                                <a href="#">
+  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-linkedin-white"></use>
   </svg>
 </a>
                             </div>
                             <div class="circle">
-                                <a href="#">  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
-    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-youtube"></use>
+                                <a href="#">
+  <svg class="a-icon as--white" aria-hidden="true" focusable="false">
+    <use xlink:href="../assets/img/svg/icon-sprite.svg#icon-youtube-white"></use>
   </svg>
 </a>
                             </div>
@@ -775,12 +836,14 @@
     </div>
 </footer>
 
+
   </div>
 <script src="../assets/js/libs/modernizr.min.js"></script>
 <script src="../assets/js/libs/jquery.min.js"></script>
 <script src="../assets/js/vendors.js"></script>
 <script src="../assets/js/scripts-front.js"></script>
 <script>console.warn('Marmite is powered by acti with ♥ !');</script>
+
  
 </body>
 </html>

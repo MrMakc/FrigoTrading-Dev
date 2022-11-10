@@ -1,18 +1,1 @@
-<svg id="Groupe_5868" data-name="Groupe 5868" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84.057" height="86.038" viewBox="0 0 84.057 86.038">
-  <defs>
-    <clipPath id="clip-path">
-      <rect id="Rectangle_6465" data-name="Rectangle 6465" width="84.057" height="86.038" fill="none"/>
-    </clipPath>
-  </defs>
-  <g id="Groupe_5867" data-name="Groupe 5867" transform="translate(0 0)">
-    <g id="Groupe_5866" data-name="Groupe 5866" clip-path="url(#clip-path)">
-      <path id="Tracé_11563" data-name="Tracé 11563" d="M0,0H67.343V69.325H0Z" transform="translate(8.357 8.357)" fill="none" stroke="#378ccc" stroke-width="2"/>
-    </g>
-  </g>
-  <text id="m" transform="translate(32.337 49.457)" fill="#378ccc" font-size="19" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">m</tspan></text>
-  <text id="_2" data-name="2" transform="translate(49.079 42.745)" fill="#378ccc" font-size="13" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">2</tspan></text>
-  <line id="Ligne_7" data-name="Ligne 7" y1="15.737" x2="15.268" transform="translate(55.645 14.484)" fill="none" stroke="#378ccc" stroke-miterlimit="8" stroke-width="2"/>
-  <path id="Tracé_11561" data-name="Tracé 11561" d="M33.883,4.1l4.6-1.582L36.954,7.256Z" transform="translate(34.984 9.332)" fill="#378ccc"/>
-  <line id="Ligne_8" data-name="Ligne 8" x1="15.652" y2="15.803" transform="translate(15.567 54.097)" fill="none" stroke="#378ccc" stroke-miterlimit="8" stroke-width="2"/>
-  <path id="Tracé_11562" data-name="Tracé 11562" d="M4.722,33.287l3.039,3.189L3.144,38.01Z" transform="translate(9.843 34.496)" fill="#378ccc"/>
-</svg>
+<svg data-name="Groupe 5868" xmlns="http://www.w3.org/2000/svg" width="84.057" height="86.038" viewBox="0 0 84.057 86.038"><defs><clipPath id="a"><path data-name="Rectangle 6465" fill="none" d="M0 0h84.057v86.038H0z"/></clipPath></defs><g data-name="Groupe 5867"><g data-name="Groupe 5866" clip-path="url(#a)"><path data-name="Tracé 11563" d="M8.357 8.357H75.7v69.325H8.357z" fill="none" stroke="#378ccc" stroke-width="2"/></g></g><text transform="translate(32.337 49.457)" fill="#378ccc" font-size="19" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">m</tspan></text><text data-name="2" transform="translate(49.079 42.745)" fill="#378ccc" font-size="13" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">2</tspan></text><path data-name="Ligne 7" fill="none" stroke="#378ccc" stroke-miterlimit="8" stroke-width="2" d="M55.645 30.221l15.268-15.737"/><path data-name="Tracé 11561" d="M68.867 13.432l4.6-1.582-1.529 4.738z" fill="#378ccc"/><path data-name="Ligne 8" fill="none" stroke="#378ccc" stroke-miterlimit="8" stroke-width="2" d="M31.219 54.097L15.567 69.9"/><path data-name="Tracé 11562" d="M14.565 67.783l3.039 3.189-4.617 1.534z" fill="#378ccc"/></svg>
