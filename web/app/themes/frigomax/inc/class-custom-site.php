@@ -79,6 +79,7 @@ class CustomSite extends Timber\Site
         // Remove post tags from menu
         remove_menu_page('edit-tags.php?taxonomy=post_tag');
         remove_menu_page('edit-comments.php');
+
     }
 
     public function theme_menu_order($menu_ord)
