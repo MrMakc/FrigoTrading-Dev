@@ -1,0 +1,5 @@
+name: frigomaxime
+recipe: wordpress
+config:
+  php: "8.0"
+  webroot: web
