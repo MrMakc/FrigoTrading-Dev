@@ -1,5 +1,9 @@
 {% import '_macros.twig' as macros %}
 
+{#<pre>#}
+{#{{ dump(main_menu) }}#}
+{#</pre>#}
+
 <header role="banner">
   <div id="header" class="header">
     <div class="bg-triangle"></div>
@@ -17,40 +21,18 @@
       <div class="main-menu">
         {#    1er niveeau    #}
         <ul class="first-lvl">
-          <li class="has-submenu">
-            <a href="#">Nos solutions</a>
-            <ul class="second-lvl">
-              <a href="#" class="resp-link">Nos solutions</a>
-              <div class="close"></div>
-              <li><a href="#">lorem</a></li>
-              <li><a href="#">Ipsum</a></li>
-              <li><a href="#">Dolor sit amet</a></li>
-            </ul>
-          </li>
-          <li class="has-submenu">
-            <a href="#">Nos activités</a>
-            {#    2ème niveau   #}
-            <ul class="second-lvl">
-              <a href="#" class="resp-link">Nos activités</a>
-              <div class="close"></div>
-              <li><a href="#">Grande distribution et grossistes</a></li>
-              <li><a href="#">Pharmaceutique et cosmétique</a></li>
-              <li><a href="#">Agro-alimentaire et agricuture</a></li>
-              <li><a href="#">Logistique</a></li>
-              <li><a href="#">Industrie</a></li>
-              <li><a href="#">Evénementiel loisirs et restauration</a></li>
-            </ul>
-          </li>
-          <li  class="has-submenu">
-            <a href="#">Nos secteurs</a>
-            <ul class="second-lvl">
-              <a href="#" class="resp-link">Nos secteurs</a>
-              <div class="close"></div>
-              <li><a href="#">Dolor sit amet</a></li>
-              <li><a href="#">lorem</a></li>
-              <li><a href="#">Ipsum</a></li>
-            </ul>
-          </li>
+          {% for item in main_menu.items %}
+              <li class="has-submenu">
+                <a href="{{ item.link }}">{{ item.title }}</a>
+                <ul class="second-lvl">
+                  <a href="#" class="resp-link">{{ item.title }}</a>
+                  <div class="close"></div>
+                  {% for child in item.children %}
+                    <li><a href="{{ child.link }}">{{ child.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+          {% endfor %}
         </ul>
       </div>
       {#     Fin 1er type de menu     #}
@@ -75,44 +57,33 @@
           </div>
         </div>
 
+
         <div class="switch-container inner-wrap">
           <div class="switch-buttons">
-            <p data-switch="1">Frigo trading</p>
-            <a href="#">Nos avantages</a>
-            <p data-switch="2">Nos réalisations</p>
-            <a href="#">Guide de location</a>
-            <p data-switch="3">Actualités</p>
+            {% for item in top_menu.items %}
+              {% if item.children %}
+                <p data-switch="{{ item.id }}">{{ item.title }}</p>
+              {% else %}
+                <a href="{{ item.slug }}">{{ item.title }}</a>
+              {% endif %}
+            {% endfor %}
           </div>
 
           <div class="switch-content">
-            <div class="switch-block" data-switch="1">
-              <ul>
-                <li><a href="#">Historique</a></li>
-                <li><a href="#">Notre équipe</a></li>
-                <li><a href="#">Notre activité</a></li>
-                <li><a href="#">Nos références / clients</a></li>
-                <li><a href="#">Carte des ports</a></li>
-              </ul>
-            </div>
-            <div class="switch-block" data-switch="2">
-              <ul>
-                <li><a href="#">Historique</a></li>
-                <li><a href="#">Notre équipe</a></li>
-                <li><a href="#">Notre activité</a></li>
-                <li><a href="#">Nos références / clients</a></li>
-                <li><a href="#">Carte des ports</a></li>
-              </ul>
-            </div>
-            <div class="switch-block" data-switch="3">
-              <ul>
-                <li><a href="#">Historique</a></li>
-                <li><a href="#">Notre équipe</a></li>
-                <li><a href="#">Notre activité</a></li>
-                <li><a href="#">Nos références / clients</a></li>
-                <li><a href="#">Carte des ports</a></li>
-              </ul>
-            </div>
+          {% for item in top_menu.items %}
+            {% if item.children %}
+                <div class="switch-block" data-switch="{{ item.id }}">
+                  <ul>
+                    {% for child in item.children %}
+                      <li><a href="{{ child.link }}">{{ child.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+            {% endif %}
+          {% endfor %}
           </div>
+        </div>
+
           <div class="links-circle">
             <div class="circle">
               <a href="#">{{ macros.svg('linkedin','white') }}</a>

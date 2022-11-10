@@ -1,12 +1,35 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <div class="inner-wrapper">
-	  {% include "partial/introduction.twig" with {
-          'title': post.meta('header_title'),
-          'subtitle': post.meta('header_subtitle'),
-          'text': post.meta('header_text')
-    } %}
-	  {% include "modules.twig" with {'modules': post.meta('modules')} %}
+
+
+  <div class="main-slider">
+    <div class="bg-triangle"></div>
+    <div class="slider-img js-item-inview opacity-transition">
+      <div class="slider-wrap">
+        <div class="slide">
+          <a href="#">
+            <div class="img">
+              <picture>
+                <img src="../assets/img/upload/exemple.png" alt="">
+              </picture>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="title-edito inner-wrap js-item-inview opacity-transition">
+    <h1>{{ post.title }}</h1>
+    <p class="subtitle">
+      {{ post.meta('sous-titre') }}
+    </p>
+  </div>
+
+
+
+    <div class="sub-wrap">
+	  {% include "modules.twig" with {'modules': post.meta('modules')} %}
+    </div>
 {% endblock %}
