@@ -77,4 +77,20 @@ add_action('init', function () {
         'plural'   => __('Catégories solutions', 'frigotrad')
     ]);
 
+    register_extended_taxonomy('zone-solutions', 'solutions', [
+      'meta_box'   => 'radio',
+      'admin_cols' => [
+        'updated' => [
+          'title_cb'    => function () {
+            return '<em>Last</em> Updated';
+          },
+          'meta_key'    => 'updated_date',
+          'date_format' => 'd/m/Y'
+        ]
+      ]
+    ], [
+      'singular' => __('Zone', 'frigotrad'),
+      'plural'   => __('Zones', 'frigotrad')
+    ]);
+
 });
