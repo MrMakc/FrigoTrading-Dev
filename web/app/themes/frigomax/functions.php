@@ -66,5 +66,5 @@ require get_template_directory() . '/inc/custom-fields.php';
 require get_template_directory() . '/inc/class-custom-site.php';
 require get_template_directory() . '/inc/class-custom-builder.php';
 require get_template_directory() . '/inc/class-custom-ajax.php';
-
+require get_template_directory() . '/inc/class-frigo-translate.php';
 

@@ -1,0 +1,46 @@
+application:
+  image: debian:stretch
+  volumes:
+    - ./:/var/www/website
+  tty: true
+php:
+  image: c2is/ubuntu-php:8.0
+  volumes_from:
+    - application
+  links:
+    - mail
+composer:
+  image: composer
+  volumes_from:
+    - application
+apache:
+  image: c2is/debian-apache
+  environment:
+    - WEBSITE_HOST=frigomax.dev.acti
+    - CERTIFICAT_CNAME=frigomax.dev.acti
+    - VHOST_SUFFIX=web
+  ports:
+    - "80:80"
+    - "443:443"
+  links:
+    - php
+  volumes_from:
+    - application
+wp-cli:
+  image: tatemz/wp-cli
+  volumes_from:
+    - application
+  entrypoint: wp
+  command: "--info"
+postfix:
+  image: catatnight/postfix
+  environment:
+    - maildomain=frigomax.dev.acti
+    - smtp_user=web:web
+  ports:
+    - "26:25"
+mail:
+  image: djfarrelly/maildev
+  ports:
+    - 1080:80
+  command: bin/maildev --web 80 --smtp 25

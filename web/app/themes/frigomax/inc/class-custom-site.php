@@ -113,6 +113,10 @@ class CustomSite extends Timber\Site
      */
     public function add_to_context($context)
     {
+
+
+
+
 //      $get_svg_menu = static function ($menu) {
 //        $menu->svg = new Timber\Term($menu['object_id']);
 //        return $menu;
